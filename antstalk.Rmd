@@ -36,11 +36,11 @@ output:
 
 ## Big picture
 
-Differentiable maps with differentiable inverse
+- Differentiable maps with differentiable inverse $+$ *statistics in these spaces*
 
-Multivariate segmentation & registration
+- Customizable multivariate segmentation & registration
 
-High-dimensional statistics in low-dimensional spaces
+- High-dimensional statistics in low-dimensional spaces
 
 
 ## Tools you can use for imaging science
