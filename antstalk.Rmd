@@ -64,7 +64,7 @@ output:
 # General theory tunable to specific domains:  *no-free lunch*
 
 ##
-![](https://raw.githubusercontent.com/stnava/ANTsDoc/master/ANTsTalk/figures/highresdiffeos.jpg)
+![](./figures/highresdiffeos.jpg)
 
 # Use prior knowledge to broaden performance
 
@@ -77,7 +77,7 @@ output:
 ![](./figures/ptbp2.png)
 
 ##
-![](https://raw.githubusercontent.com/stnava/ANTsDoc/master/ANTsTalk/figures/antsatroposn4malf.png)
+![](./figures/antsatroposn4malf.png)
 
 # *ITK+ANTs+R = ANTsR*
 
@@ -107,7 +107,7 @@ Good software should fade into the background ... however ...
 
 
 ##
-![](https://raw.githubusercontent.com/stnava/ANTsDoc/master/ANTsTalk/figures/antsvfreesurfer2.png)
+![](./figures/antsvfreesurfer2.png)
 
 
 ##
@@ -122,7 +122,7 @@ Good software should fade into the background ... however ...
 ![](./figures/reprregevex_sm.jpg)
 
 ##
-![](https://raw.githubusercontent.com/stnava/ANTsDoc/master/ANTsTalk/figures/nick.jpg)
+![](./figures/nick.jpg)
 
 ## A long history of research
 ![](./figures/lineage.jpg)
@@ -145,7 +145,7 @@ Key definitions
 # Merit Badges
 
 ## bart
-![](https://raw.githubusercontent.com/stnava/ANTsDoc/master/ANTsTalk/figures/bart.jpg)
+![](./figures/bart.jpg)
 
 ## open source
 
@@ -211,7 +211,7 @@ disappointment that so much of what had been developed in the community over the
 
 ## 
 
-![](https://raw.githubusercontent.com/stnava/ANTsDoc/master/ANTsTalk/figures/atropos.png)
+![](./figures/atropos.png)
 
 
 ## KellySlater --> KellyKapowski
