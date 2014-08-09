@@ -34,6 +34,8 @@ output:
 
 # Background
 
+## Big picture
+
 Differentiable maps with differentiable inverse
 
 Multivariate segmentation & registration
