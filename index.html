@@ -126,10 +126,11 @@
 <p><img src="figures/antsvfreesurfer2.png" /></p>
 </section><section id="section-6" class="slide level2">
 <h1></h1>
-<!-- syn example --> 
+<!-- syn example -->
 
-<div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/3I9RcRtpOvw" frameborder="0" allowfullscreen></iframe></div>
-
+<div align="center">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/3I9RcRtpOvw" frameborder="0" allowfullscreen></iframe>
+</div>
 <p><a href="http://www.youtube.com/embed/3I9RcRtpOvw">SyN video</a></p>
 </section><section id="theory-evaluation-reproducibility" class="slide level2">
 <h1>Theory + evaluation + reproducibility</h1>
@@ -198,18 +199,40 @@
 <li class="fragment"><p>Related, Brian went to a segmentation-related worksop at MICCAI and aired publicly his disappointment that so much of what had been developed in the community over the last 20+ years has not been made publicly available. “What’s wrong with you people!”</p></li>
 <li class="fragment"><p>3-tissue algorithm in ImageMath —&gt; multivariate, n-class Atropos</p></li>
 </ul>
-</section><section id="section-8" class="slide level2">
-<h1></h1>
 <p><img src="figures/atropos.png" /></p>
 </section><section id="kellyslater-kellykapowski" class="slide level2">
 <h1>KellySlater –&gt; KellyKapowski</h1>
 </section></section>
+<section><section id="putting-it-all-together" class="titleslide slide level1"><h1>Putting it all together</h1></section><section id="the-ants-cortical-thickness-pipeline" class="slide level2">
+<h1>The ANTs cortical thickness pipeline</h1>
+<p><img src="figures/pipeline.png" /></p>
+<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/24879923"><em>Large-scale evaluation of ANTs and FreeSurfer cortical thickness measurements</em>, NeuroImage 2014.*</a></p>
+<p>All software components are open source and part of the Advanced Normalization Tools (ANTs) repository.</p>
+</section><section id="basic-components-of-the-pipeline" class="slide level2">
+<h1>Basic components of the pipeline</h1>
+<p><img src="figures/components.png" /></p>
+<ol type="1">
+<li class="fragment">template building (offline)</li>
+<li class="fragment">brain extraction</li>
+<li class="fragment">cortical thickness estimation</li>
+<li class="fragment">cortical parcellation</li>
+</ol>
+</section><section id="template-building" class="slide level2">
+<h1>Template building</h1>
+<p><em>Tailor data to your specific cohort</em></p>
+<p><img src="figures/templates.png" /></p>
+<ul>
+<li class="fragment">Templates representing the average mean shape and intensity are built directly from the cohort to be analyzed, e.g. pediatric vs. middle-aged brains.</li>
+<li class="fragment">Acquisition and anonymization (e.g. defacing) protocols are often different.</li>
+</ul>
+</section></section>
 <section><section id="components" class="titleslide slide level1"><h1>Components</h1></section><section id="software-engineering" class="slide level2">
 <h1>Software engineering</h1>
-<!-- ants gource --> 
+<!-- ants gource -->
 
-<div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/7X61iBFDF1I" frameborder="0" allowfullscreen></iframe></div>
-
+<div align="center">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/7X61iBFDF1I" frameborder="0" allowfullscreen></iframe>
+</div>
 <p><a href="http://www.youtube.com/embed/7X61iBFDF1I">ants gource</a></p>
 </section></section>
 <section><section id="analysis-philosophy-and-published-opinions" class="titleslide slide level1"><h1>Analysis philosophy and published opinions</h1></section></section>
@@ -225,15 +248,15 @@
 </section><section id="strengths" class="slide level2">
 <h1>Strengths</h1>
 <p>Some strengths include relatively few assumptions, a flexible implementation and open-science approach.</p>
-</section><section id="reffont" class="slide level2">
+</section><section id="reffont" class="slide level2 unnumbered">
 <h1>References</h1>
 <div class="references">
-<p>Avants, Brian B., and Nicholas J. Tustison. 2014. “The ITK Image Registration Framework.” <em>Front Neuroinform</em> 7: 39. doi:<a href="http://dx.doi.org/10.3389/fninf.2013.00039">10.3389/fninf.2013.00039</a>. <a href="http://dx.doi.org/10.3389/fninf.2013.00039">http://dx.doi.org/10.3389/fninf.2013.00039</a>.</p>
-<p>Avants, Brian B., Nicholas J. Tustison, Michael Stauffer, Gang Song, Baohua Wu, and James C. Gee. 2014. “The Insight ToolKit Image Registration Framework.” <em>Front Neuroinform</em> 8: 44. doi:<a href="http://dx.doi.org/10.3389/fninf.2014.00044">10.3389/fninf.2014.00044</a>. <a href="http://dx.doi.org/10.3389/fninf.2014.00044">http://dx.doi.org/10.3389/fninf.2014.00044</a>.</p>
-<p>Klein, Arno, Jesper Andersson, Babak A Ardekani, John Ashburner, Brian Avants, Ming-Chang Chiang, Gary E Christensen, et al. 2009. “Evaluation of 14 Nonlinear Deformation Algorithms Applied to Human Brain MRI Registration.” <em>Neuroimage</em> 46 (3) (Jul): 786–802. doi:<a href="http://dx.doi.org/10.1016/j.neuroimage.2008.12.037">10.1016/j.neuroimage.2008.12.037</a>. <a href="http://dx.doi.org/10.1016/j.neuroimage.2008.12.037">http://dx.doi.org/10.1016/j.neuroimage.2008.12.037</a>.</p>
-<p>Tustison, Nicholas J., and Brian B. Avants. 2013. “Explicit B-Spline Regularization in Diffeomorphic Image Registration.” <em>Front Neuroinform</em> 7: 39. doi:<a href="http://dx.doi.org/10.3389/fninf.2013.00039">10.3389/fninf.2013.00039</a>. <a href="http://dx.doi.org/10.3389/fninf.2013.00039">http://dx.doi.org/10.3389/fninf.2013.00039</a>.</p>
-<p>Tustison, Nicholas J., Brian B. Avants, Philip A. Cook, Yuanjie Zheng, Alexander Egan, Paul A. Yushkevich, and James C. Gee. 2010. “N4ITK: improved N3 Bias Correction.” <em>IEEE Trans Med Imaging</em> 29 (6) (Jun): 1310–1320. doi:<a href="http://dx.doi.org/10.1109/TMI.2010.2046908">10.1109/TMI.2010.2046908</a>. <a href="http://dx.doi.org/10.1109/TMI.2010.2046908">http://dx.doi.org/10.1109/TMI.2010.2046908</a>.</p>
-<p>Tustison, Nicholas J., Philip A. Cook, Arno Klein, Gang Song, Sandhitsu R. Das, Jeffrey T. Duda, Benjamin M. Kandel, et al. 2014. “Large-Scale Evaluation of ANTs and FreeSurfer Cortical Thickness Measurements.” <em>Neuroimage</em> 99 (Oct): 166–179. doi:<a href="http://dx.doi.org/10.1016/j.neuroimage.2014.05.044">10.1016/j.neuroimage.2014.05.044</a>. <a href="http://dx.doi.org/10.1016/j.neuroimage.2014.05.044">http://dx.doi.org/10.1016/j.neuroimage.2014.05.044</a>.</p>
+<p>Avants, Brian B., and Nicholas J. Tustison. 2014. “The ITK Image Registration Framework.” <em>Front Neuroinform</em> 7. Penn Image Computing; Science Laboratory, Department of Radiology, University of Pennsylvania Philadelphia, PA, USA.: 39. doi:<a href="http://dx.doi.org/10.3389/fninf.2013.00039">10.3389/fninf.2013.00039</a>. <a href="http://dx.doi.org/10.3389/fninf.2013.00039">http://dx.doi.org/10.3389/fninf.2013.00039</a>.</p>
+<p>Avants, Brian B., Nicholas J. Tustison, Michael Stauffer, Gang Song, Baohua Wu, and James C. Gee. 2014. “The Insight ToolKit Image Registration Framework.” <em>Front Neuroinform</em> 8. Penn Image Computing; Science Laboratory, Department of Radiology, University of Pennsylvania Philadelphia, PA, USA.: 44. doi:<a href="http://dx.doi.org/10.3389/fninf.2014.00044">10.3389/fninf.2014.00044</a>. <a href="http://dx.doi.org/10.3389/fninf.2014.00044">http://dx.doi.org/10.3389/fninf.2014.00044</a>.</p>
+<p>Klein, Arno, Jesper Andersson, Babak A Ardekani, John Ashburner, Brian Avants, Ming-Chang Chiang, Gary E Christensen, et al. 2009. “Evaluation of 14 Nonlinear Deformation Algorithms Applied to Human Brain MRI Registration.” <em>Neuroimage</em> 46 (3). New York State Psychiatric Institute, Columbia University, NY, NY 10032, USA. arno@binarybottle.com: 786–802. doi:<a href="http://dx.doi.org/10.1016/j.neuroimage.2008.12.037">10.1016/j.neuroimage.2008.12.037</a>. <a href="http://dx.doi.org/10.1016/j.neuroimage.2008.12.037">http://dx.doi.org/10.1016/j.neuroimage.2008.12.037</a>.</p>
+<p>Tustison, Nicholas J., and Brian B. Avants. 2013. “Explicit B-Spline Regularization in Diffeomorphic Image Registration.” <em>Front Neuroinform</em> 7. Penn Image Computing; Science Laboratory, Department of Radiology, University of Pennsylvania Philadelphia, PA, USA.: 39. doi:<a href="http://dx.doi.org/10.3389/fninf.2013.00039">10.3389/fninf.2013.00039</a>. <a href="http://dx.doi.org/10.3389/fninf.2013.00039">http://dx.doi.org/10.3389/fninf.2013.00039</a>.</p>
+<p>Tustison, Nicholas J., Brian B. Avants, Philip A. Cook, Yuanjie Zheng, Alexander Egan, Paul A. Yushkevich, and James C. Gee. 2010. “N4ITK: improved N3 Bias Correction.” <em>IEEE Trans Med Imaging</em> 29 (6). Department of Radiology, University of Pennsylvania, Philadelphia, PA 19140, USA. ntustison@wustl.edu: 1310–20. doi:<a href="http://dx.doi.org/10.1109/TMI.2010.2046908">10.1109/TMI.2010.2046908</a>. <a href="http://dx.doi.org/10.1109/TMI.2010.2046908">http://dx.doi.org/10.1109/TMI.2010.2046908</a>.</p>
+<p>Tustison, Nicholas J., Philip A. Cook, Arno Klein, Gang Song, Sandhitsu R. Das, Jeffrey T. Duda, Benjamin M. Kandel, et al. 2014. “Large-Scale Evaluation of ANTs and FreeSurfer Cortical Thickness Measurements.” <em>Neuroimage</em> 99 (Oct). Penn Image Computing; Science Laboratory, University of Pennsylvania, Philadelphia, PA, USA.: 166–79. doi:<a href="http://dx.doi.org/10.1016/j.neuroimage.2014.05.044">10.1016/j.neuroimage.2014.05.044</a>. <a href="http://dx.doi.org/10.1016/j.neuroimage.2014.05.044">http://dx.doi.org/10.1016/j.neuroimage.2014.05.044</a>.</p>
 </div>
 </section></section>
     </div>

@@ -94,13 +94,13 @@ need unbrain example here
 
 ## ANTs*R* $\rightarrow$ new insight via quantification
 
-Good software should fade into the background ... however ... 
+Good software should fade into the background ... however ...
 
 <span style="color:blue;">
- As is common in science, the first big breakthrough in our understanding ... 
+ As is common in science, the first big breakthrough in our understanding ...
  [came from] an improvement in measurement.
 </span>
-				
+
 <span style="color:blue;">
 > Daniel Kahnemann, *Thinking, Fast and Slow* (2011)
 </span>
@@ -112,7 +112,7 @@ Good software should fade into the background ... however ...
 
 ##
 
-<!-- syn example --> 
+<!-- syn example -->
 
 <div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/3I9RcRtpOvw" frameborder="0" allowfullscreen></iframe></div>
 
@@ -128,7 +128,7 @@ Good software should fade into the background ... however ...
 ![](./figures/lineage.jpg)
 
 
-## Rigorous transformation definition is key 
+## Rigorous transformation definition is key
 
 ANTs and ITK are developed together: <span style="color:red;">see @Avants2014, @Tustison2013, @Tustison2010</span> and more ...
 
@@ -140,7 +140,7 @@ Key definitions
 
 - optimization space consistent with above
 
-- unit testing 
+- unit testing
 
 # Merit Badges
 
@@ -160,7 +160,7 @@ in the world  @AvantsITK
 - SATA 2013:  Multi-Atlas Segmentation (ANTs+JointLabelFusion)
 - BRATS 2013:  Multivariate Brain Segmentation (ANTsR)
 - Yushkevich’s Hipp Atlas:  ( hippocampusubfield.com )
-- TBA:  BOLD decoding (ANTsR) 
+- TBA:  BOLD decoding (ANTsR)
 - Substantial work with DTI ( Camino developer in house )
 - STACOM2014 ?
 
@@ -209,19 +209,46 @@ disappointment that so much of what had been developed in the community over the
 
 * 3-tissue algorithm in ImageMath ---> multivariate, n-class Atropos
 
-## 
-
 ![](./figures/atropos.png)
 
 
 ## KellySlater --> KellyKapowski
+
+# Putting it all together
+
+## The ANTs cortical thickness pipeline
+
+![](./figures/pipeline.png)
+
+[*Large-scale evaluation of ANTs and FreeSurfer cortical thickness measurements*, NeuroImage 2014.*](http://www.ncbi.nlm.nih.gov/pubmed/24879923)
+
+All software components are open source and part of the Advanced Normalization Tools (ANTs) repository.
+
+## Basic components of the pipeline
+
+![](./figures/components.png)
+
+1. template building (offline)
+2. brain extraction
+3. cortical thickness estimation
+4. cortical parcellation
+
+## Template building
+
+*Tailor data to your specific cohort*
+
+![](./figures/templates.png)
+
+* Templates representing the average mean shape and intensity are built directly from the cohort to be analyzed, e.g. pediatric vs. middle-aged brains.
+* Acquisition and anonymization (e.g. defacing) protocols are often different.
+
 
 
 # Components
 
 ## Software engineering
 
-<!-- ants gource --> 
+<!-- ants gource -->
 
 <div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/7X61iBFDF1I" frameborder="0" allowfullscreen></iframe></div>
 
