@@ -226,7 +226,7 @@ All software components are open source and part of the Advanced Normalization T
 
 ## Basic components of the pipeline
 
-![](./figures/components.png)
+<div align="center"><img height="350" src="./figures/components.png" frameborder="0"></img></div>
 
 1. template building (offline)
 2. brain extraction
@@ -237,11 +237,58 @@ All software components are open source and part of the Advanced Normalization T
 
 *Tailor data to your specific cohort*
 
-![](./figures/templates.png)
+<div align="center"><img height="350" src="./figures/templates.png" frameborder="0"></img></div>
 
 * Templates representing the average mean shape and intensity are built directly from the cohort to be analyzed, e.g. pediatric vs. middle-aged brains.
 * Acquisition and anonymization (e.g. defacing) protocols are often different.
 
+## Template building (cont.)
+
+<div align="center"><img height="350" src="./figures/templatePriors.png" frameborder="0"></img></div>
+
+Each template is [processed](https://github.com/ntustison/antsCookTemplatePriorsExample)
+to produce auxiliary images which are used for brain extraction and brain segmentation.
+
+## Brain extraction
+
+<div align="center"><img height="380" src="./figures/brainExtraction.png" frameborder="0"></img></div>
+
+Comparison with de facto standard FreeSurfer package.  Note the difference in separation of
+the gray matter from the surrounding CSF.  (0 failures out of 1205 scans)
+
+## Brain segmentation
+
+<div align="center"><img height="350" src="./figures/brainSegmentation.png" frameborder="0"></img></div>
+
+Randomly selected healthy individuals.  Atropos gets good performance across ages.
+
+## Cortical thickness estimation
+
+<div align="center"><img height="350" src="./figures/corticalThicknessEstimation.png" frameborder="0"></img></div>
+
+In contrast to FreeSurfer which warps coupled surface meshes to segment the gray matter, ANTs diffeomorphically registers the white matter to the combined gray/white matters while simultaneously estimating thickness.
+
+## Evaluation
+
+_Question_:  In the absence of ground truth, how do we evaluate performance?
+
+_Answer_:  We use demographic information with known thickness sensitivity and correlate
+with measured thickness quantities.  One of the most well-known, most easily obtained,
+and most confident measures available is “age.”  So we take 50% of the thickness data to
+train a model (e.g. linear regression) and then calculate the model’s age prediction error
+on the other 50%.  We do this for n=1000 permutations to build a distribution.   Similarly,
+we can do this for gender.
+
+<div align="center"><img height="350" src="./figures/evaluation.png" frameborder="0"></img></div>
+
+## A couple notes on usage
+
+* Out of the many cortical thickness algorithms that have been proposed, FreeSurfer dominates.  And rightfully so, because it works well and has been the only publicly available tool (until reccently).
+* In the same spirit, we have made our tools publicly available.  Usage is similar to that of FreeSurfer (see below).  We also make several templates available.
+
+<div align="center"><img height="350" src="./figures/antsCtCall.png" frameborder="0"></img></div>
+
+“Talk is cheap, show me the code.” <sub>—Linus Torvald</sub>
 
 
 # Components
