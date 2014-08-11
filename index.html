@@ -191,6 +191,45 @@
 <li class="fragment"><p>We had so much trouble converting back and forth between ITK-compatible Nifti format and MINC that Brian suggested we try to implement N3 in ITK.</p></li>
 <li class="fragment"><p>I had some experience with B-splines and added some other tweaks giving birth to N4.</p></li>
 </ul>
+</section><section id="n4-introduction" class="slide level2">
+<h1>N4 Introduction</h1>
+<p><img src="figures/n4_introduction.png" /></p>
+</section><section id="nonparametric-nonuniform-intensity-normalization-n3" class="slide level2">
+<h1>Nonparametric nonuniform intensity normalization (N3)</h1>
+<p>Sled et al., “A nonparametric method for automatic correction of intensity nonuniformity in MRI Data,” <em>IEEE-TMI</em>, 17(1), 1998.</p>
+</section><section class="slide level2">
+
+<p>Boyes et al., “Intensity non-uniformity correction using N3 on 3-T scanners with multichannel phased array coils,” <em>NeuroImage</em>, 39(4), 2008.</p>
+<blockquote>
+<p>In a comparison of several correction techniques N3 performed well (Arnold et al., 2001). Also, the algorithm and software are in the public domain (<a href="http://www.bic.mni.mcgill.ca/software/N3/">http://www.bic.mni.mcgill.ca/software/N3/</a>) and is probably the most widely used non-uniformity correction technique in neurological imaging.</p>
+</blockquote>
+<p>Zheng et al., “Improvement of brain segmentation accuracy by optimizing non-uniformity correction using N3,” <em>NeuroImage</em>, 48(1), 2009.</p>
+<blockquote>
+<p>Among existing approaches, the nonparametric non-uniformity intensity normalization method N3 (Sled et al., 1998) is one of the most frequently used… High performance and robustness have practically turned N3 into an industry standard.</p>
+</blockquote>
+<p>Vovk et al., “A Review of Methods for Correction of Intensity Inhomogeneity in MRI,” <em>IEEE-TMI</em>, 26(3), 2007.</p>
+<blockquote>
+<p>A well-known intensity inhomogeneity correction method, known as the N3 (nonparametric nonuniformity normalization), was proposed in [15]… Interestingly, no improvements have been suggested for this highly popular and successful method… The nonparametric nonuniformity normalization (N3) method [15] has obviously become the standard method against which other methods are compared.</p>
+</blockquote>
+</section><section id="code" class="slide level2">
+<h1>Code</h1>
+<pre><code>COMMAND:
+     N4BiasFieldCorrection
+
+OPTIONS:
+     -d, --image-dimensionality 2/3/4
+     -i, --input-image inputImageFilename
+     -x, --mask-image maskImageFilename
+     -w, --weight-image weightImageFilename
+     -s, --shrink-factor 1/2/3/4/...
+     -c, --convergence [&lt;numberOfIterations=50x50x50x50&gt;,&lt;convergenceThreshold=0.0&gt;]
+     -b, --bspline-fitting [splineDistance,&lt;splineOrder=3&gt;]
+                           [initialMeshResolution,&lt;splineOrder=3&gt;]
+     -t, --histogram-sharpening [&lt;FWHM=0.15&gt;,&lt;wienerNoise=0.01&gt;,&lt;numberOfHistogramBins=200&gt;]
+     -o, --output correctedImage
+                  [correctedImage,&lt;biasField&gt;]
+     -h
+     --help</code></pre>
 </section><section id="atropos" class="slide level2">
 <h1>Atropos</h1>
 <ul>
