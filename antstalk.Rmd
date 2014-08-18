@@ -1,5 +1,5 @@
 ---
-title: "An Exegesis of Advanced Normalization Tools (ANTs)"
+title: <span style="color:red;">An Exegesis of Advanced Normalization Tools (ANTs)</span>
 author: Brian B. Avants, Nicholas J. Tustison, Hans J. Johnson & the ITK and registration community
 bibliography: REFERENCES.bib
 logo:    logo.jpg
@@ -42,6 +42,9 @@ output:
 
 - High-dimensional statistics in low-dimensional spaces
 
+- Borg philosophy: from I/O, to processing to statistical methods
+
+- Open source, testing, many examples, consistent style, multiple platforms,  active community support ...
 
 ## Tools you can use for imaging science
 
@@ -63,25 +66,26 @@ output:
 
 # General theory tunable to specific domains:  *no-free lunch*
 
-##
+## Fine-grained and flexible 
 ![](./figures/highresdiffeos.jpg)
 
 # Use prior knowledge to broaden performance
 
-##
+## Mammalian cortical thickness computed with ANTs
 ![](./figures/species.jpg)
 
 # Library for multivariate image registration, segmentation & statistics
 
-##
+## Anatomical quantification
+![](./figures/antsatroposn4malf.png)
+
+## Modality integration
 ![](./figures/ptbp2.png)
 
-##
-![](./figures/antsatroposn4malf.png)
 
 # *ITK+ANTs+R = ANTsR*
 
-##
+## Agnostic statistics
 ![](./figures/antsrex.jpg)
 
 ## How do we quantify _life span_ brain health in individuals and in populations?
@@ -96,21 +100,21 @@ need unbrain example here
 
 Good software should fade into the background ... however ...
 
-<span style="color:blue;">
+<span style="color:yellow;">
  As is common in science, the first big breakthrough in our understanding ...
  [came from] an improvement in measurement.
 </span>
 
-<span style="color:blue;">
+<span style="color:pink;">
 > Daniel Kahnemann, *Thinking, Fast and Slow* (2011)
 </span>
 
 
-##
+## ANTs v Freesurfer
 ![](./figures/antsvfreesurfer2.png)
 
 
-##
+## SyN Example
 
 <!-- syn example -->
 
@@ -121,7 +125,7 @@ Good software should fade into the background ... however ...
 ## Theory + evaluation + reproducibility
 ![](./figures/reprregevex_sm.jpg)
 
-##
+## Founding Developers
 ![](./figures/nick.jpg)
 
 ## A long history of research
@@ -263,10 +267,13 @@ disappointment that so much of what had been developed in the community over the
 
 * 3-tissue algorithm in ImageMath ---> multivariate, n-class Atropos
 
-![](./figures/atropos.png)
-
 
 ## KellySlater --> KellyKapowski
+
+## Atropos $+$ KK Example
+
+![](./figures/atropos.png)
+
 
 # Putting it all together
 
