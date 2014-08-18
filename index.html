@@ -56,11 +56,27 @@
 
 
 
-<link rel="stylesheet" href="index_files/reveal.js-2.6.1/css/theme/sky.css" id="theme">
+<link rel="stylesheet" href="index_files/reveal.js-2.6.1/css/theme/night.css" id="theme">
 
+<style type="text/css">
+.reveal section img {
+  background: rgba(255, 255, 255, 0.85);
+}
+</style>
 
-<link rel="stylesheet" media="print" href="index_files/reveal.js-2.6.1/css/print/pdf.css" />
-
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'index_files/reveal.js-2.6.1/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+    <!--[if lt IE 9]>
+    <script src="index_files/reveal.js-2.6.1/lib/js/html5shiv.js"></script>
+    <![endif]-->
 
 </head>
 <body>
@@ -128,9 +144,8 @@
 <h1></h1>
 <!-- syn example -->
 
-<div align="center">
-<iframe width="560" height="315" src="http://www.youtube.com/embed/3I9RcRtpOvw" frameborder="0" allowfullscreen></iframe>
-</div>
+<div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/3I9RcRtpOvw" frameborder="0" allowfullscreen></iframe></div>
+
 <p><a href="http://www.youtube.com/embed/3I9RcRtpOvw">SyN video</a></p>
 </section><section id="theory-evaluation-reproducibility" class="slide level2">
 <h1>Theory + evaluation + reproducibility</h1>
@@ -230,6 +245,9 @@ OPTIONS:
                   [correctedImage,&lt;biasField&gt;]
      -h
      --help</code></pre>
+<blockquote>
+<p>Talk is cheap, show me the code.</p>
+</blockquote>
 </section><section id="atropos" class="slide level2">
 <h1>Atropos</h1>
 <ul>
@@ -314,9 +332,8 @@ OPTIONS:
 <h1>Software engineering</h1>
 <!-- ants gource -->
 
-<div align="center">
-<iframe width="560" height="315" src="http://www.youtube.com/embed/7X61iBFDF1I" frameborder="0" allowfullscreen></iframe>
-</div>
+<div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/7X61iBFDF1I" frameborder="0" allowfullscreen></iframe></div>
+
 <p><a href="http://www.youtube.com/embed/7X61iBFDF1I">ants gource</a></p>
 </section></section>
 <section><section id="analysis-philosophy-and-published-opinions" class="titleslide slide level1"><h1>Analysis philosophy and published opinions</h1></section></section>
@@ -332,15 +349,15 @@ OPTIONS:
 </section><section id="strengths" class="slide level2">
 <h1>Strengths</h1>
 <p>Some strengths include relatively few assumptions, a flexible implementation and open-science approach.</p>
-</section><section id="reffont" class="slide level2 unnumbered">
+</section><section id="reffont" class="slide level2">
 <h1>References</h1>
 <div class="references">
-<p>Avants, Brian B., and Nicholas J. Tustison. 2014. “The ITK Image Registration Framework.” <em>Front Neuroinform</em> 7. Penn Image Computing; Science Laboratory, Department of Radiology, University of Pennsylvania Philadelphia, PA, USA.: 39. doi:<a href="http://dx.doi.org/10.3389/fninf.2013.00039">10.3389/fninf.2013.00039</a>. <a href="http://dx.doi.org/10.3389/fninf.2013.00039">http://dx.doi.org/10.3389/fninf.2013.00039</a>.</p>
-<p>Avants, Brian B., Nicholas J. Tustison, Michael Stauffer, Gang Song, Baohua Wu, and James C. Gee. 2014. “The Insight ToolKit Image Registration Framework.” <em>Front Neuroinform</em> 8. Penn Image Computing; Science Laboratory, Department of Radiology, University of Pennsylvania Philadelphia, PA, USA.: 44. doi:<a href="http://dx.doi.org/10.3389/fninf.2014.00044">10.3389/fninf.2014.00044</a>. <a href="http://dx.doi.org/10.3389/fninf.2014.00044">http://dx.doi.org/10.3389/fninf.2014.00044</a>.</p>
-<p>Klein, Arno, Jesper Andersson, Babak A Ardekani, John Ashburner, Brian Avants, Ming-Chang Chiang, Gary E Christensen, et al. 2009. “Evaluation of 14 Nonlinear Deformation Algorithms Applied to Human Brain MRI Registration.” <em>Neuroimage</em> 46 (3). New York State Psychiatric Institute, Columbia University, NY, NY 10032, USA. arno@binarybottle.com: 786–802. doi:<a href="http://dx.doi.org/10.1016/j.neuroimage.2008.12.037">10.1016/j.neuroimage.2008.12.037</a>. <a href="http://dx.doi.org/10.1016/j.neuroimage.2008.12.037">http://dx.doi.org/10.1016/j.neuroimage.2008.12.037</a>.</p>
-<p>Tustison, Nicholas J., and Brian B. Avants. 2013. “Explicit B-Spline Regularization in Diffeomorphic Image Registration.” <em>Front Neuroinform</em> 7. Penn Image Computing; Science Laboratory, Department of Radiology, University of Pennsylvania Philadelphia, PA, USA.: 39. doi:<a href="http://dx.doi.org/10.3389/fninf.2013.00039">10.3389/fninf.2013.00039</a>. <a href="http://dx.doi.org/10.3389/fninf.2013.00039">http://dx.doi.org/10.3389/fninf.2013.00039</a>.</p>
-<p>Tustison, Nicholas J., Brian B. Avants, Philip A. Cook, Yuanjie Zheng, Alexander Egan, Paul A. Yushkevich, and James C. Gee. 2010. “N4ITK: improved N3 Bias Correction.” <em>IEEE Trans Med Imaging</em> 29 (6). Department of Radiology, University of Pennsylvania, Philadelphia, PA 19140, USA. ntustison@wustl.edu: 1310–20. doi:<a href="http://dx.doi.org/10.1109/TMI.2010.2046908">10.1109/TMI.2010.2046908</a>. <a href="http://dx.doi.org/10.1109/TMI.2010.2046908">http://dx.doi.org/10.1109/TMI.2010.2046908</a>.</p>
-<p>Tustison, Nicholas J., Philip A. Cook, Arno Klein, Gang Song, Sandhitsu R. Das, Jeffrey T. Duda, Benjamin M. Kandel, et al. 2014. “Large-Scale Evaluation of ANTs and FreeSurfer Cortical Thickness Measurements.” <em>Neuroimage</em> 99 (Oct). Penn Image Computing; Science Laboratory, University of Pennsylvania, Philadelphia, PA, USA.: 166–79. doi:<a href="http://dx.doi.org/10.1016/j.neuroimage.2014.05.044">10.1016/j.neuroimage.2014.05.044</a>. <a href="http://dx.doi.org/10.1016/j.neuroimage.2014.05.044">http://dx.doi.org/10.1016/j.neuroimage.2014.05.044</a>.</p>
+<p>Avants, Brian B., and Nicholas J. Tustison. 2014. “The ITK Image Registration Framework.” <em>Front Neuroinform</em> 7: 39. doi:<a href="http://dx.doi.org/10.3389/fninf.2013.00039">10.3389/fninf.2013.00039</a>. <a href="http://dx.doi.org/10.3389/fninf.2013.00039">http://dx.doi.org/10.3389/fninf.2013.00039</a>.</p>
+<p>Avants, Brian B., Nicholas J. Tustison, Michael Stauffer, Gang Song, Baohua Wu, and James C. Gee. 2014. “The Insight ToolKit Image Registration Framework.” <em>Front Neuroinform</em> 8: 44. doi:<a href="http://dx.doi.org/10.3389/fninf.2014.00044">10.3389/fninf.2014.00044</a>. <a href="http://dx.doi.org/10.3389/fninf.2014.00044">http://dx.doi.org/10.3389/fninf.2014.00044</a>.</p>
+<p>Klein, Arno, Jesper Andersson, Babak A Ardekani, John Ashburner, Brian Avants, Ming-Chang Chiang, Gary E Christensen, et al. 2009. “Evaluation of 14 Nonlinear Deformation Algorithms Applied to Human Brain MRI Registration.” <em>Neuroimage</em> 46 (3) (Jul): 786–802. doi:<a href="http://dx.doi.org/10.1016/j.neuroimage.2008.12.037">10.1016/j.neuroimage.2008.12.037</a>. <a href="http://dx.doi.org/10.1016/j.neuroimage.2008.12.037">http://dx.doi.org/10.1016/j.neuroimage.2008.12.037</a>.</p>
+<p>Tustison, Nicholas J., and Brian B. Avants. 2013. “Explicit B-Spline Regularization in Diffeomorphic Image Registration.” <em>Front Neuroinform</em> 7: 39. doi:<a href="http://dx.doi.org/10.3389/fninf.2013.00039">10.3389/fninf.2013.00039</a>. <a href="http://dx.doi.org/10.3389/fninf.2013.00039">http://dx.doi.org/10.3389/fninf.2013.00039</a>.</p>
+<p>Tustison, Nicholas J., Brian B. Avants, Philip A. Cook, Yuanjie Zheng, Alexander Egan, Paul A. Yushkevich, and James C. Gee. 2010. “N4ITK: improved N3 Bias Correction.” <em>IEEE Trans Med Imaging</em> 29 (6) (Jun): 1310–1320. doi:<a href="http://dx.doi.org/10.1109/TMI.2010.2046908">10.1109/TMI.2010.2046908</a>. <a href="http://dx.doi.org/10.1109/TMI.2010.2046908">http://dx.doi.org/10.1109/TMI.2010.2046908</a>.</p>
+<p>Tustison, Nicholas J., Philip A. Cook, Arno Klein, Gang Song, Sandhitsu R. Das, Jeffrey T. Duda, Benjamin M. Kandel, et al. 2014. “Large-Scale Evaluation of ANTs and FreeSurfer Cortical Thickness Measurements.” <em>Neuroimage</em> 99 (Oct): 166–179. doi:<a href="http://dx.doi.org/10.1016/j.neuroimage.2014.05.044">10.1016/j.neuroimage.2014.05.044</a>. <a href="http://dx.doi.org/10.1016/j.neuroimage.2014.05.044">http://dx.doi.org/10.1016/j.neuroimage.2014.05.044</a>.</p>
 </div>
 </section></section>
     </div>
