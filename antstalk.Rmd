@@ -157,9 +157,6 @@ built on ITK—probably the most well-vetted medical image analysis package
 in the world  @AvantsITK
 
 ## competitions
-![](./figures/lion.png)
-
-## competitions
 
 - Klein 2009:  Brain Registration (ANTs)
 - Murphy 2010:  Lung Registration (ANTs)
@@ -170,6 +167,9 @@ in the world  @AvantsITK
 - TBA:  BOLD decoding (ANTsR)
 - Substantial work with DTI ( Camino developer in house )
 - STACOM2014 ?
+
+## competitions
+![](./figures/lion.png)
 
 ## papers
 
