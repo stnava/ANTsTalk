@@ -237,8 +237,6 @@ in the world  @AvantsITK
 
 # The stories behind ANTs development
 
-(we can comment this out but I think it would be good to make some notes for posterity)
-
 ## Registration
 
 "I think these images could be better aligned." 
@@ -246,8 +244,10 @@ in the world  @AvantsITK
 ![](figures/normvsnorm.png)
 from [miykael](http://miykael.github.io/nipype-beginner-s-guide/ANTS.html)
 
-## Questions about evolution 
+## Compare chimpanzee and human prefrontal cortex
 ![](figures/chimp_human.png)
+
+[LPF algorithm](http://www.ncbi.nlm.nih.gov/pubmed/15948659)
 
 ## N4
 
@@ -334,6 +334,8 @@ disappointment that so much of what had been developed in the community over the
 
 
 ## KellySlater --> KellyKapowski
+
+![KK-KS](figures/kkks.png)
 
 ## Atropos $+$ KK Example
 
