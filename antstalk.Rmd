@@ -51,6 +51,8 @@ output:
 
 - Integration with *R* $+$ novel tools for prediction, decoding, high-to-low dimensional statistics.
 
+- Collaborations with [neurodebian](http://neuro.debian.net/pkgs/ants.html), [slicer](http://www.slicer.org/), [brainsfit](https://github.com/BRAINSia/BRAINSTools), [nipype](http://nipy.sourceforge.net/nipype/), [itk](http://www.itk.org) and more ...
+
 # Powerful, general-purpose automated or semi-automated registration and segmentation.
 
 ## Fine-grained and flexible maps
@@ -109,7 +111,7 @@ Good software should fade into the background ... however ...
 
 - satellite imagery
 
-- etcetera ...
+- interactive registration (see *Slicer*) and segmentation (see *ITK-SNAP*)
 
 # ANTs was begotten in SyN
 
@@ -238,6 +240,14 @@ in the world  @AvantsITK
 (we can comment this out but I think it would be good to make some notes for posterity)
 
 ## Registration
+
+"I think these images could be better aligned." 
+
+![](figures/normvsnorm.png)
+from [miykael](http://miykael.github.io/nipype-beginner-s-guide/ANTS.html)
+
+## Questions about evolution 
+![](figures/chimp_human.png)
 
 ## N4
 
