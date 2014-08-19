@@ -1,5 +1,5 @@
 ---
-title: <span style="color:red;">An Exegesis of Advanced Normalization Tools (ANTs)</span>
+title: <span style="color:red;">An Exegesis of Advanced Normalization Tools (*ANTs*)</span>
 author: Brian B. Avants, Nicholas J. Tustison, Hans J. Johnson & the ITK and registration community
 bibliography: REFERENCES.bib
 logo:    logo.jpg
@@ -148,7 +148,7 @@ Key definitions
 
 # Merit Badges
 
-## bart
+## 
 ![](./figures/bart.jpg)
 
 ## open source
@@ -331,6 +331,10 @@ Randomly selected healthy individuals.  Atropos gets good performance across age
 <div align="center"><img height="350" src="./figures/corticalThicknessEstimation.png" frameborder="0"></img></div>
 
 In contrast to FreeSurfer which warps coupled surface meshes to segment the gray matter, ANTs diffeomorphically registers the white matter to the combined gray/white matters while simultaneously estimating thickness.
+
+## Data inspection w/*ANTsR*
+
+spider plots ....
 
 ## Evaluation
 
