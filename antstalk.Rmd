@@ -63,16 +63,59 @@ output:
 <img style="float: right" src="figures/penn.png" />
 <img style="float: left" src="figures/picsl.jpg" />
 
-
 # General theory tunable to specific domains:  *no-free lunch*
 
-## Fine-grained and flexible 
+## Fine-grained and flexible
 ![](./figures/highresdiffeos.jpg)
 
 # Use prior knowledge to broaden performance
 
 ## Mammalian cortical thickness computed with ANTs
 ![](./figures/species.jpg)
+
+# ANTs was begotten in SyN
+
+## Community response
+
+- Just wanted to let you know---ANTS worked for me!  I seem to be getting interesting results along the line_ s of what I was predicting my study would find in specific parts of the striatum.  _--Patryk from Ireland_
+
+- To put not to fine a point on it---ANTS rocks.  _--Craig from California_
+
+- The ANTS package is very, very cool!  _--Jaime from Wisconsin_
+
+- Thank you for sharing this work, and congratulations for a job well done.  _--Alexandra from North Carolina_
+
+## SyN formulation
+$$
+\begin{aligned}
+  \inf_{\phi_1} \inf_{\phi_2}   \Bigg[
+                     \int_0^{0.5} & \left( \|v_1(t)\|_L^2 + \|v_2(t)\|_L^2 \right) dt \nonumber \\
+                     &+
+                     \int_{\Omega} \Pi_{\sim}
+                          \left( I \circ \phi_1^{-1}(\mathbf{x},0.5),
+                           J \circ \phi_2^{-1}(\mathbf{x},0.5) \right) d\Omega \Bigg]
+\end{aligned}
+$$
+where
+$$
+\begin{align}
+  \frac{d \phi_i(\mathbf{x},t)}{dt} = v_i( \phi_i(\mathbf{x},t), t ),\,\, \phi_i(\mathbf{x},0) = \mathbf{Id}, \,\, i \in \{1,2\}
+\end{align}
+$$
+and $\Pi_{\sim}$ is an arbitrary similarity metric (or metrics).
+
+## SyN for optimization symmetry
+![](./figures/fishSyN.png)
+Images deform symmetrically along the shape manifold.  This eliminates bias in the
+measurement of image differences.
+
+## Minimizing interpolations
+![](./figures/oneInterpolation.png)
+
+$\mathcal{T}_{total} = \mathcal{T}_1 \circ \mathcal{T}_2 \circ \mathcal{T}_3 \circ \mathcal{T}_4$
+
+To avoid compounding interpolation error with the concatenation of transformations, ANTs never
+uses more than a single interpolation.
 
 # Library for multivariate image registration, segmentation & statistics
 
@@ -148,7 +191,7 @@ Key definitions
 
 # Merit Badges
 
-## 
+##
 ![](./figures/bart.jpg)
 
 ## open source
@@ -174,13 +217,9 @@ in the world  @AvantsITK
 ## papers
 
 - registration : ANTs vs. everything else @Klein2009
-
 - segmentation : Atropos vs. SPM, etc.
-
 - bias correction : N4 vs N3
-
 - cortical thickness : ANTs vs. FreeSurfer @Tustison2014d
-
 - compatibility with R
 
 
@@ -270,6 +309,9 @@ disappointment that so much of what had been developed in the community over the
 
 * 3-tissue algorithm in ImageMath ---> multivariate, n-class Atropos
 
+## Atropos components
+<div align="center"><img height="350" src="./figures/atropos2.png" frameborder="0"></img></div>
+
 
 ## KellySlater --> KellyKapowski
 
@@ -357,7 +399,6 @@ we can do this for gender.
 <div align="center"><img height="350" src="./figures/antsCtCall.png" frameborder="0"></img></div>
 
 “Talk is cheap, show me the code.” <sub>—Linus Torvald</sub>
-
 
 # Components
 
