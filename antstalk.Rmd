@@ -32,6 +32,10 @@ output:
     fig_width: 5
 ---
 
+## 
+<div align="center"><img src="./figures/ireland.png" frameborder="0"></img></div>
+
+
 # Background
 
 ## Big picture
