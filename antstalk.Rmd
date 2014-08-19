@@ -36,15 +36,25 @@ output:
 
 ## Big picture
 
+- Powerful, general-purpose automated or semi-automated registration and segmentation.
+
 - Differentiable maps with differentiable inverse $+$ *statistics in these spaces*
 
 - Customizable multivariate segmentation & registration
 
-- High-dimensional statistics in low-dimensional spaces
-
 - Borg philosophy: from I/O, to processing to statistical methods
 
 - Open source, testing, many examples, consistent style, multiple platforms,  active community support ...
+
+- Integration with *R* $+$ novel tools for prediction, decoding, high-to-low dimensional statistics.
+
+## Applications
+
+- microscopy 
+
+- satellite imagery
+
+- etcetera ...
 
 ## Tools you can use for imaging science
 
