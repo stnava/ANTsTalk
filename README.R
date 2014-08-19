@@ -9,7 +9,7 @@ library(rmarkdown)
 srcdir<-"./"
 pre='antstalk'
 render( paste(pre,".Rmd",sep=''), clean=TRUE, "revealjs_presentation", output_file='index.html' ) 
-# render( paste(pre,".Rmd",sep=''), clean=TRUE, "pdf_document" )
+render( paste(pre,".Rmd",sep=''), clean=TRUE, "pdf_document" )
 # render( paste(pre,".Rmd",sep=''), clean=TRUE, "ioslides_presentation" ) 
 # render( paste(pre,".Rmd",sep=''), clean=TRUE, "beamer_presentation" ) 
 

@@ -35,10 +35,9 @@ output:
 ## 
 <div align="center"><img src="./figures/ireland.png" frameborder="0"></img></div>
 
+#  Big picture
 
-# Background
-
-## Big picture
+## 
 
 - Powerful, general-purpose automated or semi-automated registration and segmentation.
 
@@ -52,40 +51,65 @@ output:
 
 - Integration with *R* $+$ novel tools for prediction, decoding, high-to-low dimensional statistics.
 
-## Applications
+# Powerful, general-purpose automated or semi-automated registration and segmentation.
+
+## Fine-grained and flexible maps
+![](./figures/highresdiffeos.jpg)
+
+## Anatomical quantification
+![](./figures/sata2013.png)
+
+# Differentiable maps with differentiable inverse $+$ *statistics in these spaces*
+
+## Brain images as *high-dimensional data*
+![](./figures/speciestemplates.png)
+
+## Political activism
+
+<div align="center"><img src="figures/democrat_left_repub_right.png" frameborder="0"></img></div>
+
+[congress commentary](http://ntustison.github.io/CongressionalFaceTemplates/)
+
+# Customizable multivariate segmentation & registration
+
+## Mammalian cortical thickness computed with ANTs
+![](./figures/species.jpg)
+
+## General theory tunable to specific domains:  *no-free lunch*
+![](./figures/brats.png)
+
+# Agnostic data integration: prediction, decoding, diagnosis
+
+## *ITK+ANTs+R = ANTsR*
+
+## Agnostic statistics
+![](./figures/antsrex.jpg)
+
+## How do we quantify _life span_ brain health in individuals and in populations?
+![](./figures/lifebrains.jpg)
+
+## ANTs*R* $\rightarrow$ new insight via quantification
+
+Good software should fade into the background ... however ...
+
+<span style="color:yellow;">
+ As is common in science, the first big breakthrough in our understanding ...
+ [came from] an improvement in measurement.
+</span>
+
+<span style="color:pink;">
+> Daniel Kahnemann, *Thinking, Fast and Slow* (2011)
+</span>
+
+
+
+# Solid Core Permits Broad Applications
 
 - microscopy 
 
 - satellite imagery
 
 - etcetera ...
-
-## Tools you can use for imaging science
-
-- Core developers:  *B. Avants, N. Tustison, H. J. Johnson, J. T. Duda*
-
-- Many contributors, including users ...
-
-- Multi-platform, multi-threaded C++ [stnava.github.io/ANTs](stnava.github.io/ANTs)
-
-- Developed in conjunction with [http://www.itk.org/](http://www.itk.org/)
-
-- R wrapping and extension [stnava.github.io/ANTsR](stnava.github.io/ANTsR)
-
-- rapid development, regular testing $+$ many eyes $\rightarrow$ bugs are shallow
-
-<img style="float: right" src="figures/penn.png" />
-<img style="float: left" src="figures/picsl.jpg" />
-
-# General theory tunable to specific domains:  *no-free lunch*
-
-## Fine-grained and flexible
-![](./figures/highresdiffeos.jpg)
-
-# Use prior knowledge to broaden performance
-
-## Mammalian cortical thickness computed with ANTs
-![](./figures/species.jpg)
 
 # ANTs was begotten in SyN
 
@@ -112,9 +136,7 @@ $$
 $$
 where
 $$
-\begin{align}
   \frac{d \phi_i(\mathbf{x},t)}{dt} = v_i( \phi_i(\mathbf{x},t), t ),\,\, \phi_i(\mathbf{x},0) = \mathbf{Id}, \,\, i \in \{1,2\}
-\end{align}
 $$
 and $\Pi_{\sim}$ is an arbitrary similarity metric (or metrics).
 
@@ -139,32 +161,6 @@ uses more than a single interpolation.
 ## Modality integration
 ![](./figures/ptbp2.png)
 
-
-# *ITK+ANTs+R = ANTsR*
-
-## Agnostic statistics
-![](./figures/antsrex.jpg)
-
-## How do we quantify _life span_ brain health in individuals and in populations?
-![](./figures/lifebrains.jpg)
-
-
-## How do we integrate modalities and organ systems?
-
-need unbrain example here
-
-## ANTs*R* $\rightarrow$ new insight via quantification
-
-Good software should fade into the background ... however ...
-
-<span style="color:yellow;">
- As is common in science, the first big breakthrough in our understanding ...
- [came from] an improvement in measurement.
-</span>
-
-<span style="color:pink;">
-> Daniel Kahnemann, *Thinking, Fast and Slow* (2011)
-</span>
 
 
 ## ANTs v Freesurfer
@@ -426,9 +422,17 @@ we can do this for gender.
 
 # Analysis philosophy and published opinions
 
-# Voodoo in voxel-based analysis
+## What is and *is not* image registration
 
-# Instrumentation bias in the use and evaluation of software
+[*not* registration](http://www.ncbi.nlm.nih.gov/pubmed/23116330)
+
+## Voodoo in voxel-based analysis
+
+[logical circularity VBA](http://www.ncbi.nlm.nih.gov/pubmed/?term=logical+circularity+tustison)
+
+## Instrumentation bias in the use and evaluation of software
+
+[Instrumentation bias in the use and evaluation of software](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3766821/?report=reader)
 
 # Discussion
 
@@ -443,6 +447,25 @@ There are several problems and shortcomings to this analysis.
 
 Some strengths include relatively few assumptions, a flexible
 implementation and open-science approach.
+
+![systems of the body](figures/systems.png)
+
+## Tools you can use for imaging science
+
+- Core developers:  *B. Avants, N. Tustison, H. J. Johnson, J. T. Duda*
+
+- Many contributors, including users ...
+
+- Multi-platform, multi-threaded C++ [stnava.github.io/ANTs](stnava.github.io/ANTs)
+
+- Developed in conjunction with [http://www.itk.org/](http://www.itk.org/)
+
+- R wrapping and extension [stnava.github.io/ANTsR](stnava.github.io/ANTsR)
+
+- rapid development, regular testing $+$ many eyes $\rightarrow$ bugs are shallow
+
+<img style="float: right" src="figures/penn.png" />
+<img style="float: left" src="figures/picsl.jpg" />
 
 ## References {#reffont}
 
