@@ -296,7 +296,7 @@ OPTIONS:
 </section><section id="the-glove-comparison-with-freesurfer" class="slide level2">
 <h1>The Glove: Comparison with Freesurfer</h1>
 <p><em>Question</em>: In the absence of ground truth, how do we evaluate performance?</p>
-<p><em>Answer</em>: Use prediction of demographics from quantitative data as a reference for the power of our methods. One of the most well-known, most easily obtained, and most confident measures available is “age.” So we take 50% of the thickness data to train a model (e.g. linear regression) and then calculate the model’s age prediction error on the other 50%. We do this for n=1000 permutations to build a distribution. Similarly, we can do this for gender.</p>
+<p><em>Answer</em>: Use prediction of demographics from quantitative cortical thickness data as a reference for the power of our methods. One of the most well-known, most easily obtained, and most confident measures available is “age.” So we take 50% of the thickness data to train a model (e.g. linear regression) and then calculate the model’s age prediction error on the other 50%. We do this for n=1000 permutations to build a distribution. Similarly, we can do this for gender.</p>
 </section><section id="ants-vs-freesurfer" class="slide level2">
 <h1>ANTS vs Freesurfer</h1>
 <div align="center">
