@@ -297,6 +297,8 @@ available.  "What's wrong with you people!"
 
 ![KK-KS](figures/kkks.png)
 
+Several years of development by SR Das, BA, NT (KK fan)
+
 ## Atropos $+$ KK Example
 
 ![](./figures/atropos.png)
