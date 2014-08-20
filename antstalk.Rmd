@@ -32,20 +32,27 @@ output:
     fig_width: 5
 ---
 
+#  ANTs*R* is a platform for <span style="color:red;">reproducible</span> studies of <span style="color:red;">high-dimensional</span> data
+
+#  ANTs*R* is built from general <span style="color:red;">mathematical</span> and <span style="color:red;">software engineering</span> principles
+
+
+##  ANTs*R* Platform for Medical Imaging
+
+![](figures/antsgoals.png)
+
 ## 
 <div align="center"><img src="./figures/ireland.png" frameborder="0"></img></div>
 
-#  Big picture
-
 ## 
 
-- Powerful, general-purpose automated or semi-automated registration and segmentation.
+- Powerful, general-purpose, <span style="color:red;">well-evaluated</span> registration and segmentation.
 
-- Differentiable maps with differentiable inverse $+$ *statistics in these spaces*
+- Differentiable maps with differentiable inverse <span style="color:red;">$+$ statistics in these spaces</span>
 
-- Customizable multivariate segmentation & registration
+- Evaluated in multiple problem domains</span> via internal studies & open competition
 
-- Borg philosophy: from I/O, to processing to statistical methods
+- Borg philosophy: <span style="color:red;">"best of"</span> from I/O, to processing to statistical methods
 
 - Open source, testing, many examples, consistent style, multiple platforms,  active community support ...
 
@@ -55,11 +62,19 @@ output:
 
 # Powerful, general-purpose automated or semi-automated registration and segmentation.
 
+## Geometric transformations
+![](./figures/antstransforms.png)
+
+## Intensity transformations
+![](./figures/antsmetrics.png)
+
 ## Fine-grained and flexible maps
 ![](./figures/highresdiffeos.jpg)
 
 ## Anatomical quantification
 ![](./figures/sata2013.png)
+
+we provided the *standard* registration results for $>$ 20,000 image pairs at [SATA 2013](https://masi.vuse.vanderbilt.edu/workshop2013/index.php/MICCAI_2013_SATA_Challenge_and_Workshop:Current_events)
 
 # Differentiable maps with differentiable inverse $+$ *statistics in these spaces*
 
@@ -87,8 +102,7 @@ output:
 ## Agnostic statistics
 ![](./figures/antsrex.jpg)
 
-## How do we quantify _life span_ brain health in individuals and in populations?
-![](./figures/lifebrains.jpg)
+[McMillan et al.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3961542/)
 
 ## ANTs*R* $\rightarrow$ new insight via quantification
 
@@ -103,27 +117,24 @@ Good software should fade into the background ... however ...
 > Daniel Kahnemann, *Thinking, Fast and Slow* (2011)
 </span>
 
+# *Questions* & ANTs*R*s
+
+# Can we do a better job of aligning these brains?
+
+##  Brain mapping in the early 2000s was based on Matlab scripts or the *Demons* algorithm
+
+![](figures/oldbrainmapping.png)
+
+## These approaches over-penalized large deformations and were inadequate for several classes of problems
+
+## Compare chimpanzee and human prefrontal cortex
+![](figures/chimp_human.png)
+
+[LPF algorithm](http://www.ncbi.nlm.nih.gov/pubmed/15948659)
 
 
-# Solid Core Permits Broad Applications
 
-- microscopy 
-
-- satellite imagery
-
-- interactive registration (see *Slicer*) and segmentation (see *ITK-SNAP*)
-
-# ANTs was begotten in SyN
-
-## Community response
-
-- Just wanted to let you know---ANTS worked for me!  I seem to be getting interesting results along the line_ s of what I was predicting my study would find in specific parts of the striatum.  _--Patryk from Ireland_
-
-- To put not to fine a point on it---ANTS rocks.  _--Craig from California_
-
-- The ANTS package is very, very cool!  _--Jaime from Wisconsin_
-
-- Thank you for sharing this work, and congratulations for a job well done.  _--Alexandra from North Carolina_
+# ANTs was begotten in SyN: Community demand for better technology
 
 ## SyN formulation
 $$
@@ -155,20 +166,6 @@ $\mathcal{T}_{total} = \mathcal{T}_1 \circ \mathcal{T}_2 \circ \mathcal{T}_3 \ci
 To avoid compounding interpolation error with the concatenation of transformations, ANTs never
 uses more than a single interpolation.
 
-# Library for multivariate image registration, segmentation & statistics
-
-## Anatomical quantification
-![](./figures/antsatroposn4malf.png)
-
-## Modality integration
-![](./figures/ptbp2.png)
-
-
-
-## ANTs v Freesurfer
-![](./figures/antsvfreesurfer2.png)
-
-
 ## SyN Example
 
 <!-- syn example -->
@@ -177,77 +174,35 @@ uses more than a single interpolation.
 
 [SyN video](http://www.youtube.com/embed/3I9RcRtpOvw)
 
-## Theory + evaluation + reproducibility
-![](./figures/reprregevex_sm.jpg)
-
-## Founding Developers
-![](./figures/nick.jpg)
-
-## A long history of research
-![](./figures/lineage.jpg)
-
-
-## Rigorous transformation definition is key
-
-ANTs and ITK are developed together: <span style="color:red;">see @Avants2014, @Tustison2013, @Tustison2010</span> and more ...
-
-Key definitions
-
-- physical space
-
-- transformation definition aware of physical space
-
-- optimization space consistent with above
-
-- unit testing
-
-# Merit Badges
-
-##
-![](./figures/bart.jpg)
-
-## open source
-
-built on ITK—probably the most well-vetted medical image analysis package
-in the world  @AvantsITK
-
-## competitions
-
-- Klein 2009:  Brain Registration (ANTs)
-- Murphy 2010:  Lung Registration (ANTs)
-- SATA 2012:  Multi-Atlas Segmentation (ANTs+JointLabelFusion)
-- SATA 2013:  Multi-Atlas Segmentation (ANTs+JointLabelFusion)
-- BRATS 2013:  Multivariate Brain Segmentation (ANTsR)
-- Yushkevich’s Hipp Atlas:  ( hippocampusubfield.com )
-- TBA:  BOLD decoding (ANTsR)
-- Substantial work with DTI ( Camino developer in house )
-- STACOM2014 ?
-
-## competitions
-![](./figures/lion.png)
-
-## papers
-
-- registration : ANTs vs. everything else @Klein2009
-- segmentation : Atropos vs. SPM, etc.
-- bias correction : N4 vs N3
-- cortical thickness : ANTs vs. FreeSurfer @Tustison2014d
-- compatibility with R
-
-
-# The stories behind ANTs development
-
-## Registration
-
-"I think these images could be better aligned." 
+## SyGN - templates and averages in deformation space
 
 ![](figures/normvsnorm.png)
 from [miykael](http://miykael.github.io/nipype-beginner-s-guide/ANTS.html)
 
-## Compare chimpanzee and human prefrontal cortex
-![](figures/chimp_human.png)
+[geodesic image averages](http://www.ncbi.nlm.nih.gov/pubmed/15501083)
 
-[LPF algorithm](http://www.ncbi.nlm.nih.gov/pubmed/15948659)
+[optimal templates 2](http://www.ncbi.nlm.nih.gov/pubmed/19818860)
+
+[canine template](http://www.ncbi.nlm.nih.gov/pubmed/23284904)
+
+[chimpanzees](http://www.ncbi.nlm.nih.gov/pubmed/23516289)
+
+# Can we improve segmentation in "challenging" populations?
+
+##  Segmentation Framework 
+
+1. Bias correction (with optional priors)
+
+2. Prior-based tissue segmentation
+
+3. Prior-based anatomical labeling 
+
+4. Iteration through above steps (optional)
+
+## We tried N3 and FSL-FAST for these problems ... and *dislike* Matlab ...
+
+failed to locate well-implemented open-source resources for general purpose prior-based 
+segmentation and inhomogeneity correction ...
 
 ## N4
 
@@ -258,9 +213,9 @@ bias correction---used in important projects such as ADNI
 to incorporate into an ANTs processing pipeline.
 
 * We had so much trouble converting back and forth between ITK-compatible Nifti format and
-MINC that Brian suggested we try to implement N3 in ITK.
+MINC that BA suggested we try to implement N3 in ITK.
 
-* I had some experience with B-splines and added some other tweaks giving birth to N4.
+* NT had some experience with B-splines and added some other tweaks giving birth to N4.
 
 ## N4 Introduction
 
@@ -316,24 +271,29 @@ OPTIONS:
 ```
 > Talk is cheap, show me the code.
 
-## Atropos
+
+
+##  Atropos: Bayesian $N$-class multivariate segmentation 
 
 * Similar to our experience with N3, we tried to incorporate FAST (from the FMRIB at Oxford)
 into an ANTs processing pipeline.
 
-* Phil (?) pointed out the difficulty of incorporating priors into FAST.
+* We failed to successfully incorporate priors into FAST.
 
-* Related, Brian went to a segmentation-related worksop at MICCAI and aired publicly his
-disappointment that so much of what had been developed in the community over the last
-20+ years has not been made publicly available.  "What's wrong with you people!"
+* Related, BA went to a segmentation-related worksop at MICCAI and
+aired disappointment that so much of what had been developed in the
+community over the last 20+ years has not been made publicly
+available.  "What's wrong with you people!"
 
-* 3-tissue algorithm in ImageMath ---> multivariate, n-class Atropos
+* 3-tissue algorithm in ImageMath $\rightarrow$ multivariate, n-class Atropos
 
 ## Atropos components
 <div align="center"><img height="350" src="./figures/atropos2.png" frameborder="0"></img></div>
 
 
-## KellySlater --> KellyKapowski
+# Can we accurately measure cortical thickness by DiReCTly using the image space?
+
+## KellySlater $\rightarrow$ KellyKapowski
 
 ![KK-KS](figures/kkks.png)
 
@@ -341,10 +301,38 @@ disappointment that so much of what had been developed in the community over the
 
 ![](./figures/atropos.png)
 
+## FTD
 
-# Putting it all together
+## Babies
 
-## The ANTs cortical thickness pipeline
+
+
+# Can we quantify _life span_ brain health in individuals and in populations?
+
+## "Big data" problem from public resources
+![](./figures/lifebrains.jpg)
+
+## The Glove: Comparison with Freesurfer
+
+_Question_:  In the absence of ground truth, how do we evaluate performance?
+
+_Answer_:  Use prediction of demographics from quantitative data as a reference for the power of our methods.  One of the most well-known, most easily obtained,
+and most confident measures available is “age.”  So we take 50% of the thickness data to
+train a model (e.g. linear regression) and then calculate the model’s age prediction error
+on the other 50%.  We do this for n=1000 permutations to build a distribution.   Similarly,
+we can do this for gender.
+
+## ANTS vs Freesurfer
+
+<div align="center"><img height="350" src="./figures/evaluation.png" frameborder="0"></img></div>
+
+## ANTs vs Freesurfer 2
+![](./figures/antsvfreesurfer2.png)
+
+## ANTs MALF Labeling
+![](./figures/antsatroposn4malf.png)
+
+## The ANTs structural brain mapping pipeline
 
 ![](./figures/pipeline.png)
 
@@ -396,55 +384,21 @@ Randomly selected healthy individuals.  Atropos gets good performance across age
 
 In contrast to FreeSurfer which warps coupled surface meshes to segment the gray matter, ANTs diffeomorphically registers the white matter to the combined gray/white matters while simultaneously estimating thickness.
 
-## Data inspection w/*ANTsR*
 
-spider plots ....
+# Can we implement and release, with provenance, a full multiple modality pipeline quantifying adolescent development from public multiple modality MRI data?
 
-## Evaluation
+## Scientific Data 2014
+![](./figures/ptbp2.png)
 
-_Question_:  In the absence of ground truth, how do we evaluate performance?
 
-_Answer_:  We use demographic information with known thickness sensitivity and correlate
-with measured thickness quantities.  One of the most well-known, most easily obtained,
-and most confident measures available is “age.”  So we take 50% of the thickness data to
-train a model (e.g. linear regression) and then calculate the model’s age prediction error
-on the other 50%.  We do this for n=1000 permutations to build a distribution.   Similarly,
-we can do this for gender.
+# Can we customize these methods for a challenging multivariate segmentation problem with clinical relevance?
 
-<div align="center"><img height="350" src="./figures/evaluation.png" frameborder="0"></img></div>
+## BRATS 2013
 
-## A couple notes on usage
+# Can we address subtle questions in brain and cognition via imaging-specific dimensionality reduction?
 
-* Out of the many cortical thickness algorithms that have been proposed, FreeSurfer dominates.  And rightfully so, because it works well and has been the only publicly available tool (until reccently).
-* In the same spirit, we have made our tools publicly available.  Usage is similar to that of FreeSurfer (see below).  We also make several templates available.
+##  Eigenanatomy & SCCAN 
 
-<div align="center"><img height="350" src="./figures/antsCtCall.png" frameborder="0"></img></div>
-
-“Talk is cheap, show me the code.” <sub>—Linus Torvald</sub>
-
-# Components
-
-## Software engineering
-
-<!-- ants gource -->
-
-<div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/7X61iBFDF1I" frameborder="0" allowfullscreen></iframe></div>
-
-[ants gource](http://www.youtube.com/embed/7X61iBFDF1I)
-
-# Analysis philosophy and published opinions
-
-## What is and *is not* image registration
-
-[*not* registration](http://www.ncbi.nlm.nih.gov/pubmed/23116330)
-
-## Voodoo in voxel-based analysis
-
-[logical circularity VBA](http://www.ncbi.nlm.nih.gov/pubmed/?term=logical+circularity+tustison)
-
-## Instrumentation bias in the use and evaluation of software
-
-[Instrumentation bias in the use and evaluation of software](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3766821/?report=reader)
 
 # Discussion
 
@@ -454,6 +408,26 @@ There are several problems and shortcomings to this analysis.
 
 - Customizable for specific problems but not too specific
 - Latest theoretical advances in registration not yet wrapped for users
+
+
+## Solid Core Permits Broad Applications
+
+- microscopy 
+
+- satellite imagery
+
+- interactive registration (see *Slicer*) and segmentation (see *ITK-SNAP*)
+
+
+## Community response
+
+- Just wanted to let you know---ANTS worked for me!  I seem to be getting interesting results along the line_ s of what I was predicting my study would find in specific parts of the striatum.  _--Patryk from Ireland_
+
+- To put not to fine a point on it---ANTS rocks.  _--Craig from California_
+
+- The ANTS package is very, very cool!  _--Jaime from Wisconsin_
+
+- Thank you for sharing this work, and congratulations for a job well done.  _--Alexandra from North Carolina_
 
 ## Strengths
 
@@ -478,6 +452,111 @@ implementation and open-science approach.
 
 <img style="float: right" src="figures/penn.png" />
 <img style="float: left" src="figures/picsl.jpg" />
+
+
+## competitions
+
+- Klein 2009:  Brain Registration (ANTs)
+- Murphy 2010:  Lung Registration (ANTs)
+- SATA 2012:  Multi-Atlas Segmentation (ANTs+JointLabelFusion)
+- SATA 2013:  Multi-Atlas Segmentation (ANTs+JointLabelFusion)
+- BRATS 2013:  Multivariate Brain Segmentation (ANTsR)
+- Yushkevich’s Hipp Atlas:  ( hippocampusubfield.com )
+- TBA:  BOLD decoding (ANTsR)
+- Substantial work with DTI ( Camino developer in house )
+- STACOM2014 ?
+
+## 
+![](./figures/lion.png)
+
+
+
+## Data inspection w/*ANTsR*
+
+spider plots ....
+
+## A couple notes on usage
+
+* Out of the many cortical thickness algorithms that have been proposed, FreeSurfer dominates.  And rightfully so, because it works well and has been the only publicly available tool (until reccently).
+* In the same spirit, we have made our tools publicly available.  Usage is similar to that of FreeSurfer (see below).  We also make several templates available.
+
+<div align="center"><img height="350" src="./figures/antsCtCall.png" frameborder="0"></img></div>
+
+“Talk is cheap, show me the code.” <sub>—Linus Torvald</sub>
+
+
+## Software engineering
+
+<!-- ants gource -->
+
+<div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/7X61iBFDF1I" frameborder="0" allowfullscreen></iframe></div>
+
+[ants gource](http://www.youtube.com/embed/7X61iBFDF1I)
+
+
+
+
+# Library for multivariate image registration, segmentation & statistics
+
+
+## Theory + evaluation + reproducibility
+![](./figures/reprregevex_sm.jpg)
+
+## Founding Developers
+![](./figures/nick.jpg)
+
+## A long history of research
+![](./figures/lineage.jpg)
+
+
+## Rigorous transformation definition is key
+
+ANTs and ITK are developed together: <span style="color:red;">see @Avants2014, @Tustison2013, @Tustison2010</span> and more ...
+
+Key definitions
+
+- physical space
+
+- transformation definition aware of physical space
+
+- optimization space consistent with above
+
+- unit testing
+
+# Merit Badges
+
+##
+![](./figures/bart.jpg)
+
+## open source
+
+built on ITK—probably the most well-vetted medical image analysis package
+in the world  @AvantsITK
+
+## papers
+
+- registration : ANTs vs. everything else @Klein2009
+- segmentation : Atropos vs. SPM, etc.
+- bias correction : N4 vs N3
+- cortical thickness : ANTs vs. FreeSurfer @Tustison2014d
+- compatibility with R
+
+# Analysis philosophy and published opinions
+
+## What is and *is not* image registration
+
+[*not* registration](http://www.ncbi.nlm.nih.gov/pubmed/23116330)
+
+## Voodoo in voxel-based analysis
+
+[logical circularity VBA](http://www.ncbi.nlm.nih.gov/pubmed/?term=logical+circularity+tustison)
+
+## Instrumentation bias in the use and evaluation of software
+
+[Instrumentation bias in the use and evaluation of software](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3766821/?report=reader)
+
+
+
 
 ## References {#reffont}
 
