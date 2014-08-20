@@ -41,7 +41,7 @@ output:
 
 ![](figures/antsgoals.png)
 
-this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/)
+this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is [this one](http://stnava.github.io/RKRNS/)
 
 ## 
 <div align="center"><img src="./figures/ireland.png" frameborder="0"></img></div>
