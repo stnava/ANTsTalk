@@ -136,7 +136,7 @@ Good software should fade into the background ... however ...
 
 
 
-# ANTs was begotten in SyN: "science is the belief in the ignorance of experts"
+# <span style="color:red;">ANTs was begotten in SyN:</span> "science is the belief in the ignorance of experts"
 
 ## SyN formulation
 $$
