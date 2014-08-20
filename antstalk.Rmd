@@ -385,7 +385,7 @@ Randomly selected healthy individuals.  Atropos gets good performance across age
 In contrast to FreeSurfer which warps coupled surface meshes to segment the gray matter, ANTs diffeomorphically registers the white matter to the combined gray/white matters while simultaneously estimating thickness.
 
 
-# Can we implement and release, with provenance, a full multiple modality pipeline quantifying adolescent development from public multiple modality MRI data?
+# Can we implement and release, with provenance, a multiple modality MRI map of adolescent brain development from public MRI data?
 
 ## Scientific Data 2014
 ![](./figures/ptbp2.png)
