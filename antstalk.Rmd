@@ -314,6 +314,8 @@ Several years of development by SR Das, BA, NT (KK fan)
 ## "Big data" problem from public resources
 ![](./figures/lifebrains.jpg)
 
+TOT, NKI, IXI, Oasis, ADNI ... several thousand images
+
 ## The Glove: Comparison with Freesurfer
 
 _Question_:  In the absence of ground truth, how do we evaluate performance?
