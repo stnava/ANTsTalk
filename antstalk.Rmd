@@ -401,7 +401,7 @@ In contrast to FreeSurfer which warps coupled surface meshes to segment the gray
 
 # Can we address subtle questions in brain and cognition via imaging-specific dimensionality reduction?
 
-##  Eigenanatomy & SCCAN 
+##  [Eigenanatomy](http://www.ncbi.nlm.nih.gov/pubmed/24852460) & [SCCAN](http://www.ncbi.nlm.nih.gov/pubmed/?term=avants+SCCAN)
 
 
 # Discussion
