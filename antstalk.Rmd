@@ -404,10 +404,10 @@ In contrast to FreeSurfer which warps coupled surface meshes to segment the gray
 
 ## Problems
 
-There are several problems and shortcomings to this analysis.
-
 - Customizable for specific problems but not too specific
+- Rapid development: still need familiarity with compilation for latest ANTs
 - Latest theoretical advances in registration not yet wrapped for users
+- Need more [Documentation](http://stnava.github.io/ANTs/)  & [testing](http://testing.psychiatry.uiowa.edu/CDash/index.php?project=ANTS) ...
 
 
 ## Solid Core Permits Broad Applications
