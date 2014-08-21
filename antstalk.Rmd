@@ -121,7 +121,7 @@ we provided the *standard* registration results for $>$ 20,000 image pairs at [S
 
 ## history of evaluation
 
-![evaluation](figures/evalhistory.png)
+<div align="center"><img height="350" src="figures/evalhistory.png" frameborder="0"></img></div>
 
 
 # Differentiable maps with differentiable inverse $+$ *statistics in these spaces*
