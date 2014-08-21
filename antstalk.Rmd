@@ -116,7 +116,7 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 
 ## Evaluated on anatomical quantification
 
-![](./figures/figures/evalhistory.png)
+![](./figures/evalhistory.png)
 
 ## Sata 2013
 ![](./figures/sata2013.png)
