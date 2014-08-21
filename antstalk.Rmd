@@ -101,6 +101,10 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 
 # Powerful, general-purpose automated or semi-automated registration and segmentation.
 
+## overview
+
+![evaluation](figures/prezi2.png)
+
 ## Geometric transformations
 ![](./figures/antstransforms.png)
 
@@ -114,6 +118,11 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 ![](./figures/sata2013.png)
 
 we provided the *standard* registration results for $>$ 20,000 image pairs at [SATA 2013](https://masi.vuse.vanderbilt.edu/workshop2013/index.php/MICCAI_2013_SATA_Challenge_and_Workshop:Current_events)
+
+## history of evaluation
+
+![evaluation](figures/evalhistory.png)
+
 
 # Differentiable maps with differentiable inverse $+$ *statistics in these spaces*
 
