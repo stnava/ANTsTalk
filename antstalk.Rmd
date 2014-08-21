@@ -114,14 +114,14 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 ## Fine-grained and flexible maps
 ![](./figures/highresdiffeos.jpg)
 
-## Anatomical quantification
+## Evaluated on anatomical quantification
+
+<div align="center"><img height="600" src="figures/evalhistory.png" frameborder="0"></img></div>
+
+## Sata 2013
 ![](./figures/sata2013.png)
 
 we provided the *standard* registration results for $>$ 20,000 image pairs at [SATA 2013](https://masi.vuse.vanderbilt.edu/workshop2013/index.php/MICCAI_2013_SATA_Challenge_and_Workshop:Current_events)
-
-## history of evaluation
-
-<div align="center"><img height="350" src="figures/evalhistory.png" frameborder="0"></img></div>
 
 
 # Differentiable maps with differentiable inverse $+$ *statistics in these spaces*
