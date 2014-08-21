@@ -355,6 +355,8 @@ Several years of development by SR Das, BA, NT (KK fan)
 
 ## Babies
 
+![](./figures/baby.png)
+
 
 
 # Can we quantify _life span_ brain health in individuals and in populations?
