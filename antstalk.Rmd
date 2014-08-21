@@ -72,7 +72,7 @@ we map image pairs with a *transformation* and a *metric*
 
 ## how do we cluster the statistical fields that arise from these maps?
 
-## how do we cluster these fields when we have supervision and associate them with outcomes?
+## how do we cluster these fields with supervision and associate clusters with outcomes?
 
 ##  <span style="color:red;">ANTs*R*</span> Platform for Medical Imaging
 
