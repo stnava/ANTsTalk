@@ -36,9 +36,10 @@ output:
 
 #  ANTs*R* is built from general <span style="color:red;">mathematical</span> and <span style="color:red;">software engineering</span> principles
 
+<!--
 ## Questions driving ANTs development
 
-* how do we compare image pairs?
+* how do we compare image pairs? anatomical image pairs?
 
 * what is the pairwise similarity?
 
@@ -53,9 +54,27 @@ output:
 * how to cluster them when we have supervision .... sccan
 
 * (give examples in R)
+-->
 
+## Images are high-dimensional data (SNPs, demographics...)
 
-##  ANTs*R* Platform for Medical Imaging
+<div align="center"><iframe width="854" height="510" src="http://www.youtube.com/embed/tEfMBiKp9eE" frameborder="0" allowfullscreen></iframe></div>
+
+[smile movie](http://youtu.be/tEfMBiKp9eE)
+
+we map image pairs with a *transformation* and a *metric*
+
+## statistical fields arise from this mapping
+
+![images at measurement fields](figures/statisticalfields.png)
+
+## how do we map not just pairs but hundreds or thousands of pairs of images?
+
+## how do we cluster the statistical fields that arise from these maps?
+
+## how do we cluster these fields when we have supervision and associate them with outcomes?
+
+##  <span style="color:red;">ANTs*R*</span> Platform for Medical Imaging
 
 ![](figures/antsgoals.png)
 
@@ -192,7 +211,7 @@ uses more than a single interpolation.
 
 <div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/3I9RcRtpOvw" frameborder="0" allowfullscreen></iframe></div>
 
-[SyN video](http://www.youtube.com/embed/3I9RcRtpOvw)
+[SyN movie](http://www.youtube.com/embed/3I9RcRtpOvw)
 
 ## SyGN - templates and averages in deformation space
 
