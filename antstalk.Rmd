@@ -36,6 +36,24 @@ output:
 
 #  ANTs*R* is built from general <span style="color:red;">mathematical</span> and <span style="color:red;">software engineering</span> principles
 
+## Questions driving ANTs development
+
+* how do we compare image pairs?
+
+* what is the pairwise similarity?
+
+* what if this pair has rgb/vector/tensor voxels?
+
+* what does one do with the statistical fields that arise from this mapping?
+
+* how do we extend from pairs to millions of pairs of images?
+
+* how to cluster these statistical fields ... eanat
+
+* how to cluster them when we have supervision .... sccan
+
+* (give examples in R)
+
 
 ##  ANTs*R* Platform for Medical Imaging
 
