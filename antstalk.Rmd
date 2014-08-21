@@ -139,7 +139,7 @@ we provided the *standard* registration results for $>$ 20,000 image pairs at [S
 ## General theory tunable to specific domains:  *no-free lunch*
 ![](./figures/brats.png)
 
-[BRATS Challenge](http://hal.inria.fr/docs/00/93/56/40/PDF/brats_preprint.pdf)
+[BRATS 2013 Challenge](http://hal.inria.fr/docs/00/93/56/40/PDF/brats_preprint.pdf)
 
 # Agnostic data integration: prediction, decoding, diagnosis
 
@@ -349,13 +349,15 @@ Several years of development by SR Das, BA, NT (KK fan)
 
 ![](./figures/atropos.png)
 
+<!--
+
 ## FTD
 
 ## Babies
 
 ![](./figures/baby.png)
 
-
+-->
 
 # Can we quantify _life span_ brain health in individuals and in populations?
 
