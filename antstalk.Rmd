@@ -101,10 +101,6 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 
 # Powerful, general-purpose automated or semi-automated registration and segmentation.
 
-## overview
-
-![evaluation](figures/prezi2.png)
-
 ## Geometric transformations
 ![](./figures/antstransforms.png)
 
