@@ -139,6 +139,8 @@ we provided the *standard* registration results for $>$ 20,000 image pairs at [S
 ## General theory tunable to specific domains:  *no-free lunch*
 ![](./figures/brats.png)
 
+[BRATS Challenge](http://hal.inria.fr/docs/00/93/56/40/PDF/brats_preprint.pdf)
+
 # Agnostic data integration: prediction, decoding, diagnosis
 
 ## *ITK+ANTs+R = ANTsR*
