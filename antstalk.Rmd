@@ -32,6 +32,9 @@ output:
     fig_width: 5
 ---
 
+## 
+<div align="center"><img src="./figures/ireland.png" frameborder="0"></img></div>
+
 #  ANTs*R* is a platform for <span style="color:red;">reproducible</span> studies of <span style="color:red;">high-dimensional</span> data
 
 #  ANTs*R* is built from general <span style="color:red;">mathematical</span> and <span style="color:red;">software engineering</span> principles
@@ -64,7 +67,7 @@ output:
 
 we map image pairs with a *transformation* and a *metric*
 
-## statistical fields arise from this mapping
+## coordinated statistical fields arise from this mapping
 
 ![images at measurement fields](figures/statisticalfields.png)
 
@@ -79,9 +82,6 @@ we map image pairs with a *transformation* and a *metric*
 ![](figures/antsgoals.png)
 
 this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is [this one](http://stnava.github.io/RKRNS/)
-
-## 
-<div align="center"><img src="./figures/ireland.png" frameborder="0"></img></div>
 
 ## 
 
