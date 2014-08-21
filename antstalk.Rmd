@@ -67,7 +67,7 @@ output:
 
 we map image pairs with a *transformation* and a *metric*
 
-## coordinated statistical fields arise from this mapping
+## coordinated multivariate statistical fields arise from this mapping
 
 ![images at measurement fields](figures/statisticalfields.png)
 
