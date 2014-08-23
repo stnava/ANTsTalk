@@ -435,7 +435,7 @@ qvals<-p.adjust( mylmresults$pval.model )
 ```
 The minimum q-value is `r min(qvals)` ... 
 
-## All the power of *R* $+$ <br />the power of *ANTs* $\rightarrow$<br /> <span style="color:red;">**Reproducible imaging science**</span> 
+## The power of *ANTs* $+$ *R* $\rightarrow$<br /> <span style="color:red;">**Reproducible imaging science**</span> 
 
 ![](./figures/antsgoals.png)
 

@@ -413,9 +413,9 @@ mat&lt;-<span class="kw">imageListToMatrix</span>( imglist, mask )
 dx&lt;-<span class="kw">factor</span>( <span class="kw">c</span>( <span class="kw">rep</span>(<span class="dv">0</span>,simnum), <span class="kw">rep</span>(<span class="dv">1</span>,simnum) ) )
 mylmresults&lt;-<span class="kw">bigLMStats</span>( <span class="kw">lm</span>( mat ~<span class="st"> </span>dx ) )
 qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pre>
-<p>The minimum q-value is 6.4019 × 10<sup>-37</sup> …</p>
-</section><section id="all-the-power-of-r-the-power-of-ants-rightarrow-reproducible-imaging-science" class="slide level2">
-<h1>All the power of <em>R</em> <span class="math">\(+\)</span> <br />the power of <em>ANTs</em> <span class="math">\(\rightarrow\)</span><br /> <span style="color:red;"><strong>Reproducible imaging science</strong></span></h1>
+<p>The minimum q-value is 1.8301 × 10<sup>-36</sup> …</p>
+</section><section id="the-power-of-ants-r-rightarrow-reproducible-imaging-science" class="slide level2">
+<h1>The power of <em>ANTs</em> <span class="math">\(+\)</span> <em>R</em> <span class="math">\(\rightarrow\)</span><br /> <span style="color:red;"><strong>Reproducible imaging science</strong></span></h1>
 <p><img src="figures/antsgoals.png" /></p>
 <p>… used in <a href="http://www.ncbi.nlm.nih.gov/pubmed/24096125">“Sparse canonical correlation analysis relates network-level atrophy to multivariate cognitive measures in a neurodegenerative population”</a> and several upcoming …</p>
 </section></section>
