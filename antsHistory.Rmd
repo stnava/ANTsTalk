@@ -435,9 +435,11 @@ qvals<-p.adjust( mylmresults$pval.model )
 ```
 The minimum q-value is `r min(qvals)` ... 
 
-all the power of *R* $+$ the power of *ANTs* ...
+all the power of *R* $+$ the power of *ANTs* $\rightarrow$
 
-**Reproducible imaging science** (used in ["Sparse canonical correlation analysis relates network-level atrophy to multivariate cognitive measures in a neurodegenerative population"](http://www.ncbi.nlm.nih.gov/pubmed/24096125) and several upcoming ...)
+**Reproducible imaging science** 
+
+... used in ["Sparse canonical correlation analysis relates network-level atrophy to multivariate cognitive measures in a neurodegenerative population"](http://www.ncbi.nlm.nih.gov/pubmed/24096125) and several upcoming ...
 
 # Can we customize these methods for a challenging multivariate segmentation problem with clinical relevance?
 
