@@ -55,6 +55,25 @@
     <style type="text/css">code{white-space: pre;}</style>
 
 
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+</style>
 
 <link rel="stylesheet" href="index_files/reveal.js-2.6.1/css/theme/night.css" id="theme">
 
@@ -359,11 +378,45 @@ OPTIONS:
 <h1>Agnostic statistics</h1>
 <p><img src="figures/antsrex.jpg" /></p>
 <p><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3961542/">McMillan et al.</a></p>
+</section><section id="a-quick-antsr-example" class="slide level2">
+<h1>A Quick <span style="color:grey;"><em>ANTsR</em></span> example</h1>
+<p>This is an executable <em>ANTsR</em> code block - <em>N</em>-dimensional statistics to go with our <em>N</em>-dimensional image processing software!</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ANTsR)
+dim&lt;-<span class="dv">2</span>
+filename&lt;-<span class="kw">getANTsRData</span>(<span class="st">&#39;r16&#39;</span>)
+img&lt;-<span class="kw">antsImageRead</span>( filename , dim )
+filename&lt;-<span class="kw">getANTsRData</span>(<span class="st">&#39;r64&#39;</span>)
+img2&lt;-<span class="kw">antsImageRead</span>( filename , dim )
+mask&lt;-<span class="kw">getMask</span>(img,<span class="dv">50</span>,<span class="dv">255</span>,T)
+nvox&lt;-<span class="kw">sum</span>( mask ==<span class="st"> </span><span class="dv">1</span> )
+<span class="kw">plotANTsImage</span>(img)</code></pre>
+<p>The brain has 17395 voxels …</p>
+</section><section id="a-quick-antsr-example-1" class="slide level2">
+<h1>A Quick <span style="color:grey;"><em>ANTsR</em></span> example</h1>
+<p>Simulate a population morphometry study - a “VBM” …</p>
+<pre class="sourceCode r"><code class="sourceCode r">simnum&lt;-<span class="dv">10</span>
+imglist&lt;-<span class="kw">list</span>()
+imglist2&lt;-<span class="kw">list</span>()
+for ( i in <span class="dv">1</span>:simnum ) {
+  img1sim&lt;-<span class="kw">antsImageClone</span>(img)
+  img1sim[ mask==<span class="dv">1</span> ]&lt;-img1sim[ mask==<span class="dv">1</span> ]+<span class="kw">rnorm</span>(nvox)
+  img2sim&lt;-<span class="kw">antsImageClone</span>(img2)
+  img2sim[ mask==<span class="dv">1</span> ]&lt;-img2sim[ mask==<span class="dv">1</span> ]+<span class="kw">rnorm</span>(nvox)
+  imglist&lt;-<span class="kw">lappend</span>(imglist,img1sim)
+  imglist2&lt;-<span class="kw">lappend</span>(imglist2,img2sim)
+}
+imglist&lt;-<span class="kw">lappend</span>( imglist, imglist2 )
+mat&lt;-<span class="kw">imageListToMatrix</span>( imglist, mask )
+dx&lt;-<span class="kw">factor</span>( <span class="kw">c</span>( <span class="kw">rep</span>(<span class="dv">0</span>,simnum), <span class="kw">rep</span>(<span class="dv">1</span>,simnum) ) )
+mylmresults&lt;-<span class="kw">bigLMStats</span>( <span class="kw">lm</span>( mat ~<span class="st"> </span>dx ) )
+qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pre>
+<p>The minimum q-value is 7.5912 × 10<sup>-37</sup> …</p>
+<p>all the power of <em>R</em> <span class="math">\(+\)</span> the power of <em>ANTs</em> …</p>
 </section></section>
 <section><section id="can-we-customize-these-methods-for-a-challenging-multivariate-segmentation-problem-with-clinical-relevance" class="titleslide slide level1"><h1>Can we customize these methods for a challenging multivariate segmentation problem with clinical relevance?</h1></section><section id="general-theory-tunable-to-specific-domains-no-free-lunch" class="slide level2">
 <h1>General theory tunable to specific domains: <em>no-free lunch</em></h1>
 <p><img src="figures/brats.png" /></p>
-<p><a href="http://hal.inria.fr/docs/00/93/56/40/PDF/brats_preprint.pdf">BRATS 2013 Challenge</a></p>
+<p><a href="http://hal.inria.fr/docs/00/93/56/40/PDF/brats_preprint.pdf">BRATS 2013 Challenge</a> <strong>won</strong> with <a href="https://github.com/stnava/ANTsR"><em>ANTsR</em></a></p>
 </section></section>
 <section><section id="can-we-address-subtle-questions-in-brain-and-cognition-via-imaging-specific-dimensionality-reduction" class="titleslide slide level1"><h1>Can we address subtle questions in brain and cognition via imaging-specific dimensionality reduction?</h1></section><section id="eigenanatomy-sccan" class="slide level2">
 <h1><a href="http://www.ncbi.nlm.nih.gov/pubmed/24852460">Eigenanatomy</a> &amp; <a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=avants+SCCAN">SCCAN</a></h1>
