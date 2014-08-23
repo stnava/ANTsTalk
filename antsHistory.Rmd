@@ -44,7 +44,16 @@ This talk is online at [http://stnava.github.io/ANTsTalk/](http://stnava.github.
 this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is [this one](http://stnava.github.io/RKRNS/)
 -->
 
-# 
+
+# *ANTs* optimizes mathematically well-defined <span style="color:red;">objective functions</span> guided by <span style="color:red;">prior knowledge</span>  ...
+
+# ... including that of developers, domain experts and users ...
+
+# this strong <span style="color:red;">mathematical and software engineering</span> foundation leads to near limitless opportunities for innovation in a variety of application domains
+
+# plug *your ideas* into our software to gain insight into biomedical data ...
+
+ 
 
 # The *ANTs* Big Five: SyN, Atropos, N4, MALF (and introducing ... ) <span style="color:grey;">*R*</span>
 
