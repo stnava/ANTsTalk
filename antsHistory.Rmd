@@ -1,6 +1,6 @@
 ---
 title: <span style="color:red;">A Brief History of Advanced Normalization Tools (*ANTs*)</span>
-author: Brian B. Avants (<span style="color:blue;">PENN</span>) and <br />Nicholas J. Tustison (UVA)
+author: Brian B. Avants (<span style="color:blue;">PENN</span>) and <br />Nicholas J. Tustison (<span style="color:orange;">UVA</span>)
 bibliography: REFERENCES.bib
 logo:    logo.jpg
 output:
