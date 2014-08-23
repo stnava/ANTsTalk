@@ -49,7 +49,7 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 
 # ... including that of developers, domain experts and users ...
 
-# this strong <span style="color:red;">mathematical and software engineering</span> foundation leads to near limitless opportunities for innovation in a variety of application domains
+# our strong <span style="color:red;">mathematical and software engineering</span> foundation leads to near limitless opportunities for innovation in a variety of application domains
 
 # plug *your ideas* into our software to gain insight into biomedical data ...
 
