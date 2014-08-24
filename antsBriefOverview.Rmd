@@ -43,18 +43,17 @@ This talk is online at [http://stnava.github.io/ANTsTalk/](http://stnava.github.
 
 * Registration $=$ geometric mapping between image pairs or image sets (e.g. Affine)
 
-<span style="color:grey;">
-* Diffeomorphisms $=$ differentiable map with differentiable inverse (e.g. "silly putty", viscous fluid)  
-</span>
+* <span style="color:grey;">
+Diffeomorphisms $=$ differentiable map with differentiable inverse (e.g. "silly putty", viscous fluid)  </span>
+
 * Segmentation $=$ labeling tissue or anatomy in images, usually automated (e.g. K-means)
-<span style="color:grey;">
-* Multivariate $=$ using many voxels or measurements at once (e.g. PCA, $p >> n$ ridge regression)
-</span>
+
+* <span style="color:grey;"> Multivariate $=$ using many voxels or measurements at once (e.g. PCA, $p >> n$ ridge regression)</span>
+
 * Multiple modality $=$ using many modalities at once (e.g. DTI and T1 and BOLD)
 
-<span style="color:grey;">
-* Dimensionality reduction $=$ principled way of finding few variables to represent many variables (e.g. PCA, CCA)
-</span>
+* <span style="color:grey;"> Dimensionality reduction $=$ principled way of finding few variables to represent many variables (e.g. PCA, CCA) </span>
+
 # *ANTs* optimizes mathematically well-defined <span style="color:red;">objective functions</span> guided by <span style="color:red;">prior knowledge</span>  ...
 
 # plug *your ideas* into our software: <br /> <span style="color:blue;">innovation and <span style="color:red;">insight</span> from biomedical data ...</span>
