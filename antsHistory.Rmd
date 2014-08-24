@@ -21,7 +21,7 @@ output:
     smaller: false
     theme: night
     transition: fade
-    highlight: kate
+    highlight: haddock
     center: true
     self_contained: false
   ioslides_presentation:
