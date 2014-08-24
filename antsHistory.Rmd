@@ -627,7 +627,7 @@ Good software should fade into the background ... however ...
 <img style="float: right" src="figures/penn.png" />
 <img style="float: left" src="figures/picsl.jpg" />
 
-##
+## ANTs Visitor/Publication Statistics: Early 2014
 ![](figures/antsvisitors.png)
 
 ## 
