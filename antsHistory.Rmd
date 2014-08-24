@@ -21,7 +21,7 @@ output:
     smaller: false
     theme: night
     transition: fade
-    highlight: espresso
+    highlight: default
     center: true
     self_contained: false
   ioslides_presentation:
