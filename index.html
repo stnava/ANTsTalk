@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Brian B. Avants (PENN) and Nicholas J. Tustison (UVA)" />
-  <title>A Brief History of Advanced Normalization Tools (ANTs)</title>
+  <meta name="author" content="Brian B. Avants, Nicholas J. Tustison, Hans J. Johnson &amp; the ITK and registration community" />
+  <title>An Exegesis of Advanced Normalization Tools (ANTs)</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -55,25 +55,6 @@
     <style type="text/css">code{white-space: pre;}</style>
 
 
-<style type="text/css">
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
-td.sourceCode { padding-left: 5px; }
-pre, code { color: #bdae9d; background-color: #2a211c; }
-code > span.kw { color: #43a8ed; font-weight: bold; }
-code > span.dt { text-decoration: underline; }
-code > span.dv { color: #44aa43; }
-code > span.bn { color: #44aa43; }
-code > span.fl { color: #44aa43; }
-code > span.ch { color: #049b0a; }
-code > span.st { color: #049b0a; }
-code > span.co { color: #0066ff; font-style: italic; }
-code > span.al { color: #ffff00; }
-code > span.fu { color: #ff9358; font-weight: bold; }
-code > span.er { font-weight: bold; }
-</style>
 
 <link rel="stylesheet" href="index_files/reveal.js-2.6.1/css/theme/night.css" id="theme">
 
@@ -103,8 +84,8 @@ code > span.er { font-weight: bold; }
     <div class="slides">
 
 <section>
-    <h1 class="title"><span style="color:red;">A Brief History of Advanced Normalization Tools (<em>ANTs</em>)</span></h1>
-    <h2 class="author">Brian B. Avants (<span style="color:blue;">PENN</span>) and <br />Nicholas J. Tustison (<span style="color:orange;">UVA</span>)</h2>
+    <h1 class="title"><span style="color:red;">An Exegesis of Advanced Normalization Tools (<em>ANTs</em>)</span></h1>
+    <h2 class="author">Brian B. Avants, Nicholas J. Tustison, Hans J. Johnson &amp; the ITK and registration community</h2>
     <h3 class="date"></h3>
 </section>
 
@@ -136,524 +117,46 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 <section><section id="including-that-of-developers-domain-experts-and-users" class="titleslide slide level1"><h1>… including that of developers, domain experts and users …</h1></section></section>
 <section><section id="our-strong-mathematical-and-software-engineering-foundation-leads-to-near-limitless-opportunities-for-innovation-in-a-variety-of-application-domains" class="titleslide slide level1"><h1>our strong <span style="color:red;">mathematical and software engineering</span> foundation leads to near limitless opportunities for innovation in a variety of application domains</h1></section></section>
 <section><section id="plug-your-ideas-into-our-software-to-gain-insight-into-biomedical-data" class="titleslide slide level1"><h1>plug <em>your ideas</em> into our software to gain insight into biomedical data …</h1></section></section>
-<section><section id="the-ants-big-five-syn-atropos-n4-malf-and-introducing-r" class="titleslide slide level1"><h1>The <em>ANTs</em> Big Five: SyN, Atropos, N4, MALF (and introducing … ) <span style="color:grey;"><em>R</em></span></h1></section></section>
-<section><section id="ants-was-begotten-in-syn-science-is-the-belief-in-the-ignorance-of-experts" class="titleslide slide level1"><h1><span style="color:red;">ANTs was begotten in SyN:</span> “science is the belief in the ignorance of experts”</h1></section><section id="syn-topology-preserving-large-deformation-transformations" class="slide level2">
-<h1>SyN: topology preserving large deformation transformations</h1>
-<div align="center">
-<iframe width="854" height="510" src="http://www.youtube.com/embed/tEfMBiKp9eE" frameborder="0" allowfullscreen>
-</iframe>
-</div>
-<p><a href="http://youtu.be/tEfMBiKp9eE">smile movie</a></p>
-<p>we map image pairs with a <em>transformation</em> and a <em>metric</em></p>
-</section><section id="syn-was-an-answer-to-can-we-do-a-better-job-of-aligning-these-brains" class="slide level2">
-<h1>SyN was an answer to:<br /> “Can we do a better job of aligning these brains?”</h1>
-</section><section id="brain-mapping-in-the-early-2000s-was-based-on-matlab-scripts-or-the-demons-algorithm" class="slide level2">
-<h1>Brain mapping in the early 2000s was based on Matlab scripts or the <em>Demons</em> algorithm</h1>
-<p><img src="figures/oldbrainmapping.png" /></p>
-</section><section id="these-approaches-over-penalized-large-deformations-and-were-inadequate-for-several-classes-of-problems" class="slide level2">
-<h1>These approaches over-penalized large deformations and were inadequate for several classes of problems</h1>
-</section><section id="geometric-transformations" class="slide level2">
-<h1>Geometric transformations</h1>
-<p><img src="figures/antstransforms.png" /></p>
-<p>we operate at different levels of transformation depending on the problem - <em>but SyN explores the outer edges</em></p>
-</section><section id="compare-chimpanzee-and-human-prefrontal-cortex" class="slide level2">
-<h1>Compare chimpanzee and human prefrontal cortex</h1>
-<p><img src="figures/chimp_human.png" /></p>
-<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/15948659">LPF algorithm</a></p>
-</section><section id="syn-formulation" class="slide level2">
-<h1>SyN formulation</h1>
-<p><span class="math">\[
-\begin{aligned}
-  \inf_{\phi_1} \inf_{\phi_2}   \Bigg[
-                     \int_0^{0.5} &amp; \left( \|v_1(t)\|_L^2 + \|v_2(t)\|_L^2 \right) dt \nonumber \\
-                     &amp;+
-                     \int_{\Omega} \Pi_{\sim}
-                          \left( I \circ \phi_1^{-1}(\mathbf{x},0.5),
-                           J \circ \phi_2^{-1}(\mathbf{x},0.5) \right) d\Omega \Bigg]
-\end{aligned}
-\]</span> where <span class="math">\[
-  \frac{d \phi_i(\mathbf{x},t)}{dt} = v_i( \phi_i(\mathbf{x},t), t ),\,\, \phi_i(\mathbf{x},0) = \mathbf{Id}, \,\, i \in \{1,2\}
-\]</span> and <span class="math">\(\Pi_{\sim}\)</span> is an arbitrary similarity metric (<span style="color:red;">or metrics</span>).</p>
-</section><section id="syn-for-optimization-symmetry" class="slide level2">
-<h1>SyN for optimization symmetry</h1>
-<p><img src="figures/fishSyN.png" /> Images deform symmetrically along the shape manifold. This eliminates bias in the measurement of image differences.</p>
-</section><section id="minimizing-interpolations" class="slide level2">
-<h1>Minimizing interpolations</h1>
-<p><img src="figures/oneInterpolation.png" /></p>
-<p><span class="math">\(\mathcal{T}_{total} = \mathcal{T}_1 \circ \mathcal{T}_2 \circ \mathcal{T}_3 \circ \mathcal{T}_4\)</span></p>
-<p>To avoid compounding interpolation error with the concatenation of transformations, <em>ANTs</em> never uses more than a single interpolation.</p>
-<p>We ported many of these ideas into the <a href="http://www.itk.org">Insight ToolKit</a> as part of its V4 reboot!</p>
-</section><section id="syn-example" class="slide level2">
-<h1>SyN Example</h1>
-<!-- syn example -->
-<div align="center">
-<iframe width="560" height="315" src="http://www.youtube.com/embed/3I9RcRtpOvw" frameborder="0" allowfullscreen>
-</iframe>
-</div>
-<p><a href="http://www.youtube.com/embed/3I9RcRtpOvw">SyN movie</a></p>
-</section><section id="intensity-transformations" class="slide level2">
-<h1>Intensity transformations</h1>
-<p><img src="figures/antsmetrics.png" /></p>
-<p>Our go to metrics: neighborhood correlation and mutual information</p>
-</section><section id="section-1" class="slide level2">
-<h1></h1>
-<p><img src="figures/evalhistory.png" /></p>
-</section><section id="sata-2013" class="slide level2">
-<h1>Sata 2013</h1>
-<p><img src="figures/sata2013.png" /></p>
-<p>we provided the <em>standard</em> registration results for <span class="math">\(&gt;\)</span> 20,000 image pairs at <a href="https://masi.vuse.vanderbilt.edu/workshop2013/index.php/MICCAI_2013_SATA_Challenge_and_Workshop:Current_events">SATA 2013</a></p>
+<section><section id="registration-with-priors" class="titleslide slide level1"><h1>Registration with priors</h1></section><section id="prior-knowledge-about-how-to-map---e.g.lesion-brains" class="slide level2">
+<h1>prior knowledge about how to map - e.g. lesion brains</h1>
+</section><section id="we-need-to-rotate" class="slide level2">
+<h1>we need to rotate</h1>
+</section><section id="we-need-to-scale-and-shear" class="slide level2">
+<h1>we need to scale and shear</h1>
+</section><section id="we-need-to-deform-but-not-the-lesion" class="slide level2">
+<h1>we need to deform ( but not the lesion )</h1>
+</section><section id="fine-grained-and-flexible-maps" class="slide level2">
+<h1>Fine-grained and flexible maps</h1>
+<p><img src="figures/highresdiffeos.jpg" /></p>
 </section></section>
-<section><section id="differentiable-maps-with-differentiable-inverse-statistics-in-these-spaces" class="titleslide slide level1"><h1>Differentiable maps with differentiable inverse <span class="math">\(+\)</span> <em>statistics in these spaces</em></h1></section><section id="brain-templates-as-high-dimensional-averages" class="slide level2">
-<h1>Brain templates as <em>high-dimensional averages</em></h1>
-<p><img src="figures/speciestemplates.png" /></p>
-</section><section id="sygn---templates-and-averages-in-deformation-space" class="slide level2">
-<h1>SyGN - templates and averages in deformation space</h1>
-<p><img src="figures/normvsnorm.png" /> from <a href="http://miykael.github.io/nipype-beginner-s-guide/ANTS.html">miykael</a></p>
-<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/15501083">geodesic image averages</a></p>
-<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/19818860">optimal templates 2</a></p>
-<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/23284904">canine template</a></p>
-<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/23516289">chimpanzees</a></p>
-</section><section id="average-republican-and-democratic-congressmen" class="slide level2">
-<h1>Average Republican and Democratic congressmen</h1>
-<div align="center">
-<img src="figures/democrat_left_repub_right.png" frameborder="0"></img>
-</div>
-<p><a href="http://ntustison.github.io/CongressionalFaceTemplates/">congress</a></p>
+<section><section id="segmentation-with-priors" class="titleslide slide level1"><h1>Segmentation with priors</h1></section><section id="tissue" class="slide level2">
+<h1>tissue</h1>
+</section><section id="anatomy" class="slide level2">
+<h1>anatomy</h1>
+</section><section id="cortical-thickness" class="slide level2">
+<h1>cortical thickness</h1>
 </section></section>
-<section><section id="can-we-improve-segmentation-across-species-organs-populations" class="titleslide slide level1"><h1>Can we improve segmentation across species, organs, populations?</h1></section><section id="segmentation-framework" class="slide level2">
-<h1>Segmentation Framework</h1>
-<ol type="1">
-<li class="fragment"><p>Bias correction (with optional priors)</p></li>
-<li class="fragment"><p>Prior-based tissue segmentation</p></li>
-<li class="fragment"><p>Prior-based anatomical labeling</p></li>
-<li class="fragment"><p>Iteration through above steps (optional)</p></li>
-</ol>
-</section><section id="we-tried-n3-and-fsl-fast-for-these-problems-and-dislike-matlab" class="slide level2">
-<h1>We tried N3 and FSL-FAST for these problems … and <em>dislike</em> Matlab …</h1>
-<p>failed to locate well-implemented open-source resources for general purpose prior-based segmentation and inhomogeneity correction …</p>
-</section><section id="n4" class="slide level2">
-<h1>N4</h1>
-<ul>
-<li class="fragment"><p>N3 (developed at the Montreal Neurological Institute) has been the gold standard for bias correction—used in important projects such as ADNI</p></li>
-<li class="fragment"><p>N3 is a set of perl scripts that works natively with the MINC file format which we tried to incorporate into an <em>ANTs</em> processing pipeline.</p></li>
-<li class="fragment"><p>We had so much trouble converting back and forth between ITK-compatible Nifti format and MINC that BA suggested we try to implement N3 in ITK.</p></li>
-<li class="fragment"><p>NT had some experience with B-splines and added some other tweaks giving birth to N4.</p></li>
-</ul>
-</section><section id="n4-introduction" class="slide level2">
-<h1>N4 Introduction</h1>
-<p><img src="figures/n4_introduction.png" /></p>
-</section><section id="nonparametric-nonuniform-intensity-normalization-n3" class="slide level2">
-<h1>Nonparametric nonuniform intensity normalization (N3)</h1>
-<p>Sled et al., “A nonparametric method for automatic correction of intensity nonuniformity in MRI Data,” <em>IEEE-TMI</em>, 17(1), 1998.</p>
-</section><section class="slide level2">
-
-<p>Boyes et al., “Intensity non-uniformity correction using N3 on 3-T scanners with multichannel phased array coils,” <em>NeuroImage</em>, 39(4), 2008.</p>
-<blockquote>
-<p>In a comparison of several correction techniques N3 performed well (Arnold et al., 2001). Also, the algorithm and software are in the public domain (<a href="http://www.bic.mni.mcgill.ca/software/N3/" class="uri">http://www.bic.mni.mcgill.ca/software/N3/</a>) and is probably the most widely used non-uniformity correction technique in neurological imaging.</p>
-</blockquote>
-<p>Zheng et al., “Improvement of brain segmentation accuracy by optimizing non-uniformity correction using N3,” <em>NeuroImage</em>, 48(1), 2009.</p>
-<blockquote>
-<p>Among existing approaches, the nonparametric non-uniformity intensity normalization method N3 (Sled et al., 1998) is one of the most frequently used… High performance and robustness have practically turned N3 into an industry standard.</p>
-</blockquote>
-<p>Vovk et al., “A Review of Methods for Correction of Intensity Inhomogeneity in MRI,” <em>IEEE-TMI</em>, 26(3), 2007.</p>
-<blockquote>
-<p>A well-known intensity inhomogeneity correction method, known as the N3 (nonparametric nonuniformity normalization), was proposed in [15]… Interestingly, no improvements have been suggested for this highly popular and successful method… The nonparametric nonuniformity normalization (N3) method [15] has obviously become the standard method against which other methods are compared.</p>
-</blockquote>
-</section><section id="code" class="slide level2">
-<h1>Code</h1>
-<pre><code>COMMAND:
-     N4BiasFieldCorrection
-
-OPTIONS:
-     -d, --image-dimensionality 2/3/4
-     -i, --input-image inputImageFilename
-     -x, --mask-image maskImageFilename
-     -w, --weight-image weightImageFilename
-     -s, --shrink-factor 1/2/3/4/...
-     -c, --convergence [&lt;numberOfIterations=50x50x50x50&gt;,&lt;convergenceThreshold=0.0&gt;]
-     -b, --bspline-fitting [splineDistance,&lt;splineOrder=3&gt;]
-                           [initialMeshResolution,&lt;splineOrder=3&gt;]
-     -t, --histogram-sharpening [&lt;FWHM=0.15&gt;,&lt;wienerNoise=0.01&gt;,&lt;numberOfHistogramBins=200&gt;]
-     -o, --output correctedImage
-                  [correctedImage,&lt;biasField&gt;]
-     -h
-     --help</code></pre>
-<blockquote>
-<p>Talk is cheap, show me the code.</p>
-</blockquote>
-</section><section id="atropos-bayesian-n-class-multivariate-segmentation" class="slide level2">
-<h1>Atropos: Bayesian <span class="math">\(N\)</span>-class multivariate segmentation</h1>
-<ul>
-<li class="fragment"><p>Similar to our experience with N3, we tried to incorporate FAST (from the FMRIB at Oxford) into an <em>ANTs</em> processing pipeline.</p></li>
-<li class="fragment"><p>We failed to successfully incorporate priors into FAST.</p></li>
-<li class="fragment"><p>Related, BA went to a segmentation-related worksop at MICCAI and aired disappointment that so much of what had been developed in the community over the last 20+ years has not been made publicly available. “What’s wrong with you people!”</p></li>
-<li class="fragment"><p>3-tissue algorithm in ImageMath <span class="math">\(\rightarrow\)</span> multivariate, n-class Atropos</p></li>
-</ul>
-</section><section id="atropos-components" class="slide level2">
-<h1>Atropos components</h1>
-<div align="center">
-<img height="350" src="./figures/atropos2.png" frameborder="0"></img>
-</div>
-</section><section id="babies" class="slide level2">
-<h1>Babies</h1>
-<p><img src="figures/baby.png" /></p>
+<section><section id="ants-in-competition" class="titleslide slide level1"><h1>ANTs in competition</h1></section><section id="grand-challenges" class="slide level2">
+<h1>“grand challenges”</h1>
+</section><section id="ants-versus-freesurfer" class="slide level2">
+<h1>ANTs versus Freesurfer</h1>
 </section></section>
-<section><section id="can-we-accurately-measure-cortical-thickness-by-directly-using-the-image-space" class="titleslide slide level1"><h1>Can we accurately measure cortical thickness by DiReCTly using the image space?</h1></section><section id="kellyslater-rightarrow-kellykapowski" class="slide level2">
-<h1>KellySlater <span class="math">\(\rightarrow\)</span> KellyKapowski</h1>
-<p><img src="figures/kkks.png" alt="KK-KS" /></p>
-<p>Several years of development by SR Das, BA, NT (KK fan)</p>
-</section><section id="atropos-kk-example" class="slide level2">
-<h1>Atropos <span class="math">\(+\)</span> KK Example</h1>
-<p><img src="figures/atropos.png" /></p>
+<section><section id="ants-statistics-antsr" class="titleslide slide level1"><h1>ANTs statistics: <em>ANTsR</em></h1></section><section id="antsr-code-example" class="slide level2">
+<h1>ANTsR code example</h1>
+</section><section id="brats-competition" class="slide level2">
+<h1>BRATS competition</h1>
+</section><section id="eanat" class="slide level2">
+<h1>EANAT</h1>
+</section><section id="sccan" class="slide level2">
+<h1>SCCAN</h1>
 </section></section>
-<section><section id="putting-it-all-together-can-we-quantify-life-span-brain-health-in-individuals-and-in-populations" class="titleslide slide level1"><h1>Putting it all together: <br />Can we quantify <em>life span</em> brain health in individuals and in populations?</h1></section><section id="big-data-problem-from-public-resources" class="slide level2">
-<h1>“Big data” problem from public resources</h1>
-<p><img src="figures/lifebrains.jpg" /></p>
-<p>TOT, NKI, IXI, Oasis, ADNI … several thousand images</p>
-</section><section id="the-glove-comparison-with-freesurfer" class="slide level2">
-<h1>The Glove: Comparison with Freesurfer</h1>
-<p><em>Question</em>: In the absence of ground truth, how do we evaluate performance?</p>
-<p><em>Answer</em>: Use prediction of demographics from quantitative cortical thickness data as a reference for the power of our methods. One of the most well-known, most easily obtained, and most confident measures available is “age.” So we take 50% of the thickness data to train a model (e.g. linear regression) and then calculate the model’s age prediction error on the other 50%. We do this for n=1000 permutations to build a distribution. Similarly, we can do this for gender.</p>
-</section><section id="ants-vs-freesurfer" class="slide level2">
-<h1>ANTS vs Freesurfer</h1>
-<div align="center">
-<img height="350" src="./figures/evaluation.png" frameborder="0"></img>
-</div>
-</section><section id="ants-vs-freesurfer-2" class="slide level2">
-<h1><em>ANTs</em> vs Freesurfer 2</h1>
-<p><img src="figures/antsvfreesurfer2.png" /></p>
-</section><section id="ants-malf-labeling" class="slide level2">
-<h1><em>ANTs</em> MALF Labeling</h1>
-<p><img src="figures/antsatroposn4malf.png" /></p>
-</section><section id="the-ants-structural-brain-mapping-pipeline" class="slide level2">
-<h1>The <em>ANTs</em> structural brain mapping pipeline</h1>
-<p><img src="figures/pipeline.png" /></p>
-<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/24879923"><em>Large-scale evaluation of </em>ANTs* and FreeSurfer cortical thickness measurements<em>, NeuroImage 2014.</em></a></p>
-<p>All software components are open source and part of the Advanced Normalization Tools (ANTs) repository.</p>
-</section><section id="basic-components-of-the-pipeline" class="slide level2">
-<h1>Basic components of the pipeline</h1>
-<div align="center">
-<img height="350" src="./figures/components.png" frameborder="0"></img>
-</div>
-<ol type="1">
-<li class="fragment">template building (offline)</li>
-<li class="fragment">brain extraction</li>
-<li class="fragment">cortical thickness estimation</li>
-<li class="fragment">cortical parcellation</li>
-</ol>
-</section><section id="template-building" class="slide level2">
-<h1>Template building</h1>
-<p><em>Tailor data to your specific cohort</em></p>
-<div align="center">
-<img height="350" src="./figures/templates.png" frameborder="0"></img>
-</div>
-<ul>
-<li class="fragment">Templates representing the average mean shape and intensity are built directly from the cohort to be analyzed, e.g. pediatric vs. middle-aged brains.</li>
-<li class="fragment">Acquisition and anonymization (e.g. defacing) protocols are often different.</li>
-</ul>
-</section><section id="template-building-cont." class="slide level2">
-<h1>Template building (cont.)</h1>
-<div align="center">
-<img height="350" src="./figures/templatePriors.png" frameborder="0"></img>
-</div>
-<p>Each template is <a href="https://github.com/ntustison/antsCookTemplatePriorsExample">processed</a> to produce auxiliary images which are used for brain extraction and brain segmentation.</p>
-</section><section id="brain-extraction" class="slide level2">
-<h1>Brain extraction</h1>
-<div align="center">
-<img height="380" src="./figures/brainExtraction.png" frameborder="0"></img>
-</div>
-<p>Comparison with de facto standard FreeSurfer package. Note the difference in separation of the gray matter from the surrounding CSF. (0 failures out of 1205 scans)</p>
-</section><section id="brain-segmentation" class="slide level2">
-<h1>Brain segmentation</h1>
-<div align="center">
-<img height="350" src="./figures/brainSegmentation.png" frameborder="0"></img>
-</div>
-<p>Randomly selected healthy individuals. Atropos gets good performance across ages.</p>
-</section><section id="cortical-thickness-estimation" class="slide level2">
-<h1>Cortical thickness estimation</h1>
-<div align="center">
-<img height="350" src="./figures/corticalThicknessEstimation.png" frameborder="0"></img>
-</div>
-<p>In contrast to FreeSurfer which warps coupled surface meshes to segment the gray matter, <em>ANTs</em> diffeomorphically registers the white matter to the combined gray/white matters while simultaneously estimating thickness.</p>
-</section></section>
-<section><section id="can-we-implement-and-release-with-provenance-a-multiple-modality-mri-map-of-adolescent-brain-development-from-public-mri-data" class="titleslide slide level1"><h1>Can we implement and release, with provenance, a multiple modality MRI map of adolescent brain development from public MRI data?</h1></section><section id="scientific-data-2014" class="slide level2">
-<h1>Scientific Data 2014</h1>
-<p><img src="figures/ptbp2.png" /></p>
-</section></section>
-<section><section id="customizable-multivariate-segmentation-registration" class="titleslide slide level1"><h1>Customizable multivariate segmentation &amp; registration</h1></section><section id="mammalian-cortical-thickness-computed-with-ants" class="slide level2">
-<h1>Mammalian cortical thickness computed with ANTs</h1>
-<p><img src="figures/species.jpg" /></p>
-</section><section id="many-instructional-examples-for-new-colleagues" class="slide level2">
-<h1>Many instructional examples for new colleagues</h1>
-<p><a href="http://stnava.github.io/ANTs/">see examples @ <em>ANTs</em> webpage</a></p>
-</section></section>
-<section><section id="agnostic-data-integration-prediction-decoding-diagnosis" class="titleslide slide level1"><h1>Agnostic data integration: prediction, decoding, diagnosis</h1></section><section id="itkantsr-antsr" class="slide level2">
-<h1><em>ITK+ANTs+R = ANTsR</em></h1>
-</section><section id="agnostic-statistics" class="slide level2">
-<h1>Agnostic statistics</h1>
-<p><img src="figures/antsrex.jpg" /></p>
-<p><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3961542/">McMillan et al.</a></p>
-</section><section id="a-quick-antsr-example" class="slide level2">
-<h1>A Quick <span style="color:grey;"><em>ANTsR</em></span> example</h1>
-<p>This is an executable <em>ANTsR</em> code block - <em>N</em>-dimensional statistics to go with our <em>N</em>-dimensional image processing software!</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ANTsR)
-dim&lt;-<span class="dv">2</span>
-filename&lt;-<span class="kw">getANTsRData</span>(<span class="st">&#39;r16&#39;</span>)
-img&lt;-<span class="kw">antsImageRead</span>( filename , dim )
-filename&lt;-<span class="kw">getANTsRData</span>(<span class="st">&#39;r64&#39;</span>)
-img2&lt;-<span class="kw">antsImageRead</span>( filename , dim )
-mask&lt;-<span class="kw">getMask</span>(img,<span class="dv">50</span>,<span class="dv">255</span>,T)
-nvox&lt;-<span class="kw">sum</span>( mask ==<span class="st"> </span><span class="dv">1</span> )
-<span class="kw">plotANTsImage</span>(img)</code></pre>
-<p>The brain has 17395 voxels …</p>
-</section><section id="a-quick-antsr-example-1" class="slide level2">
-<h1>A Quick <span style="color:grey;"><em>ANTsR</em></span> example</h1>
-<p>Simulate a population morphometry study - a “VBM” …</p>
-<pre class="sourceCode r"><code class="sourceCode r">simnum&lt;-<span class="dv">10</span>
-imglist&lt;-<span class="kw">list</span>()
-imglist2&lt;-<span class="kw">list</span>()
-for ( i in <span class="dv">1</span>:simnum ) {
-  img1sim&lt;-<span class="kw">antsImageClone</span>(img)
-  img1sim[ mask==<span class="dv">1</span> ]&lt;-img1sim[ mask==<span class="dv">1</span> ]+<span class="kw">rnorm</span>(nvox)
-  img2sim&lt;-<span class="kw">antsImageClone</span>(img2)
-  img2sim[ mask==<span class="dv">1</span> ]&lt;-img2sim[ mask==<span class="dv">1</span> ]+<span class="kw">rnorm</span>(nvox)
-  imglist&lt;-<span class="kw">lappend</span>(imglist,img1sim)
-  imglist2&lt;-<span class="kw">lappend</span>(imglist2,img2sim)
-}
-imglist&lt;-<span class="kw">lappend</span>( imglist, imglist2 )
-mat&lt;-<span class="kw">imageListToMatrix</span>( imglist, mask )
-dx&lt;-<span class="kw">factor</span>( <span class="kw">c</span>( <span class="kw">rep</span>(<span class="dv">0</span>,simnum), <span class="kw">rep</span>(<span class="dv">1</span>,simnum) ) )
-mylmresults&lt;-<span class="kw">bigLMStats</span>( <span class="kw">lm</span>( mat ~<span class="st"> </span>dx ) )
-qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pre>
-<p>The minimum q-value is 5.9427 × 10<sup>-37</sup> …</p>
-</section><section id="the-power-of-ants-r-rightarrow-reproducible-imaging-science" class="slide level2">
-<h1>The power of <em>ANTs</em> <span class="math">\(+\)</span> <em>R</em> <span class="math">\(\rightarrow\)</span><br /> <span style="color:red;"><strong>Reproducible imaging science</strong></span></h1>
-<p><img src="figures/antsgoals.png" /></p>
-<p>… used in <a href="http://www.ncbi.nlm.nih.gov/pubmed/24096125">“Sparse canonical correlation analysis relates network-level atrophy to multivariate cognitive measures in a neurodegenerative population”</a> and several upcoming …</p>
-</section></section>
-<section><section id="can-we-customize-these-methods-for-a-challenging-multivariate-segmentation-problem-with-clinical-relevance" class="titleslide slide level1"><h1>Can we customize these methods for a challenging multivariate segmentation problem with clinical relevance?</h1></section><section id="general-theory-tunable-to-specific-domains-no-free-lunch" class="slide level2">
-<h1>General theory tunable to specific domains: <em>no-free lunch</em></h1>
-<p><img src="figures/brats.png" /></p>
-<p><a href="http://hal.inria.fr/docs/00/93/56/40/PDF/brats_preprint.pdf">BRATS 2013 Challenge</a> <strong>won</strong> with <a href="https://github.com/stnava/ANTsR"><em>ANTsR</em></a></p>
-</section></section>
-<section><section id="can-we-address-subtle-questions-in-brain-and-cognition-via-imaging-specific-dimensionality-reduction" class="titleslide slide level1"><h1>Can we address subtle questions in brain and cognition via imaging-specific dimensionality reduction?</h1></section><section id="eigenanatomy-sccan" class="slide level2">
-<h1><a href="http://www.ncbi.nlm.nih.gov/pubmed/24852460">Eigenanatomy</a> &amp; <a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=avants+SCCAN">SCCAN</a></h1>
-</section><section id="antsr-rightarrow-new-insight-via-quantification" class="slide level2">
-<h1>ANTs<em>R</em> <span class="math">\(\rightarrow\)</span> new insight via quantification</h1>
-<p>Good software should fade into the background … however …</p>
-<p><span style="color:yellow;"> As is common in science, the first big breakthrough in our understanding … [came from] an improvement in measurement. </span></p>
-<p><span style="color:pink;"> &gt; Daniel Kahnemann, <em>Thinking, Fast and Slow</em> (2011) </span></p>
-</section></section>
-<section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section><section id="questions-driving-ants-development-refs.1" class="slide level2">
-<h1>Questions driving <em>ANTs</em> development (<span class="math">\(+\)</span> Refs.1)</h1>
-<ul>
-<li class="fragment"><p>how should we geometrically transform anatomical coordinates?</p>
-<ul>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/17659998">syn paper</a> - our geometric transformation model of choice</li>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/24409140">recent B-spline alternative/improvement</a></li>
-</ul></li>
-<li class="fragment"><p>how should we measure pairwise image similarity?</p>
-<ul>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/20851191">similarity metric evaluation</a> compares functions for computing rigid or affine transformations between images</li>
-</ul></li>
-<li class="fragment"><p>what if this pair has rgb/vector/tensor voxels?</p>
-<ul>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/18041273">dti similarity</a></li>
-</ul></li>
-<li class="fragment"><p>how do we extend from pairs to hundreds or thousands of pairs of images?</p>
-<ul>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=avants+optimal+template">optimal templates</a> and <a href="http://www.ncbi.nlm.nih.gov/pubmed/24879923">spatial priors</a></li>
-<li class="fragment">species specific templates/priors in <a href="http://www.ncbi.nlm.nih.gov/pubmed/23516289">chimps</a> and <a href="http://www.ncbi.nlm.nih.gov/pubmed/23284904">canines</a></li>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=tustison+freesurfer">ants “big data”</a></li>
-</ul></li>
-<li class="fragment"><p>how do we fuse multiple modality images at the subject and population levels?</p>
-<ul>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=tustison+logical+circularity">ants auxiliary modality study</a></li>
-</ul></li>
-</ul>
-</section><section id="questions-driving-ants-development-refs.2" class="slide level2">
-<h1>Questions driving <em>ANTs</em> development (<span class="math">\(+\)</span> Refs.2)</h1>
-<ul>
-<li class="fragment"><p>can diffeomorphisms <a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=tustison+freesurfer">improve cortical thickness measurement</a>?</p></li>
-<li class="fragment"><p>how might we efficiently cluster the statistical fields that arise in image analysis?</p>
-<ul>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=atropos+tustison">Atropos</a> segmentation and <a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=N4+tustison">N4 inhomogeneity correction</a></li>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=eigenanatomy+avants">Eigenanatomy</a> for sparse imaging-specific PCA</li>
-</ul></li>
-<li class="fragment"><p>how to cluster such fields when we have supervision?</p>
-<ul>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=sparse+canonical+avants">sparse canonical correlation analysis for neuroimaging</a></li>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/24852460">Prior-constrained PCA</a></li>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4009425/">atlas-based label fusion</a> and <a href="http://www.ncbi.nlm.nih.gov/pubmed/21237273">MALF</a> - powerful expert systems for segmentation</li>
-</ul></li>
-<li class="fragment"><p>how do we implement a fully multivariate <em>interpretable</em> brain and behavior study?</p>
-<ul>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=sccan+avants">SCCAN for imaging &amp; cognition</a></li>
-</ul></li>
-<li class="fragment"><p>how do we extend these ideas to functional MRI &amp; decoding?</p>
-<ul>
-<li class="fragment"><a href="http://stnava.github.io/RKRNS/">recent unpublished software</a></li>
-<li class="fragment"><a href="..not%20yet...">recent work with Ben Kandel</a></li>
-</ul></li>
-</ul>
-</section><section id="ants-also-specializes-in-longitudinal-analysis" class="slide level2">
-<h1><em>ANTs</em> also specializes in longitudinal analysis</h1>
-<ul>
-<li class="fragment">Longitudinal image processing issues
-<ul>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/20005963">registration induced bias</a></li>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/23549059">general &amp; TBI-specific issues in longitudinal analysis</a></li>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/22517961">reproducibility of CBF</a></li>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/22306801">structure-specific analysis</a></li>
-</ul></li>
-<li class="fragment">An early study of longitudinal cortical change in ALS
-<ul>
-<li class="fragment"><a href="http://www.ncbi.nlm.nih.gov/pubmed/16317254">ALS atrophy rates</a></li>
-</ul></li>
-<li class="fragment">Extension of standard-setting ants cortical thickness pipeline to longitudinal data
-<ul>
-<li class="fragment"><a href="https://github.com/stnava/DynANTs">DynANTs (unpublished)</a></li>
-</ul></li>
-</ul>
-</section><section id="section-2" class="slide level2">
-<h1></h1>
-<ul>
-<li class="fragment"><p>Powerful, general-purpose, <span style="color:red;">well-evaluated</span> registration and segmentation.</p></li>
-<li class="fragment"><p>Differentiable maps with differentiable inverse <span style="color:red;"><span class="math">\(+\)</span> statistics in these spaces</span></p></li>
-<li class="fragment"><p>Evaluated in multiple problem domains</span> via internal studies &amp; open competition</p></li>
-<li class="fragment"><p>Borg philosophy: <span style="color:red;">“best of”</span> from I/O, to processing to statistical methods</p></li>
-<li class="fragment"><p>Open source, testing, many examples, consistent style, multiple platforms, active community support …</p></li>
-<li class="fragment"><p>Integration with <em>R</em> <span class="math">\(+\)</span> novel tools for prediction, decoding, high-to-low dimensional statistics.</p></li>
-<li class="fragment"><p>Collaborations with <a href="http://neuro.debian.net/pkgs/ants.html">neurodebian</a>, <a href="http://www.slicer.org/">slicer</a>, <a href="https://github.com/BRAINSia/BRAINSTools">brainsfit</a>, <a href="http://nipy.sourceforge.net/nipype/">nipype</a>, <a href="http://www.itk.org">itk</a> and more …</p></li>
-</ul>
-</section><section id="tools-you-can-use-for-imaging-science" class="slide level2">
-<h1>Tools you can use for imaging science</h1>
-<ul>
-<li class="fragment"><p>Core developers: <em>B. Avants, N. Tustison, H. J. Johnson, J. T. Duda</em></p></li>
-<li class="fragment"><p>Many contributors, including users …</p></li>
-<li class="fragment"><p>Multi-platform, multi-threaded C++ <a href="stnava.github.io/ANTs" class="uri">stnava.github.io/ANTs</a></p></li>
-<li class="fragment"><p>Developed in conjunction with <a href="http://www.itk.org/"><a href="http://www.itk.org/" class="uri">http://www.itk.org/</a></a></p></li>
-<li class="fragment"><p>R wrapping and extension <a href="stnava.github.io/ANTsR" class="uri">stnava.github.io/ANTsR</a></p></li>
-<li class="fragment"><p>rapid development, regular testing <span class="math">\(+\)</span> many eyes <span class="math">\(\rightarrow\)</span> bugs are shallow</p></li>
-</ul>
-<p><img style="float: right" src="figures/penn.png" /> <img style="float: left" src="figures/picsl.jpg" /></p>
-</section><section id="section-3" class="slide level2">
-<h1></h1>
-<p><img src="figures/steamer_lane2.jpg" /></p>
-</section></section>
-<section><section id="analysis-philosophy-and-published-opinions" class="titleslide slide level1"><h1>Analysis philosophy and published opinions</h1></section><section id="what-is-and-is-not-image-registration" class="slide level2">
-<h1>What is and <em>is not</em> image registration</h1>
-<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/23116330"><em>not</em> registration</a></p>
-</section><section id="voodoo-in-voxel-based-analysis" class="slide level2">
-<h1>Voodoo in voxel-based analysis</h1>
-<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=logical+circularity+tustison">logical circularity VBA</a></p>
-</section><section id="instrumentation-bias-in-the-use-and-evaluation-of-software" class="slide level2">
-<h1>Instrumentation bias in the use and evaluation of software</h1>
-<p><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3766821/?report=reader">Instrumentation bias in the use and evaluation of software</a></p>
-</section></section>
-<section><section id="discussion" class="titleslide slide level1"><h1>Discussion</h1></section><section id="problems" class="slide level2">
-<h1>Problems</h1>
-<ul>
-<li class="fragment">Customizable for specific problems but not too specific</li>
-<li class="fragment">Rapid development: still need familiarity with compilation for latest ANTs</li>
-<li class="fragment">Latest theoretical advances in registration not yet wrapped for users</li>
-<li class="fragment">Need more <a href="http://stnava.github.io/ANTs/">Documentation</a> &amp; <a href="http://testing.psychiatry.uiowa.edu/CDash/index.php?project=ANTS">testing</a> …</li>
-</ul>
-</section><section id="solid-core-permits-broad-applications" class="slide level2">
-<h1>Solid Core Permits Broad Applications</h1>
-<ul>
-<li class="fragment"><p>microscopy</p></li>
-<li class="fragment"><p>satellite imagery</p></li>
-<li class="fragment"><p>interactive registration (see <em>Slicer</em>) and segmentation (see <em>ITK-SNAP</em>)</p></li>
-</ul>
-</section><section id="community-response" class="slide level2">
-<h1>Community response</h1>
-<ul>
-<li class="fragment"><p>Just wanted to let you know—ANTS worked for me! I seem to be getting interesting results along the line_ s of what I was predicting my study would find in specific parts of the striatum. <em>–Patryk from Ireland</em></p></li>
-<li class="fragment"><p>To put not to fine a point on it—ANTS rocks. <em>–Craig from California</em></p></li>
-<li class="fragment"><p>The ANTS package is very, very cool! <em>–Jaime from Wisconsin</em></p></li>
-<li class="fragment"><p>Thank you for sharing this work, and congratulations for a job well done. <em>–Alexandra from North Carolina</em></p></li>
-</ul>
-</section><section id="strengths" class="slide level2">
-<h1>Strengths</h1>
-<p>Some strengths include relatively few assumptions, a flexible implementation and open-science approach.</p>
-<p><img src="figures/systems.png" alt="systems of the body" /></p>
-</section><section id="competitions" class="slide level2">
-<h1>competitions</h1>
-<ul>
-<li class="fragment">Klein 2009: Brain Registration (ANTs)</li>
-<li class="fragment">Murphy 2010: Lung Registration (ANTs)</li>
-<li class="fragment">SATA 2012: Multi-Atlas Segmentation (ANTs+JointLabelFusion)</li>
-<li class="fragment">SATA 2013: Multi-Atlas Segmentation (ANTs+JointLabelFusion)</li>
-<li class="fragment">BRATS 2013: Multivariate Brain Segmentation (ANTsR)</li>
-<li class="fragment">Yushkevich’s Hipp Atlas: ( hippocampusubfield.com )</li>
-<li class="fragment">TBA: BOLD decoding (ANTsR)</li>
-<li class="fragment">Substantial work with DTI ( Camino developer in house )</li>
-<li class="fragment">STACOM2014 ?</li>
-</ul>
-</section><section id="software-engineering" class="slide level2">
-<h1>Software engineering</h1>
-<!-- ants gource -->
-<div align="center">
-<iframe width="560" height="315" src="http://www.youtube.com/embed/7X61iBFDF1I" frameborder="0" allowfullscreen>
-</iframe>
-</div>
-<p><a href="http://www.youtube.com/embed/7X61iBFDF1I">ants gource</a></p>
-</section><section id="a-couple-notes-on-usage" class="slide level2">
-<h1>A couple notes on usage</h1>
-<ul>
-<li class="fragment">Out of the many cortical thickness algorithms that have been proposed, FreeSurfer dominates. And rightfully so, because it works well and has been the only publicly available tool (until reccently).</li>
-<li class="fragment">In the same spirit, we have made our tools publicly available. Usage is similar to that of FreeSurfer (see below). We also make several templates available.</li>
-</ul>
-<div align="center">
-<img height="350" src="./figures/antsCtCall.png" frameborder="0"></img>
-</div>
-<p>“Talk is cheap, show me the code.” <sub>—Linus Torvald</sub></p>
-</section></section>
-<section><section id="library-for-multivariate-image-registration-segmentation-statistics" class="titleslide slide level1"><h1>Library for multivariate image registration, segmentation &amp; statistics</h1></section><section id="theory-evaluation-reproducibility" class="slide level2">
-<h1>Theory + evaluation + reproducibility</h1>
-<p><img src="figures/reprregevex_sm.jpg" /></p>
-</section><section id="founding-developers" class="slide level2">
-<h1>Founding Developers</h1>
-<p><img src="figures/nick.jpg" /></p>
-</section><section id="a-long-history-of-research" class="slide level2">
-<h1>A long history of research</h1>
-<p><img src="figures/lineage.jpg" /></p>
-</section><section id="rigorous-transformation-definition-is-key" class="slide level2">
-<h1>Rigorous transformation definition is key</h1>
-<p>ANTs and ITK are developed together: <span style="color:red;">see <span class="citation" data-cites="Avants2014">B. B. Avants et al. (2014)</span>, <span class="citation" data-cites="Tustison2013">Tustison and Avants (2013)</span>, <span class="citation" data-cites="Tustison2010">Tustison et al. (2010)</span></span> and more …</p>
-<p>Key definitions</p>
-<ul>
-<li class="fragment"><p>physical space</p></li>
-<li class="fragment"><p>transformation definition aware of physical space</p></li>
-<li class="fragment"><p>optimization space consistent with above</p></li>
-<li class="fragment"><p>unit testing</p></li>
-</ul>
-</section></section>
-<section><section id="merit-badges" class="titleslide slide level1"><h1>Merit Badges</h1></section><section id="section-4" class="slide level2">
-<h1></h1>
-<p><img src="figures/bart.jpg" /></p>
-</section><section id="open-source" class="slide level2">
-<h1>open source</h1>
-<p>built on ITK—probably the most well-vetted medical image analysis package in the world <span class="citation" data-cites="AvantsITK">B. B. Avants and Tustison (2014)</span></p>
-</section><section id="papers" class="slide level2">
-<h1>papers</h1>
-<ul>
-<li class="fragment">registration : <em>ANTs</em> vs. everything else <span class="citation" data-cites="Klein2009">Klein et al. (2009)</span></li>
-<li class="fragment">segmentation : Atropos vs. SPM, etc.</li>
-<li class="fragment">bias correction : N4 vs N3</li>
-<li class="fragment">cortical thickness : <em>ANTs</em> vs. FreeSurfer <span class="citation" data-cites="Tustison2014d">Tustison et al. (2014)</span></li>
-<li class="fragment">compatibility with R</li>
-</ul>
+<section><section id="ants-innovations" class="titleslide slide level1"><h1>ANTs Innovations</h1></section><section id="coordinated-multivariate-statistical-fields-arise-from-this-mapping" class="slide level2">
+<h1>coordinated multivariate statistical fields arise from this mapping</h1>
+<p><img src="figures/statisticalfields.png" alt="images at measurement fields" /></p>
 </section><section id="reffont" class="slide level2 unnumbered">
 <h1>References</h1>
 <div class="references">
-<p>Avants, Brian B., and Nicholas J. Tustison. 2014. “The ITK Image Registration Framework.” <em>Front Neuroinform</em> 7. Penn Image Computing; Science Laboratory, Department of Radiology, University of Pennsylvania Philadelphia, PA, USA.: 39. doi:<a href="http://dx.doi.org/10.3389/fninf.2013.00039">10.3389/fninf.2013.00039</a>.</p>
-<p>Avants, Brian B., Nicholas J. Tustison, Michael Stauffer, Gang Song, Baohua Wu, and James C. Gee. 2014. “The Insight ToolKit Image Registration Framework.” <em>Front Neuroinform</em> 8. Penn Image Computing; Science Laboratory, Department of Radiology, University of Pennsylvania Philadelphia, PA, USA.: 44. doi:<a href="http://dx.doi.org/10.3389/fninf.2014.00044">10.3389/fninf.2014.00044</a>.</p>
-<p>Klein, Arno, Jesper Andersson, Babak A Ardekani, John Ashburner, Brian Avants, Ming-Chang Chiang, Gary E Christensen, et al. 2009. “Evaluation of 14 Nonlinear Deformation Algorithms Applied to Human Brain MRI Registration.” <em>Neuroimage</em> 46 (3). New York State Psychiatric Institute, Columbia University, NY, NY 10032, USA. arno@binarybottle.com: 786–802. doi:<a href="http://dx.doi.org/10.1016/j.neuroimage.2008.12.037">10.1016/j.neuroimage.2008.12.037</a>.</p>
-<p>Tustison, Nicholas J., and Brian B. Avants. 2013. “Explicit B-Spline Regularization in Diffeomorphic Image Registration.” <em>Front Neuroinform</em> 7. Penn Image Computing; Science Laboratory, Department of Radiology, University of Pennsylvania Philadelphia, PA, USA.: 39. doi:<a href="http://dx.doi.org/10.3389/fninf.2013.00039">10.3389/fninf.2013.00039</a>.</p>
-<p>Tustison, Nicholas J., Brian B. Avants, Philip A. Cook, Yuanjie Zheng, Alexander Egan, Paul A. Yushkevich, and James C. Gee. 2010. “N4ITK: Improved N3 Bias Correction.” <em>IEEE Trans Med Imaging</em> 29 (6). Department of Radiology, University of Pennsylvania, Philadelphia, PA 19140, USA. ntustison@wustl.edu: 1310–20. doi:<a href="http://dx.doi.org/10.1109/TMI.2010.2046908">10.1109/TMI.2010.2046908</a>.</p>
-<p>Tustison, Nicholas J., Philip A. Cook, Arno Klein, Gang Song, Sandhitsu R. Das, Jeffrey T. Duda, Benjamin M. Kandel, et al. 2014. “Large-Scale Evaluation of ANTs and FreeSurfer Cortical Thickness Measurements.” <em>Neuroimage</em> 99 (Oct). Penn Image Computing; Science Laboratory, University of Pennsylvania, Philadelphia, PA, USA.: 166–79. doi:<a href="http://dx.doi.org/10.1016/j.neuroimage.2014.05.044">10.1016/j.neuroimage.2014.05.044</a>.</p>
+
 </div>
 </section></section>
     </div>
