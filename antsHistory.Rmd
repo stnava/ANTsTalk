@@ -36,7 +36,8 @@ output:
 ```{r global options, include=FALSE}
 library(rmarkdown)
 library(knitr)
-opts_chunk$set(fig.width=9, fig.height=6, fig.path='FigsAntsHistory/',
+figpath<-'FigsAntsHistory/'
+opts_chunk$set(fig.width=9, fig.height=6, fig.path=figpath,
                warning=FALSE, message=FALSE)
 ```
 
@@ -430,7 +431,6 @@ filename<-getANTsRData('r64')
 img2<-antsImageRead( filename , dim )
 mask<-getMask(img,150,255,T)
 nvox<-sum( mask == 1 )
-plotANTsImage(img)
 ```
 The brain has `r nvox` voxels ...
 
@@ -459,13 +459,22 @@ qvals<-p.adjust( mylmresults$pval.model )
 ```
 The minimum q-value is `r min(qvals)` ... 
 
-## Visualize the distribution of effects
+## Visualize the histograms of effects
 ```{r vizmorph,results='hide'}
 whichvox<-qvals < 1.e-8
 voxdf<-data.frame( volume=c( as.numeric( mat[,whichvox] ) ), DX=DX )
 ggplot(voxdf, aes(volume, fill = DX)) + geom_density(alpha = 0.2)
 ```
 
+## Visualize the anatomical distribution of effects
+```{r vizmorph2,results='hide'}
+betas<-antsImageClone(mask)
+betas[mask==1]<-mylmresults$beta.t[1,]
+thresh<-paste(mean(mylmresults$beta.t[1,]),'x',
+  max(mylmresults$beta.t[1,]),sep='')
+plotANTsImage(img,functional=list(),
+  outname=paste(figpath,'loadimages.jpg',sep=''))
+```
 ## The power of *ANTs* $+$ *R* $\rightarrow$<br /> <span style="color:red;">**Reproducible imaging science**</span> 
 
 ![](./figures/antsgoals.png)
