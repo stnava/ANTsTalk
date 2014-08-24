@@ -1,6 +1,6 @@
 ---
 title: <span style="color:red;">An Exegesis of Advanced Normalization Tools (*ANTs*)</span>
-author: Brian B. Avants, Nicholas J. Tustison, Hans J. Johnson & the ITK and registration community
+author: Brian B. Avants (<span style="color:blue;">PENN</span>) and <br />Nicholas J. Tustison (<span style="color:orange;">UVA</span>)
 bibliography: REFERENCES.bib
 logo:    logo.jpg
 output:
@@ -37,6 +37,8 @@ output:
 
 This talk is online at [http://stnava.github.io/ANTsTalk/](http://stnava.github.io/ANTsTalk/#/) with colored [links](http://stnava.github.io/ANTsTalk/#/) meant to be clicked for more information
 
+## we can compare apples and oranges ...
+
 ## Definitions
 
 * Registration $=$ geometric mapping between image pairs or image sets (e.g. Affine)
@@ -51,20 +53,9 @@ This talk is online at [http://stnava.github.io/ANTsTalk/](http://stnava.github.
 
 * Dimensionality reduction $=$ principled way of finding few variables to represent many variables (e.g. PCA, CCA)
 
-<!--
-#  *ANTs* is an image processing platform for reproducible <span style="color:red;">multiple modality</span> image analysis & <span style="color:red;">multivariate statistics</span>
-##  <span style="color:red;">ANTs*R*</span> Platform for Medical Imaging
-![](figures/antsgoals.png)
-this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is [this one](http://stnava.github.io/RKRNS/)
--->
-
 # *ANTs* optimizes mathematically well-defined <span style="color:red;">objective functions</span> guided by <span style="color:red;">prior knowledge</span>  ...
 
-# ... including that of developers, domain experts and users ...
-
-# our strong <span style="color:red;">mathematical and software engineering</span> foundation leads to near limitless opportunities for innovation in a variety of application domains
-
-# plug *your ideas* into our software to gain insight into biomedical data ...
+# plug *your ideas* into our software: <br /> <span style="color:blue;">innovation and insight from biomedical data ...</span>
 
  
 # Registration with priors 
@@ -77,8 +68,19 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 
 ## we need to deform ( but not the lesion )
 
+## with landmarks ... two metrics 
+
+## important in segmentation: brain extraction, segmentation, anatomical labeling
+
+* general purpose 
+
+* can use library of shapes to identify objects ...
+
 ## Fine-grained and flexible maps
 ![](./figures/highresdiffeos.jpg)
+
+
+## building templates
 
 # Segmentation with priors 
 
@@ -98,11 +100,13 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 
 ## ANTsR code example 
 
+## PTBP 
+
 ## BRATS competition
 
-## EANAT 
+## ANTsR: EANAT 
 
-## SCCAN 
+## ANTsR: SCCAN 
 
 # ANTs Innovations
 

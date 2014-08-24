@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Brian B. Avants, Nicholas J. Tustison, Hans J. Johnson &amp; the ITK and registration community" />
+  <meta name="author" content="Brian B. Avants (PENN) and Nicholas J. Tustison (UVA)" />
   <title>An Exegesis of Advanced Normalization Tools (ANTs)</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -85,7 +85,7 @@
 
 <section>
     <h1 class="title"><span style="color:red;">An Exegesis of Advanced Normalization Tools (<em>ANTs</em>)</span></h1>
-    <h2 class="author">Brian B. Avants, Nicholas J. Tustison, Hans J. Johnson &amp; the ITK and registration community</h2>
+    <h2 class="author">Brian B. Avants (<span style="color:blue;">PENN</span>) and <br />Nicholas J. Tustison (<span style="color:orange;">UVA</span>)</h2>
     <h3 class="date"></h3>
 </section>
 
@@ -95,6 +95,9 @@
 <img src="figures/ireland.png" frameborder="0"></img>
 </div>
 <p>This talk is online at <a href="http://stnava.github.io/ANTsTalk/#/"><a href="http://stnava.github.io/ANTsTalk/" class="uri">http://stnava.github.io/ANTsTalk/</a></a> with colored <a href="http://stnava.github.io/ANTsTalk/#/">links</a> meant to be clicked for more information</p>
+</section>
+<section id="we-can-compare-apples-and-oranges" class="slide level2">
+<h1>we can compare apples and oranges …</h1>
 </section>
 <section id="definitions" class="slide level2">
 <h1>Definitions</h1>
@@ -106,17 +109,9 @@
 <li class="fragment"><p>Multiple modality <span class="math">\(=\)</span> using many modalities at once (e.g. DTI and T1 and BOLD)</p></li>
 <li class="fragment"><p>Dimensionality reduction <span class="math">\(=\)</span> principled way of finding few variables to represent many variables (e.g. PCA, CCA)</p></li>
 </ul>
-<!--
-#  *ANTs* is an image processing platform for reproducible <span style="color:red;">multiple modality</span> image analysis & <span style="color:red;">multivariate statistics</span>
-##  <span style="color:red;">ANTs*R*</span> Platform for Medical Imaging
-![](figures/antsgoals.png)
-this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is [this one](http://stnava.github.io/RKRNS/)
--->
 </section>
 <section><section id="ants-optimizes-mathematically-well-defined-objective-functions-guided-by-prior-knowledge" class="titleslide slide level1"><h1><em>ANTs</em> optimizes mathematically well-defined <span style="color:red;">objective functions</span> guided by <span style="color:red;">prior knowledge</span> …</h1></section></section>
-<section><section id="including-that-of-developers-domain-experts-and-users" class="titleslide slide level1"><h1>… including that of developers, domain experts and users …</h1></section></section>
-<section><section id="our-strong-mathematical-and-software-engineering-foundation-leads-to-near-limitless-opportunities-for-innovation-in-a-variety-of-application-domains" class="titleslide slide level1"><h1>our strong <span style="color:red;">mathematical and software engineering</span> foundation leads to near limitless opportunities for innovation in a variety of application domains</h1></section></section>
-<section><section id="plug-your-ideas-into-our-software-to-gain-insight-into-biomedical-data" class="titleslide slide level1"><h1>plug <em>your ideas</em> into our software to gain insight into biomedical data …</h1></section></section>
+<section><section id="plug-your-ideas-into-our-software-innovation-and-insight-from-biomedical-data" class="titleslide slide level1"><h1>plug <em>your ideas</em> into our software: <br /> <span style="color:blue;">innovation and insight from biomedical data …</span></h1></section></section>
 <section><section id="registration-with-priors" class="titleslide slide level1"><h1>Registration with priors</h1></section><section id="prior-knowledge-about-how-to-map---e.g.lesion-brains" class="slide level2">
 <h1>prior knowledge about how to map - e.g. lesion brains</h1>
 </section><section id="we-need-to-rotate" class="slide level2">
@@ -125,9 +120,19 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 <h1>we need to scale and shear</h1>
 </section><section id="we-need-to-deform-but-not-the-lesion" class="slide level2">
 <h1>we need to deform ( but not the lesion )</h1>
+</section><section id="with-landmarks-two-metrics" class="slide level2">
+<h1>with landmarks … two metrics</h1>
+</section><section id="important-in-segmentation-brain-extraction-segmentation-anatomical-labeling" class="slide level2">
+<h1>important in segmentation: brain extraction, segmentation, anatomical labeling</h1>
+<ul>
+<li class="fragment"><p>general purpose</p></li>
+<li class="fragment"><p>can use library of shapes to identify objects …</p></li>
+</ul>
 </section><section id="fine-grained-and-flexible-maps" class="slide level2">
 <h1>Fine-grained and flexible maps</h1>
 <p><img src="figures/highresdiffeos.jpg" /></p>
+</section><section id="building-templates" class="slide level2">
+<h1>building templates</h1>
 </section></section>
 <section><section id="segmentation-with-priors" class="titleslide slide level1"><h1>Segmentation with priors</h1></section><section id="tissue" class="slide level2">
 <h1>tissue</h1>
@@ -143,12 +148,14 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 </section></section>
 <section><section id="ants-statistics-antsr" class="titleslide slide level1"><h1>ANTs statistics: <em>ANTsR</em></h1></section><section id="antsr-code-example" class="slide level2">
 <h1>ANTsR code example</h1>
+</section><section id="ptbp" class="slide level2">
+<h1>PTBP</h1>
 </section><section id="brats-competition" class="slide level2">
 <h1>BRATS competition</h1>
-</section><section id="eanat" class="slide level2">
-<h1>EANAT</h1>
-</section><section id="sccan" class="slide level2">
-<h1>SCCAN</h1>
+</section><section id="antsr-eanat" class="slide level2">
+<h1>ANTsR: EANAT</h1>
+</section><section id="antsr-sccan" class="slide level2">
+<h1>ANTsR: SCCAN</h1>
 </section></section>
 <section><section id="ants-innovations" class="titleslide slide level1"><h1>ANTs Innovations</h1></section><section id="coordinated-multivariate-statistical-fields-arise-from-this-mapping" class="slide level2">
 <h1>coordinated multivariate statistical fields arise from this mapping</h1>
