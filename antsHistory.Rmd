@@ -519,7 +519,7 @@ Good software should fade into the background ... however ...
 # Discussion 
 
 
-## Questions driving *ANTs* development ($+$ Refs.1)
+## Questions driving *ANTs* ($+$ Refs.1)
 
 * how should we geometrically transform anatomical coordinates?
 
@@ -544,7 +544,7 @@ Good software should fade into the background ... however ...
 
     - [ants auxiliary modality study](http://www.ncbi.nlm.nih.gov/pubmed/?term=tustison+logical+circularity)
 
-## Questions driving *ANTs* development ($+$ Refs.2)
+## Questions driving *ANTs* ($+$ Refs.2)
 
 * can diffeomorphisms [improve cortical thickness measurement](http://www.ncbi.nlm.nih.gov/pubmed/?term=tustison+freesurfer)?
 
