@@ -56,7 +56,7 @@ Diffeomorphisms $=$ differentiable map with differentiable inverse (e.g. "silly 
 
 # *ANTs* optimizes mathematically well-defined <span style="color:red;">objective functions</span> guided by <span style="color:red;">prior knowledge</span>  ...
 
-# plug *your ideas* into our software: <br /> <span style="color:blue;">innovation and <span style="color:red;">insight</span> from biomedical data ...</span>
+# plug *your ideas* into our software: <br /> <span style="color:blue;">innovation and <span style="color:red;">insight</span> from biomedical data</span> ...
 
  
 # Registration with priors 
