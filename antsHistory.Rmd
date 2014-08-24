@@ -32,6 +32,14 @@ output:
     fig_width: 5
 ---
 
+
+```{r global options, include=FALSE}
+library(rmarkdown)
+library(knitr)
+opts_chunk$set(fig.width=9, fig.height=6, fig.path='FigsAntsHistory/',
+               warning=FALSE, message=FALSE)
+```
+
 ## 
 <div align="center"><img src="./figures/ireland.png" frameborder="0"></img></div>
 
