@@ -45,7 +45,7 @@ This talk is online at [http://stnava.github.io/ANTsTalk/](http://stnava.github.
 
 * Segmentation $=$ labeling tissue or anatomy in images, usually automated (e.g. K-means)
 
-* Multivariate $=$ using many voxels or measurements at once (e.g. PCA)
+* Multivariate $=$ using many voxels or measurements at once (e.g. PCA, $p >> n$ ridge regression)
 
 * Multiple modality $=$ using many modalities at once (e.g. DTI and T1 and BOLD)
 
