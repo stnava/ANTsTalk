@@ -384,7 +384,7 @@ Randomly selected healthy individuals.  Atropos gets good performance across age
 
 ## Cortical thickness estimation
 
-![](./figures/corticalThicknessEstimation.png)
+<div align="center"><img height="250" src="./figures/corticalThicknessEstimation.png" frameborder="0"></img></div>
 
 In contrast to FreeSurfer which warps coupled surface meshes to segment the gray matter, *ANTs* diffeomorphically registers the white matter to the combined gray/white matters while simultaneously estimating thickness.
 
