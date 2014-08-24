@@ -389,6 +389,8 @@ Randomly selected healthy individuals.  Atropos gets good performance across age
 In contrast to FreeSurfer which warps coupled surface meshes to segment the gray matter, *ANTs* diffeomorphically registers the white matter to the combined gray/white matters while simultaneously estimating thickness.
 
 
+# Establishing structural processing validity and robustness is key to unlocking other modalities
+
 # Can we implement and release, with provenance, a multiple modality MRI map of adolescent brain development from public MRI data?
 
 ## Scientific Data 2014
@@ -487,6 +489,9 @@ plotANTsImage(img,functional=list(betas),threshold=thresh,
 ... used in ["Sparse canonical correlation analysis relates network-level atrophy to multivariate cognitive measures in a neurodegenerative population"](http://www.ncbi.nlm.nih.gov/pubmed/24096125) and several upcoming ...
 
 # Can we customize these methods for a challenging multivariate segmentation problem with clinical relevance?
+
+## Tumor segmentation
+![](./figures/tumorsegmentation.png)
 
 ## General theory tunable to specific domains:  *no-free lunch*
 ![](./figures/brats.png)
