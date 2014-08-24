@@ -36,7 +36,7 @@ output:
 ```{r global options, include=FALSE}
 library(rmarkdown)
 library(knitr)
-figpath<-'FigsAntsHistory/'
+figpath<-'FigsAntsRegistration/'
 opts_chunk$set(fig.width=9, fig.height=6, fig.path=figpath,
                warning=FALSE, message=FALSE)
 ```
