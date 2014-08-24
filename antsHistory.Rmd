@@ -37,7 +37,7 @@ output:
 
 This talk is online at [http://stnava.github.io/ANTsTalk/](http://stnava.github.io/ANTsTalk/#/) with colored [links](http://stnava.github.io/ANTsTalk/#/) meant to be clicked for more information
 
-# Definitions
+## Definitions
 
 * Registration $=$ geometric mapping between image pairs or image sets
 
