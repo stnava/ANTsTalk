@@ -7,8 +7,6 @@ library(shiny)
 library(ggvis)
 library(rmarkdown)
 srcdir<-"./"
-pre='antsRegistration'
-render( paste(pre,".Rmd",sep=''), clean=TRUE, "revealjs_presentation" ) 
 pre='antsHistory'
 render( paste(pre,".Rmd",sep=''), clean=TRUE, "revealjs_presentation", output_file='index.html' ) 
 # render( paste(pre,".Rmd",sep=''), clean=TRUE, "pdf_document" )

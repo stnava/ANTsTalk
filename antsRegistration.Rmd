@@ -1,5 +1,5 @@
 ---
-title: <span style="color:red;">An Exegesis of Advanced Normalization Tools (*ANTs*)</span>
+title: <span style="color:red;">An Exegesis of Registration in Advanced Normalization Tools (*ANTs*)</span>
 author: Brian B. Avants (<span style="color:blue;">PENN</span>) and <br />Nicholas J. Tustison (<span style="color:orange;">UVA</span>)
 bibliography: REFERENCES.bib
 logo:    logo.jpg
@@ -21,7 +21,7 @@ output:
     smaller: false
     theme: solarized
     transition: fade
-    highlight: espresso
+    highlight: zenburn
     center: true
     self_contained: false
   ioslides_presentation:
