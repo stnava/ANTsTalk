@@ -490,7 +490,7 @@ plotANTsImage(img,functional=list(betas),threshold=thresh,
 
 # Can we customize these methods for a challenging multivariate segmentation problem with clinical relevance?
 
-## Tumor segmentation
+## Automated tumor segmentation from multiple MRI
 ![](./figures/tumorsegmentation.png)
 
 ## General theory tunable to specific domains:  *no-free lunch*
