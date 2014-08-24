@@ -497,7 +497,7 @@ Good software should fade into the background ... however ...
 </span>
 
 
-# Summary 
+# Discussion 
 
 
 ## Questions driving *ANTs* development ($+$ Refs.1)
@@ -563,8 +563,18 @@ Good software should fade into the background ... however ...
 * Extension of standard-setting ants cortical thickness pipeline to longitudinal data
     - [DynANTs (unpublished)](https://github.com/stnava/DynANTs)
 
+## Challenges: Computational and Scientific
 
-## 
+- Scalability: **need to fuse feature selection methods with transformation optimization**
+- Scalability: **need to leverage existing ITK streaming infrastructure in application level tool**
+- Domain expertise: Customizable for specific problems but sometimes not specific enough
+- Rapid development: colleagues still need familiarity with compilation for latest ANTs features
+- Latest theoretical advances in registration not yet wrapped for users
+- Need more [Documentation](http://stnava.github.io/ANTs/)  & [testing](http://testing.psychiatry.uiowa.edu/CDash/index.php?project=ANTS) ...
+
+
+
+## Recap
 
 - Powerful, general-purpose, <span style="color:red;">well-evaluated</span> registration and segmentation.
 
@@ -620,18 +630,6 @@ Good software should fade into the background ... however ...
 [Instrumentation bias in the use and evaluation of software](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3766821/?report=reader)
 
 
-
-
-
-
-# Discussion
-
-## Problems
-
-- Customizable for specific problems but not too specific
-- Rapid development: still need familiarity with compilation for latest ANTs
-- Latest theoretical advances in registration not yet wrapped for users
-- Need more [Documentation](http://stnava.github.io/ANTs/)  & [testing](http://testing.psychiatry.uiowa.edu/CDash/index.php?project=ANTS) ...
 
 
 ## Solid Core Permits Broad Applications
