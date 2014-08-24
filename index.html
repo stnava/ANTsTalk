@@ -171,6 +171,7 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 <p><img src="figures/oneInterpolation.png" /></p>
 <p><span class="math">\(\mathcal{T}_{total} = \mathcal{T}_1 \circ \mathcal{T}_2 \circ \mathcal{T}_3 \circ \mathcal{T}_4\)</span></p>
 <p>To avoid compounding interpolation error with the concatenation of transformations, <em>ANTs</em> never uses more than a single interpolation.</p>
+<p>We ported many of these ideas into the <a href="http://www.itk.org">Insight ToolKit</a> as part of its V4 reboot!</p>
 </section><section id="syn-example" class="slide level2">
 <h1>SyN Example</h1>
 <!-- syn example -->
@@ -183,8 +184,8 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 <h1>Intensity transformations</h1>
 <p><img src="figures/antsmetrics.png" /></p>
 <p>Our go to metrics: neighborhood correlation and mutual information</p>
-</section><section id="evaluated-on-anatomical-quantification" class="slide level2">
-<h1>Evaluated on anatomical quantification</h1>
+</section><section id="section-1" class="slide level2">
+<h1></h1>
 <p><img src="figures/evalhistory.png" /></p>
 </section><section id="sata-2013" class="slide level2">
 <h1>Sata 2013</h1>
@@ -413,7 +414,7 @@ mat&lt;-<span class="kw">imageListToMatrix</span>( imglist, mask )
 dx&lt;-<span class="kw">factor</span>( <span class="kw">c</span>( <span class="kw">rep</span>(<span class="dv">0</span>,simnum), <span class="kw">rep</span>(<span class="dv">1</span>,simnum) ) )
 mylmresults&lt;-<span class="kw">bigLMStats</span>( <span class="kw">lm</span>( mat ~<span class="st"> </span>dx ) )
 qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pre>
-<p>The minimum q-value is 1.8301 × 10<sup>-36</sup> …</p>
+<p>The minimum q-value is 5.0863 × 10<sup>-37</sup> …</p>
 </section><section id="the-power-of-ants-r-rightarrow-reproducible-imaging-science" class="slide level2">
 <h1>The power of <em>ANTs</em> <span class="math">\(+\)</span> <em>R</em> <span class="math">\(\rightarrow\)</span><br /> <span style="color:red;"><strong>Reproducible imaging science</strong></span></h1>
 <p><img src="figures/antsgoals.png" /></p>
@@ -503,7 +504,7 @@ qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pr
 <li class="fragment"><a href="https://github.com/stnava/DynANTs">DynANTs (unpublished)</a></li>
 </ul></li>
 </ul>
-</section><section id="section-1" class="slide level2">
+</section><section id="section-2" class="slide level2">
 <h1></h1>
 <ul>
 <li class="fragment"><p>Powerful, general-purpose, <span style="color:red;">well-evaluated</span> registration and segmentation.</p></li>
@@ -525,7 +526,7 @@ qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pr
 <li class="fragment"><p>rapid development, regular testing <span class="math">\(+\)</span> many eyes <span class="math">\(\rightarrow\)</span> bugs are shallow</p></li>
 </ul>
 <p><img style="float: right" src="figures/penn.png" /> <img style="float: left" src="figures/picsl.jpg" /></p>
-</section><section id="section-2" class="slide level2">
+</section><section id="section-3" class="slide level2">
 <h1></h1>
 <p><img src="figures/lion.png" /></p>
 </section></section>
@@ -618,7 +619,7 @@ qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pr
 <li class="fragment"><p>unit testing</p></li>
 </ul>
 </section></section>
-<section><section id="merit-badges" class="titleslide slide level1"><h1>Merit Badges</h1></section><section id="section-3" class="slide level2">
+<section><section id="merit-badges" class="titleslide slide level1"><h1>Merit Badges</h1></section><section id="section-4" class="slide level2">
 <h1></h1>
 <p><img src="figures/bart.jpg" /></p>
 </section><section id="open-source" class="slide level2">

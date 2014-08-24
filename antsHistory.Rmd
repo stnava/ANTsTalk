@@ -116,6 +116,8 @@ $\mathcal{T}_{total} = \mathcal{T}_1 \circ \mathcal{T}_2 \circ \mathcal{T}_3 \ci
 To avoid compounding interpolation error with the concatenation of transformations, *ANTs* never
 uses more than a single interpolation.
 
+We ported many of these ideas into the [Insight ToolKit](http://www.itk.org) as part of its V4 reboot!
+
 ## SyN Example
 
 <!-- syn example -->
@@ -131,8 +133,7 @@ uses more than a single interpolation.
 
 Our go to metrics: neighborhood correlation and mutual information
 
-## Evaluated on anatomical quantification
-
+## 
 ![](./figures/evalhistory.png)
 
 ## Sata 2013
