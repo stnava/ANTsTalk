@@ -583,7 +583,7 @@ Good software should fade into the background ... however ...
 
 
 ## 
-![](./figures/steamer_lane2.png)
+![](./figures/steamer_lane2.jpg)
 
 
 
