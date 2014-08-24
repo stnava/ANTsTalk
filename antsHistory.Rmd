@@ -622,6 +622,8 @@ Good software should fade into the background ... however ...
 <img style="float: right" src="figures/penn.png" />
 <img style="float: left" src="figures/picsl.jpg" />
 
+##
+![](figures/antsvisitors.png)
 
 ## 
 ![](./figures/steamer_lane2.jpg)

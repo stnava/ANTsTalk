@@ -422,7 +422,7 @@ mat&lt;-<span class="kw">imageListToMatrix</span>( imglist, mask )
 DX&lt;-<span class="kw">factor</span>( <span class="kw">c</span>( <span class="kw">rep</span>(<span class="dv">0</span>,simnum), <span class="kw">rep</span>(<span class="dv">1</span>,simnum) ) )
 mylmresults&lt;-<span class="kw">bigLMStats</span>( <span class="kw">lm</span>( mat ~<span class="st"> </span>DX ) )
 qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pre>
-<p>The minimum q-value is 3.3542 × 10<sup>-40</sup> …</p>
+<p>The minimum q-value is 1.5231 × 10<sup>-40</sup> …</p>
 </section><section id="visualize-the-histograms-of-effects" class="slide level2">
 <h1>Visualize the histograms of effects</h1>
 <pre class="sourceCode r"><code class="sourceCode r">whichvox&lt;-qvals &lt;<span class="st"> </span><span class="fl">1.e-8</span>
@@ -557,6 +557,9 @@ voxdf&lt;-<span class="kw">data.frame</span>( <span class="dt">volume=</span><sp
 <p><img style="float: right" src="figures/penn.png" /> <img style="float: left" src="figures/picsl.jpg" /></p>
 </section><section id="section-3" class="slide level2">
 <h1></h1>
+<p><img src="figures/antsvisitors.png" /></p>
+</section><section id="section-4" class="slide level2">
+<h1></h1>
 <p><img src="figures/steamer_lane2.jpg" /></p>
 </section></section>
 <section><section id="analysis-philosophy-and-published-opinions" class="titleslide slide level1"><h1>Analysis philosophy and published opinions</h1></section><section id="what-is-and-is-not-image-registration" class="slide level2">
@@ -639,7 +642,7 @@ voxdf&lt;-<span class="kw">data.frame</span>( <span class="dt">volume=</span><sp
 <li class="fragment"><p>unit testing</p></li>
 </ul>
 </section></section>
-<section><section id="merit-badges" class="titleslide slide level1"><h1>Merit Badges</h1></section><section id="section-4" class="slide level2">
+<section><section id="merit-badges" class="titleslide slide level1"><h1>Merit Badges</h1></section><section id="section-5" class="slide level2">
 <h1></h1>
 <p><img src="figures/bart.jpg" /></p>
 </section><section id="open-source" class="slide level2">
