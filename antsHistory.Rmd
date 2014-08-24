@@ -19,9 +19,9 @@ output:
     incremental: true
     widescreen: true
     smaller: false
-    theme: night
+    theme: solarized
     transition: fade
-    highlight: espresso
+    highlight: zenburn
     center: true
     self_contained: false
   ioslides_presentation:
@@ -149,7 +149,7 @@ Our go to metrics: neighborhood correlation and mutual information
 ## 
 ![](./figures/evalhistory.png)
 
-## Sata 2013
+## 
 ![](./figures/sata2013.png)
 
 we provided the *standard* registration results for $>$ 20,000 image pairs at [SATA 2013](https://masi.vuse.vanderbilt.edu/workshop2013/index.php/MICCAI_2013_SATA_Challenge_and_Workshop:Current_events)
@@ -397,9 +397,9 @@ In contrast to FreeSurfer which warps coupled surface meshes to segment the gray
 
 [see examples @ *ANTs* webpage](http://stnava.github.io/ANTs/)
 
-# Agnostic data integration: prediction, decoding, diagnosis
+# Agnostic data integration: <br /><span style="color:red;">prediction, decoding, diagnosis</span>
 
-## *ITK+ANTs+R = ANTsR*
+## ITK+ANTs+R = <span style="color:red;">*ANTsR*</span>
 
 ## Agnostic statistics
 ![](./figures/antsrex.jpg)
@@ -420,7 +420,7 @@ filename<-getANTsRData('r16')
 img<-antsImageRead( filename , dim )
 filename<-getANTsRData('r64')
 img2<-antsImageRead( filename , dim )
-mask<-getMask(img,50,255,T)
+mask<-getMask(img,150,255,T)
 nvox<-sum( mask == 1 )
 plotANTsImage(img)
 ```
@@ -435,19 +435,28 @@ imglist<-list()
 imglist2<-list()
 for ( i in 1:simnum ) {
   img1sim<-antsImageClone(img)
-  img1sim[ mask==1 ]<-img1sim[ mask==1 ]+rnorm(nvox)
+  img1sim[ mask==1 ]<-rnorm(nvox,mean=0.205)
+  SmoothImage(dim,img1sim,1.5,img1sim)
   img2sim<-antsImageClone(img2)
-  img2sim[ mask==1 ]<-img2sim[ mask==1 ]+rnorm(nvox)
+  img2sim[ mask==1 ]<-rnorm(nvox,mean=0.20)
+  SmoothImage(dim,img2sim,1.5,img2sim)
   imglist<-lappend(imglist,img1sim)
   imglist2<-lappend(imglist2,img2sim)
 }
 imglist<-lappend( imglist, imglist2 )
 mat<-imageListToMatrix( imglist, mask )
-dx<-factor( c( rep(0,simnum), rep(1,simnum) ) )
-mylmresults<-bigLMStats( lm( mat ~ dx ) )
+DX<-factor( c( rep(0,simnum), rep(1,simnum) ) )
+mylmresults<-bigLMStats( lm( mat ~ DX ) )
 qvals<-p.adjust( mylmresults$pval.model ) 
 ```
 The minimum q-value is `r min(qvals)` ... 
+
+## Visualize the distribution of effects
+```{r vizmorph,results='hide'}
+whichvox<-qvals < 1.e-8
+voxdf<-data.frame( volume=c( as.numeric( mat[,whichvox] ) ), DX=DX )
+ggplot(voxdf, aes(volume, fill = DX)) + geom_density(alpha = 0.2)
+```
 
 ## The power of *ANTs* $+$ *R* $\rightarrow$<br /> <span style="color:red;">**Reproducible imaging science**</span> 
 
@@ -470,12 +479,12 @@ The minimum q-value is `r min(qvals)` ...
 
 Good software should fade into the background ... however ...
 
-<span style="color:yellow;">
+<span style="color:red;">
  As is common in science, the first big breakthrough in our understanding ...
  [came from] an improvement in measurement.
 </span>
 
-<span style="color:pink;">
+<span style="color:blue;">
 > Daniel Kahnemann, *Thinking, Fast and Slow* (2011)
 </span>
 

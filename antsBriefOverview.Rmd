@@ -19,9 +19,9 @@ output:
     incremental: true
     widescreen: true
     smaller: false
-    theme: night
+    theme: solarized
     transition: fade
-    highlight: pygments
+    highlight: espresso
     center: true
     self_contained: false
   ioslides_presentation:
@@ -56,12 +56,15 @@ Diffeomorphisms $=$ differentiable map with differentiable inverse (e.g. "silly 
 
 # *ANTs* optimizes mathematically well-defined <span style="color:red;">objective functions</span> guided by <span style="color:red;">prior knowledge</span>  ...
 
-# plug *your ideas* into our software: <br /> <span style="color:blue;">innovation and <span style="color:red;">insight</span> from biomedical data</span> ...
+# plug *your ideas* into our software: <br /> <span style="color:blue;"> <span style="color:red;">innovation, insight</span> from biomedical data</span> ...
 
  
 # Registration with priors 
 
 ## prior knowledge about how to map - e.g. lesion brains
+
+> a test 
+>> is the best
 
 ## we need to rotate
 

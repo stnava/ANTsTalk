@@ -58,30 +58,26 @@
 <style type="text/css">
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #303030; color: #cccccc; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; }
 td.sourceCode { padding-left: 5px; }
-pre, code { color: #bdae9d; background-color: #2a211c; }
-code > span.kw { color: #43a8ed; font-weight: bold; }
-code > span.dt { text-decoration: underline; }
-code > span.dv { color: #44aa43; }
-code > span.bn { color: #44aa43; }
-code > span.fl { color: #44aa43; }
-code > span.ch { color: #049b0a; }
-code > span.st { color: #049b0a; }
-code > span.co { color: #0066ff; font-style: italic; }
-code > span.al { color: #ffff00; }
-code > span.fu { color: #ff9358; font-weight: bold; }
-code > span.er { font-weight: bold; }
+pre, code { color: #cccccc; background-color: #303030; }
+code > span.kw { color: #f0dfaf; }
+code > span.dt { color: #dfdfbf; }
+code > span.dv { color: #dcdccc; }
+code > span.bn { color: #dca3a3; }
+code > span.fl { color: #c0bed1; }
+code > span.ch { color: #dca3a3; }
+code > span.st { color: #cc9393; }
+code > span.co { color: #7f9f7f; }
+code > span.ot { color: #efef8f; }
+code > span.al { color: #ffcfaf; }
+code > span.fu { color: #efef8f; }
+code > span.er { color: #c3bf9f; }
 </style>
 
-<link rel="stylesheet" href="index_files/reveal.js-2.6.1/css/theme/night.css" id="theme">
+<link rel="stylesheet" href="index_files/reveal.js-2.6.1/css/theme/solarized.css" id="theme">
 
-<style type="text/css">
-.reveal section img {
-  background: rgba(255, 255, 255, 0.85);
-}
-</style>
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -198,8 +194,8 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 </section><section id="section-1" class="slide level2">
 <h1></h1>
 <p><img src="figures/evalhistory.png" /></p>
-</section><section id="sata-2013" class="slide level2">
-<h1>Sata 2013</h1>
+</section><section id="section-2" class="slide level2">
+<h1></h1>
 <p><img src="figures/sata2013.png" /></p>
 <p>we provided the <em>standard</em> registration results for <span class="math">\(&gt;\)</span> 20,000 image pairs at <a href="https://masi.vuse.vanderbilt.edu/workshop2013/index.php/MICCAI_2013_SATA_Challenge_and_Workshop:Current_events">SATA 2013</a></p>
 </section></section>
@@ -387,8 +383,8 @@ OPTIONS:
 <h1>Many instructional examples for new colleagues</h1>
 <p><a href="http://stnava.github.io/ANTs/">see examples @ <em>ANTs</em> webpage</a></p>
 </section></section>
-<section><section id="agnostic-data-integration-prediction-decoding-diagnosis" class="titleslide slide level1"><h1>Agnostic data integration: prediction, decoding, diagnosis</h1></section><section id="itkantsr-antsr" class="slide level2">
-<h1><em>ITK+ANTs+R = ANTsR</em></h1>
+<section><section id="agnostic-data-integration-prediction-decoding-diagnosis" class="titleslide slide level1"><h1>Agnostic data integration: <br /><span style="color:red;">prediction, decoding, diagnosis</span></h1></section><section id="itkantsr-antsr" class="slide level2">
+<h1>ITK+ANTs+R = <span style="color:red;"><em>ANTsR</em></span></h1>
 </section><section id="agnostic-statistics" class="slide level2">
 <h1>Agnostic statistics</h1>
 <p><img src="figures/antsrex.jpg" /></p>
@@ -402,10 +398,10 @@ filename&lt;-<span class="kw">getANTsRData</span>(<span class="st">&#39;r16&#39;
 img&lt;-<span class="kw">antsImageRead</span>( filename , dim )
 filename&lt;-<span class="kw">getANTsRData</span>(<span class="st">&#39;r64&#39;</span>)
 img2&lt;-<span class="kw">antsImageRead</span>( filename , dim )
-mask&lt;-<span class="kw">getMask</span>(img,<span class="dv">50</span>,<span class="dv">255</span>,T)
+mask&lt;-<span class="kw">getMask</span>(img,<span class="dv">150</span>,<span class="dv">255</span>,T)
 nvox&lt;-<span class="kw">sum</span>( mask ==<span class="st"> </span><span class="dv">1</span> )
 <span class="kw">plotANTsImage</span>(img)</code></pre>
-<p>The brain has 17395 voxels …</p>
+<p>The brain has 1180 voxels …</p>
 </section><section id="a-quick-antsr-example-1" class="slide level2">
 <h1>A Quick <span style="color:grey;"><em>ANTsR</em></span> example</h1>
 <p>Simulate a population morphometry study - a “VBM” …</p>
@@ -414,18 +410,26 @@ imglist&lt;-<span class="kw">list</span>()
 imglist2&lt;-<span class="kw">list</span>()
 for ( i in <span class="dv">1</span>:simnum ) {
   img1sim&lt;-<span class="kw">antsImageClone</span>(img)
-  img1sim[ mask==<span class="dv">1</span> ]&lt;-img1sim[ mask==<span class="dv">1</span> ]+<span class="kw">rnorm</span>(nvox)
+  img1sim[ mask==<span class="dv">1</span> ]&lt;-<span class="kw">rnorm</span>(nvox,<span class="dt">mean=</span><span class="fl">0.205</span>)
+  <span class="kw">SmoothImage</span>(dim,img1sim,<span class="fl">1.5</span>,img1sim)
   img2sim&lt;-<span class="kw">antsImageClone</span>(img2)
-  img2sim[ mask==<span class="dv">1</span> ]&lt;-img2sim[ mask==<span class="dv">1</span> ]+<span class="kw">rnorm</span>(nvox)
+  img2sim[ mask==<span class="dv">1</span> ]&lt;-<span class="kw">rnorm</span>(nvox,<span class="dt">mean=</span><span class="fl">0.20</span>)
+  <span class="kw">SmoothImage</span>(dim,img2sim,<span class="fl">1.5</span>,img2sim)
   imglist&lt;-<span class="kw">lappend</span>(imglist,img1sim)
   imglist2&lt;-<span class="kw">lappend</span>(imglist2,img2sim)
 }
 imglist&lt;-<span class="kw">lappend</span>( imglist, imglist2 )
 mat&lt;-<span class="kw">imageListToMatrix</span>( imglist, mask )
-dx&lt;-<span class="kw">factor</span>( <span class="kw">c</span>( <span class="kw">rep</span>(<span class="dv">0</span>,simnum), <span class="kw">rep</span>(<span class="dv">1</span>,simnum) ) )
-mylmresults&lt;-<span class="kw">bigLMStats</span>( <span class="kw">lm</span>( mat ~<span class="st"> </span>dx ) )
+DX&lt;-<span class="kw">factor</span>( <span class="kw">c</span>( <span class="kw">rep</span>(<span class="dv">0</span>,simnum), <span class="kw">rep</span>(<span class="dv">1</span>,simnum) ) )
+mylmresults&lt;-<span class="kw">bigLMStats</span>( <span class="kw">lm</span>( mat ~<span class="st"> </span>DX ) )
 qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pre>
-<p>The minimum q-value is 3.5483 × 10<sup>-37</sup> …</p>
+<p>The minimum q-value is 3.1375 × 10<sup>-39</sup> …</p>
+</section><section id="visualize-the-distribution-of-effects" class="slide level2">
+<h1>Visualize the distribution of effects</h1>
+<pre class="sourceCode r"><code class="sourceCode r">whichvox&lt;-qvals &lt;<span class="st"> </span><span class="fl">1.e-8</span>
+voxdf&lt;-<span class="kw">data.frame</span>( <span class="dt">volume=</span><span class="kw">c</span>( <span class="kw">as.numeric</span>( mat[,whichvox] ) ), <span class="dt">DX=</span>DX )
+<span class="kw">ggplot</span>(voxdf, <span class="kw">aes</span>(volume, <span class="dt">fill =</span> DX)) +<span class="st"> </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>)</code></pre>
+<p><img src="index_files/figure-revealjs/vizmorph.png" title="plot of chunk vizmorph" alt="plot of chunk vizmorph" width="768" /></p>
 </section><section id="the-power-of-ants-r-rightarrow-reproducible-imaging-science" class="slide level2">
 <h1>The power of <em>ANTs</em> <span class="math">\(+\)</span> <em>R</em> <span class="math">\(\rightarrow\)</span><br /> <span style="color:red;"><strong>Reproducible imaging science</strong></span></h1>
 <p><img src="figures/antsgoals.png" /></p>
@@ -441,8 +445,8 @@ qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pr
 </section><section id="antsr-rightarrow-new-insight-via-quantification" class="slide level2">
 <h1>ANTs<em>R</em> <span class="math">\(\rightarrow\)</span> new insight via quantification</h1>
 <p>Good software should fade into the background … however …</p>
-<p><span style="color:yellow;"> As is common in science, the first big breakthrough in our understanding … [came from] an improvement in measurement. </span></p>
-<p><span style="color:pink;"> &gt; Daniel Kahnemann, <em>Thinking, Fast and Slow</em> (2011) </span></p>
+<p><span style="color:red;"> As is common in science, the first big breakthrough in our understanding … [came from] an improvement in measurement. </span></p>
+<p><span style="color:blue;"> &gt; Daniel Kahnemann, <em>Thinking, Fast and Slow</em> (2011) </span></p>
 </section></section>
 <section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section><section id="questions-driving-ants-development-refs.1" class="slide level2">
 <h1>Questions driving <em>ANTs</em> development (<span class="math">\(+\)</span> Refs.1)</h1>
@@ -515,7 +519,7 @@ qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pr
 <li class="fragment"><a href="https://github.com/stnava/DynANTs">DynANTs (unpublished)</a></li>
 </ul></li>
 </ul>
-</section><section id="section-2" class="slide level2">
+</section><section id="section-3" class="slide level2">
 <h1></h1>
 <ul>
 <li class="fragment"><p>Powerful, general-purpose, <span style="color:red;">well-evaluated</span> registration and segmentation.</p></li>
@@ -537,7 +541,7 @@ qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pr
 <li class="fragment"><p>rapid development, regular testing <span class="math">\(+\)</span> many eyes <span class="math">\(\rightarrow\)</span> bugs are shallow</p></li>
 </ul>
 <p><img style="float: right" src="figures/penn.png" /> <img style="float: left" src="figures/picsl.jpg" /></p>
-</section><section id="section-3" class="slide level2">
+</section><section id="section-4" class="slide level2">
 <h1></h1>
 <p><img src="figures/steamer_lane2.jpg" /></p>
 </section></section>
@@ -630,7 +634,7 @@ qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pr
 <li class="fragment"><p>unit testing</p></li>
 </ul>
 </section></section>
-<section><section id="merit-badges" class="titleslide slide level1"><h1>Merit Badges</h1></section><section id="section-4" class="slide level2">
+<section><section id="merit-badges" class="titleslide slide level1"><h1>Merit Badges</h1></section><section id="section-5" class="slide level2">
 <h1></h1>
 <p><img src="figures/bart.jpg" /></p>
 </section><section id="open-source" class="slide level2">
