@@ -39,15 +39,17 @@ This talk is online at [http://stnava.github.io/ANTsTalk/](http://stnava.github.
 
 ## Definitions
 
-* Registration $=$ geometric mapping between image pairs or image sets
+* Registration $=$ geometric mapping between image pairs or image sets (e.g. Affine)
 
-* Diffeomorphisms $=$ differentiable map with differentiable inverse ("silly putty", viscous fluid)  
+* Diffeomorphisms $=$ differentiable map with differentiable inverse (e.g. "silly putty", viscous fluid)  
 
-* Segmentation $=$ labeling tissue or anatomy in images, usually automated
+* Segmentation $=$ labeling tissue or anatomy in images, usually automated (e.g. K-means)
 
-* Multivariate $=$ using many voxels or measurements at once 
+* Multivariate $=$ using many voxels or measurements at once (e.g. PCA)
 
-* Multiple modality $=$ using many modalities at once
+* Multiple modality $=$ using many modalities at once (e.g. DTI and T1 and BOLD)
+
+* Dimensionality reduction $=$ principled way of finding few variables to represent many variables (e.g. PCA, CCA)
 
 <!--
 #  *ANTs* is an image processing platform for reproducible <span style="color:red;">multiple modality</span> image analysis & <span style="color:red;">multivariate statistics</span>
