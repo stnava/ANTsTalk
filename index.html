@@ -423,18 +423,18 @@ mat&lt;-<span class="kw">imageListToMatrix</span>( imglist, mask )
 DX&lt;-<span class="kw">factor</span>( <span class="kw">c</span>( <span class="kw">rep</span>(<span class="dv">0</span>,simnum), <span class="kw">rep</span>(<span class="dv">1</span>,simnum) ) )
 mylmresults&lt;-<span class="kw">bigLMStats</span>( <span class="kw">lm</span>( mat ~<span class="st"> </span>DX ) )
 qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pre>
-<p>The minimum q-value is 1.167 × 10<sup>-39</sup> …</p>
+<p>The minimum q-value is 5.0847 × 10<sup>-40</sup> …</p>
 </section><section id="visualize-the-histograms-of-effects" class="slide level2">
 <h1>Visualize the histograms of effects</h1>
 <pre class="sourceCode r"><code class="sourceCode r">whichvox&lt;-qvals &lt;<span class="st"> </span><span class="fl">1.e-8</span>
 voxdf&lt;-<span class="kw">data.frame</span>( <span class="dt">volume=</span><span class="kw">c</span>( <span class="kw">as.numeric</span>( mat[,whichvox] ) ), <span class="dt">DX=</span>DX )
 <span class="kw">ggplot</span>(voxdf, <span class="kw">aes</span>(volume, <span class="dt">fill =</span> DX)) +<span class="st"> </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>)</code></pre>
-<p><img src="FigsAntsRegistration/vizmorph.png" title="plot of chunk vizmorph" alt="plot of chunk vizmorph" width="864" /></p>
+<p><img src="FigsAntsHistory/vizmorph.png" title="plot of chunk vizmorph" alt="plot of chunk vizmorph" width="864" /></p>
 </section><section id="visualize-the-anatomical-distribution" class="slide level2">
 <h1>Visualize the anatomical distribution</h1>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plotANTsImage</span>(img,<span class="dt">functional=</span><span class="kw">list</span>(betas),<span class="dt">threshold=</span>thresh,
   <span class="dt">outname=</span>ofn)</code></pre>
-<p><img src="FigsAntsRegistration/vizmorph2.jpg" /></p>
+<p><img src="FigsAntsHistory/vizmorph2.jpg" /></p>
 </section><section id="the-power-of-ants-r-rightarrow-reproducible-imaging-science" class="slide level2">
 <h1>The power of <em>ANTs</em> <span class="math">\(+\)</span> <em>R</em> <span class="math">\(\rightarrow\)</span><br /> <span style="color:red;"><strong>Reproducible imaging science</strong></span></h1>
 <p><img src="figures/antsgoals.png" /></p>
