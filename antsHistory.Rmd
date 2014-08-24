@@ -77,9 +77,9 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 
  
 
-# The *ANTs* Big Five: SyN, Atropos, N4, MALF (and introducing ... ) <span style="color:grey;">*R*</span>
+# The *ANTs* Big Five: <br />SyN, Atropos, N4, MALF <br />(and introducing ... ) <span style="color:grey;">*R*</span>
 
-# <span style="color:red;">ANTs was begotten in SyN:</span> "science is the belief in the ignorance of experts"
+# <span style="color:red;">ANTs was begotten in SyN:</span><br /> "science is the belief <br />in the ignorance of experts"
 
 ## SyN: topology preserving large deformation transformations
 
@@ -90,13 +90,13 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 we map image pairs with a *transformation* and a *metric*
 
 
-## SyN was an answer to:<br /> "Can we do a better job of aligning these brains?"
+## SyN was an answer to:<br /> <span style="color:red;">"Can we do a better job <br />of aligning these brains?"</span>
 
-##  Brain mapping in the early 2000s was based on Matlab scripts or the *Demons* algorithm
+##  Brain mapping in the early 2000s was based on SPM or <br />the [Demons algorithm](http://www.ncbi.nlm.nih.gov/pubmed/9873902)
 
 ![](figures/oldbrainmapping.png)
 
-## These approaches over-penalized large deformations and were inadequate for several classes of problems
+## These approaches over-penalized [large deformations](http://stnava.github.io/C) and were inadequate for several classes of problems
 
 ## Geometric transformations
 ![](./figures/antstransforms.png)
@@ -466,15 +466,22 @@ voxdf<-data.frame( volume=c( as.numeric( mat[,whichvox] ) ), DX=DX )
 ggplot(voxdf, aes(volume, fill = DX)) + geom_density(alpha = 0.2)
 ```
 
-## Visualize the anatomical distribution of effects
-```{r vizmorph2,results='hide'}
+## Visualize the anatomical distribution
+```{r vizmorph2hide,results='hide',echo=FALSE}
 betas<-antsImageClone(mask)
-betas[mask==1]<-mylmresults$beta.t[1,]
-thresh<-paste(mean(mylmresults$beta.t[1,]),'x',
-  max(mylmresults$beta.t[1,]),sep='')
-plotANTsImage(img,functional=list(),
-  outname=paste(figpath,'loadimages.jpg',sep=''))
+betavec<-abs(mylmresults$beta.t[1,])
+betas[mask==1]<-betavec
+thresh<-paste(mean(betavec),'x',max(betavec),sep='')
+ofn<-paste(figpath,'vizmorph2.jpg',sep='')
 ```
+
+```{r vizmorph2,results='hide'}
+plotANTsImage(img,functional=list(betas),threshold=thresh,
+  outname=ofn)
+```
+
+![](`r ofn`)
+
 ## The power of *ANTs* $+$ *R* $\rightarrow$<br /> <span style="color:red;">**Reproducible imaging science**</span> 
 
 ![](./figures/antsgoals.png)
@@ -558,7 +565,7 @@ Good software should fade into the background ... however ...
     - [recent unpublished software](http://stnava.github.io/RKRNS/) 
     - [recent work with Ben Kandel](..not yet...)
 
-## *ANTs* also specializes in longitudinal analysis
+## *ANTs* longitudinal analysis
 
 * Longitudinal image processing issues
     - [registration induced bias](http://www.ncbi.nlm.nih.gov/pubmed/20005963)

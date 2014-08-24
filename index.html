@@ -132,8 +132,8 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 <section><section id="including-that-of-developers-domain-experts-and-users" class="titleslide slide level1"><h1>… including that of developers, domain experts and users …</h1></section></section>
 <section><section id="our-strong-mathematical-and-software-engineering-foundation-leads-to-near-limitless-opportunities-for-innovation-in-a-variety-of-application-domains" class="titleslide slide level1"><h1>our strong <span style="color:red;">mathematical and software engineering</span> foundation leads to near limitless opportunities for innovation in a variety of application domains</h1></section></section>
 <section><section id="plug-your-ideas-into-our-software-to-gain-insight-into-biomedical-data" class="titleslide slide level1"><h1>plug <em>your ideas</em> into our software to gain insight into biomedical data …</h1></section></section>
-<section><section id="the-ants-big-five-syn-atropos-n4-malf-and-introducing-r" class="titleslide slide level1"><h1>The <em>ANTs</em> Big Five: SyN, Atropos, N4, MALF (and introducing … ) <span style="color:grey;"><em>R</em></span></h1></section></section>
-<section><section id="ants-was-begotten-in-syn-science-is-the-belief-in-the-ignorance-of-experts" class="titleslide slide level1"><h1><span style="color:red;">ANTs was begotten in SyN:</span> “science is the belief in the ignorance of experts”</h1></section><section id="syn-topology-preserving-large-deformation-transformations" class="slide level2">
+<section><section id="the-ants-big-five-syn-atropos-n4-malf-and-introducing-r" class="titleslide slide level1"><h1>The <em>ANTs</em> Big Five: <br />SyN, Atropos, N4, MALF <br />(and introducing … ) <span style="color:grey;"><em>R</em></span></h1></section></section>
+<section><section id="ants-was-begotten-in-syn-science-is-the-belief-in-the-ignorance-of-experts" class="titleslide slide level1"><h1><span style="color:red;">ANTs was begotten in SyN:</span><br /> “science is the belief <br />in the ignorance of experts”</h1></section><section id="syn-topology-preserving-large-deformation-transformations" class="slide level2">
 <h1>SyN: topology preserving large deformation transformations</h1>
 <div align="center">
 <iframe width="854" height="510" src="http://www.youtube.com/embed/tEfMBiKp9eE" frameborder="0" allowfullscreen>
@@ -142,12 +142,12 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 <p><a href="http://youtu.be/tEfMBiKp9eE">smile movie</a></p>
 <p>we map image pairs with a <em>transformation</em> and a <em>metric</em></p>
 </section><section id="syn-was-an-answer-to-can-we-do-a-better-job-of-aligning-these-brains" class="slide level2">
-<h1>SyN was an answer to:<br /> “Can we do a better job of aligning these brains?”</h1>
-</section><section id="brain-mapping-in-the-early-2000s-was-based-on-matlab-scripts-or-the-demons-algorithm" class="slide level2">
-<h1>Brain mapping in the early 2000s was based on Matlab scripts or the <em>Demons</em> algorithm</h1>
+<h1>SyN was an answer to:<br /> <span style="color:red;">“Can we do a better job <br />of aligning these brains?”</span></h1>
+</section><section id="brain-mapping-in-the-early-2000s-was-based-on-spm-or-the-demons-algorithm" class="slide level2">
+<h1>Brain mapping in the early 2000s was based on SPM or <br />the <a href="http://www.ncbi.nlm.nih.gov/pubmed/9873902">Demons algorithm</a></h1>
 <p><img src="figures/oldbrainmapping.png" /></p>
 </section><section id="these-approaches-over-penalized-large-deformations-and-were-inadequate-for-several-classes-of-problems" class="slide level2">
-<h1>These approaches over-penalized large deformations and were inadequate for several classes of problems</h1>
+<h1>These approaches over-penalized <a href="http://stnava.github.io/C">large deformations</a> and were inadequate for several classes of problems</h1>
 </section><section id="geometric-transformations" class="slide level2">
 <h1>Geometric transformations</h1>
 <p><img src="figures/antstransforms.png" /></p>
@@ -399,8 +399,7 @@ img&lt;-<span class="kw">antsImageRead</span>( filename , dim )
 filename&lt;-<span class="kw">getANTsRData</span>(<span class="st">&#39;r64&#39;</span>)
 img2&lt;-<span class="kw">antsImageRead</span>( filename , dim )
 mask&lt;-<span class="kw">getMask</span>(img,<span class="dv">150</span>,<span class="dv">255</span>,T)
-nvox&lt;-<span class="kw">sum</span>( mask ==<span class="st"> </span><span class="dv">1</span> )
-<span class="kw">plotANTsImage</span>(img)</code></pre>
+nvox&lt;-<span class="kw">sum</span>( mask ==<span class="st"> </span><span class="dv">1</span> )</code></pre>
 <p>The brain has 1180 voxels …</p>
 </section><section id="a-quick-antsr-example-1" class="slide level2">
 <h1>A Quick <span style="color:grey;"><em>ANTsR</em></span> example</h1>
@@ -423,13 +422,18 @@ mat&lt;-<span class="kw">imageListToMatrix</span>( imglist, mask )
 DX&lt;-<span class="kw">factor</span>( <span class="kw">c</span>( <span class="kw">rep</span>(<span class="dv">0</span>,simnum), <span class="kw">rep</span>(<span class="dv">1</span>,simnum) ) )
 mylmresults&lt;-<span class="kw">bigLMStats</span>( <span class="kw">lm</span>( mat ~<span class="st"> </span>DX ) )
 qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pre>
-<p>The minimum q-value is 4.3788 × 10<sup>-39</sup> …</p>
-</section><section id="visualize-the-distribution-of-effects" class="slide level2">
-<h1>Visualize the distribution of effects</h1>
+<p>The minimum q-value is 3.3232 × 10<sup>-40</sup> …</p>
+</section><section id="visualize-the-histograms-of-effects" class="slide level2">
+<h1>Visualize the histograms of effects</h1>
 <pre class="sourceCode r"><code class="sourceCode r">whichvox&lt;-qvals &lt;<span class="st"> </span><span class="fl">1.e-8</span>
 voxdf&lt;-<span class="kw">data.frame</span>( <span class="dt">volume=</span><span class="kw">c</span>( <span class="kw">as.numeric</span>( mat[,whichvox] ) ), <span class="dt">DX=</span>DX )
 <span class="kw">ggplot</span>(voxdf, <span class="kw">aes</span>(volume, <span class="dt">fill =</span> DX)) +<span class="st"> </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>)</code></pre>
 <p><img src="FigsAntsHistory/vizmorph.png" title="plot of chunk vizmorph" alt="plot of chunk vizmorph" width="864" /></p>
+</section><section id="visualize-the-anatomical-distribution" class="slide level2">
+<h1>Visualize the anatomical distribution</h1>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plotANTsImage</span>(img,<span class="dt">functional=</span><span class="kw">list</span>(betas),<span class="dt">threshold=</span>thresh,
+  <span class="dt">outname=</span>ofn)</code></pre>
+<p><img src="FigsAntsHistory/vizmorph2.jpg" /></p>
 </section><section id="the-power-of-ants-r-rightarrow-reproducible-imaging-science" class="slide level2">
 <h1>The power of <em>ANTs</em> <span class="math">\(+\)</span> <em>R</em> <span class="math">\(\rightarrow\)</span><br /> <span style="color:red;"><strong>Reproducible imaging science</strong></span></h1>
 <p><img src="figures/antsgoals.png" /></p>
@@ -500,8 +504,8 @@ voxdf&lt;-<span class="kw">data.frame</span>( <span class="dt">volume=</span><sp
 <li class="fragment"><a href="..not%20yet...">recent work with Ben Kandel</a></li>
 </ul></li>
 </ul>
-</section><section id="ants-also-specializes-in-longitudinal-analysis" class="slide level2">
-<h1><em>ANTs</em> also specializes in longitudinal analysis</h1>
+</section><section id="ants-longitudinal-analysis" class="slide level2">
+<h1><em>ANTs</em> longitudinal analysis</h1>
 <ul>
 <li class="fragment">Longitudinal image processing issues
 <ul>
