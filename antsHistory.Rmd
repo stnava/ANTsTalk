@@ -37,13 +37,24 @@ output:
 
 This talk is online at [http://stnava.github.io/ANTsTalk/](http://stnava.github.io/ANTsTalk/#/) with colored [links](http://stnava.github.io/ANTsTalk/#/) meant to be clicked for more information
 
+# Definitions
+
+* Registration $=$ geometric mapping between image pairs or image sets
+
+* Diffeomorphisms $=$ differentiable map with differentiable inverse ("silly putty", viscous fluid)  
+
+* Segmentation $=$ labeling tissue or anatomy in images, usually automated
+
+* Multivariate $=$ using many voxels or measurements at once 
+
+* Multiple modality $=$ using many modalities at once
+
 <!--
 #  *ANTs* is an image processing platform for reproducible <span style="color:red;">multiple modality</span> image analysis & <span style="color:red;">multivariate statistics</span>
 ##  <span style="color:red;">ANTs*R*</span> Platform for Medical Imaging
 ![](figures/antsgoals.png)
 this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is [this one](http://stnava.github.io/RKRNS/)
 -->
-
 
 # *ANTs* optimizes mathematically well-defined <span style="color:red;">objective functions</span> guided by <span style="color:red;">prior knowledge</span>  ...
 
@@ -570,7 +581,7 @@ Good software should fade into the background ... however ...
 
 
 ## 
-![](./figures/lion.png)
+![](./figures/steamer_lane2.png)
 
 
 
