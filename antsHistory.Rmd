@@ -71,12 +71,10 @@ this document [is another goal of ANTs](http://stnava.github.io/ANTsTalk/) as is
 
 # ... including that of developers, domain experts and users ...
 
-# our strong <span style="color:red;">mathematical and software engineering</span> foundation leads to near limitless opportunities for innovation in a variety of application domains
-
 # plug *your ideas* into our software to gain insight into biomedical data ...
 
+# our strong <span style="color:red;">mathematical and software engineering</span> foundation leads to near limitless opportunities for innovation in a variety of application domains
  
-
 # The *ANTs* Big Five: <br />SyN, Atropos, N4, MALF <br />(and introducing ... ) <span style="color:grey;">*R*</span>
 
 # <span style="color:red;">ANTs was begotten in SyN:</span><br /> "science is the belief <br />in the ignorance of experts"
