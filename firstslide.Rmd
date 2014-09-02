@@ -19,7 +19,7 @@ output:
     incremental: true
     widescreen: true
     smaller: false
-    theme: solarized
+    theme: night
     transition: fade
     highlight: zenburn
     center: true
