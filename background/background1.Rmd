@@ -1,0 +1,115 @@
+
+## Image mapping & perception: 1878
+
+![](./figures/galton.png)
+
+* Francis Galton: Can we see criminality in the face?
+
+* (maybe he should have used ANTs?)
+
+
+
+
+## Founding developers
+
+<div align="center"><img width="1433" src="./figures/bant2.png" frameborder="0"></img></div>
+
+
+## Long-term collaborators
+
+![](./figures/antscollab.jpg)
+
+
+$+$ [neurodebian](http://neuro.debian.net/pkgs/ants.html), [slicer](http://www.slicer.org/), [brainsfit](https://github.com/BRAINSia/BRAINSTools), [nipype](http://nipy.sourceforge.net/nipype/), [itk](http://www.itk.org) and more ...
+
+## General purpose library for multivariate image registration, segmentation & statistical analysis tools
+
+* 170,000+ lines of C++, 6$+$ years of work, 15+ collaborators. 
+
+* Generic mathematical methods that are tunable for 
+application specific domains:  no-free lunch
+
+* Deep testing on multiple platforms ... osx, linux, windows.
+
+* Several "wins" in public knock-abouts ( [Klein 2009](http://www.ncbi.nlm.nih.gov/pubmed/19195496), [Murphy 2011](http://www.ncbi.nlm.nih.gov/pubmed/21632295), [SATA 2012 and 2013](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3837555/), [BRATS 2013](http://martinos.org/qtim/miccai2013/proc_brats_2013.pdf), others ) 
+
+```
+    An algorithm must use prior knowledge about a problem 
+    to do well on that problem 
+```
+
+# *ANTs* optimizes mathematically well-defined <span style="color:red;">objective functions</span> guided by <span style="color:red;">prior knowledge</span>  ...
+
+# ... including that of developers, domain experts and other colleagues ...
+
+# plug *your ideas* into our software to gain insight into biomedical data ...
+
+# our strong <span style="color:red;">mathematical and software engineering</span> foundation leads to near limitless opportunities for innovation in a variety of application domains
+ 
+## ANTs is *open* to different image types, multiple modalities, anatomical regions, segmentation priors, etc.
+
+## ANTs & Neuroscience
+
+We need statistical image analysis <br />at several scales in modern neuroscience
+
+* Macro: *in vivo* structural and functional MRI
+
+* Micro:  high-resolution post-mortem MRI links with in vivo MRI
+
+* Nano: neuron reconstruction ...
+
+* Solutions that are consistent across these scales have the potential
+to build multi-scale feature sets or templates and provide new
+insights into brain structure and function
+
+* E.g. Parcellation constraints based on histology, tractography, function ...
+
+* Statistical definitions of anatomy/pathology?  
+
+* Reinvention of these solutions within each lab ... can we mitigate this?
+
+* Reduce, reuse, recycle ...
+
+
+## ANTs Lineage 
+
+![](./figures/lineage.jpg)
+
+References: @Horn1981, @Gee1993, @Grenander1993, @Thompson2001, @Miller2002, @Shen2002, @Arnold2014, @Thirion1998, @Rueckert1999, @Fischl2012, @Ashburner2012
+
+## Diffeomorphisms
+
+<div align="center"><img width="1433" src="./figures/sillyputty.png" frameborder="0"></img></div>
+
+plausible physical modeling of large, invertible deformations
+
+"differentiable map with differentiable inverse"
+
+## Fine-grained and flexible maps
+![](./figures/highresdiffeos.jpg)
+
+## ANTs: Beyond Registration
+
+![](./figures/antscapabilities.jpg)
+
+[Atropos](http://www.ncbi.nlm.nih.gov/pubmed/?term=atropos+tustison) segmentation, [N4 inhomogeneity correction](http://www.ncbi.nlm.nih.gov/pubmed/?term=N4+tustison), [Eigenanatomy](http://www.ncbi.nlm.nih.gov/pubmed/?term=eigenanatomy+avants), [SCCAN](http://www.ncbi.nlm.nih.gov/pubmed/?term=sparse+canonical+avants), [Prior-constrained PCA](http://www.ncbi.nlm.nih.gov/pubmed/24852460), and [atlas-based label fusion](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4009425/) and [MALF](http://www.ncbi.nlm.nih.gov/pubmed/21237273) (powerful expert systems for segmentation)
+
+## Definitions
+
+* Registration $=$ estimate an "optimal" geometric mapping between image pairs or image sets (e.g. Affine)
+
+* Similarity $=$ a function relating one image to another, given a transformation (e.g. mutual information)
+
+* <span style="color:grey;">
+Diffeomorphisms $=$ differentiable map with differentiable inverse (e.g. "silly putty", viscous fluid)  </span>
+
+* Segmentation $=$ labeling tissue or anatomy in images, usually automated (e.g. K-means)
+
+* <span style="color:grey;"> Multivariate $=$ using many voxels or measurements at once (e.g. PCA, $p >> n$ ridge regression)</span>
+
+* Multiple modality $=$ using many modalities at once (e.g. DTI and T1 and BOLD)
+
+* MALF: multi-atlas label fusion - using anatomical dictionaries to label new data
+
+* Solutions to challenging statistical image processing problems usually need elements from each of the above 
+

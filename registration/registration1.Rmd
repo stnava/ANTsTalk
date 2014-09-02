@@ -1,0 +1,157 @@
+
+# <span style="color:red;">Medical Image Registration</span> <br /> Fundamental tool for<br /> morphometry, segmentation,<br /> motion estimation and <br /> <span style="color:blue;">data cleaning</span>
+
+# we *can* compare<br /> <span style="color:red;">apples</span> and <span style="color:orange;">oranges</span> ... 
+
+## apples and oranges ... 
+
+![](./figures/appleorange1.png)
+
+initialization
+
+## apples and oranges ... 
+
+![](./figures/appleorange2.png)
+
+<span style="color:red;">R</span><span style="color:green;">G</span><span style="color:blue;">B</span> affine
+
+## apples and oranges ... 
+
+![](./figures/appleorange3.png)
+
+<span style="color:red;">R</span><span style="color:green;">G</span><span style="color:blue;">B</span> deformable registration - i.e. registration on color
+
+## The Technical Framework
+
+![](./figures/designprinciples.png)
+
+... and most of it multivariate.
+
+## ANTs Nomenclature / Standards 
+![](./figures/antsnomen1.jpg)
+
+## ANTs Nomenclature / Standards 
+![](./figures/antsnomen2.jpg)
+
+## ANTs Nomenclature / Standards 
+![](./figures/antsnomen3.jpg)
+
+## ANTs Nomenclature / Standards 
+![](./figures/antsnomen4.jpg)
+
+ 
+## The optimization problem
+
+Find mapping $$ \color{red}{ \phi(x,p) \in \mathcal{T} }$$ such that
+
+$$ \color{red}{ M(I,J,\phi(x,p)) } $$ is minimized
+
+Must select both metric $\color{red}{M}$ and transformation $\color{red}{\mathcal{T}}$
+
+... in addition to optimizer and the problem's resolution
+
+Discussed in more detail [in this frontiers paper](http://www.ncbi.nlm.nih.gov/pubmed/24817849)
+
+
+## The *A*-team of similarity metrics
+
+![](./figures/towardsstandardmetric.png)
+
+$$ \| I - J \| ~~~~~~~~~~~~~~~~~~~ \frac{< I, J >}{\|I\|\|J\|} ~~~~~~~~~~~~~~~ p(I,J) log \frac{p(I,J)}{p(I)p(J)}$$
+
+**all metrics** may be computed from **sparse** or **dense** samples and used with low or high-dimensional transformations
+
+[our research on similarity metrics for brain registration](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3065962/)
+
+## [SyN](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2276735/) for optimization symmetry
+![](./figures/fishSyN.png)
+Images deform symmetrically along the shape manifold.  This eliminates bias in the
+measurement of image differences.
+
+##  [SyN (link)](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2276735/) Example
+
+<!-- syn example -->
+
+<div align="center"><iframe width="1120" height="630" src="http://www.youtube.com/embed/3I9RcRtpOvw" frameborder="0" allowfullscreen></iframe></div>
+
+[SyN movie](http://www.youtube.com/embed/3I9RcRtpOvw)
+
+
+## Concatenated transformation $+$ metric stages are necessary in real data
+
+0.  Initialize the mapping ( more on this later )
+
+1.  Start with a *rigid transformation*:  $I(x) \approx J(R(x))$ s.t. negative $MI$ is minimized
+
+2.  Follow by an *affine transformation*:  $I(x) \approx J(R(A(x)))$ s.t. negative $MI$ is minimized with fixed $R$
+
+3.  Finally, a *diffeomorphism*:  $I(x) \approx J(R(A(\phi(x))))$ s.t. $k$-neighborhood correlation $CC_k$ is minimized with fixed $R, A$
+
+4.  Output the *composite transform* $A \circ R$ as a matrix transformation and $\phi$ and $\phi^{-1}$ as deformation fields.
+
+standard in [recommended](http://stnava.github.io/ANTsDoc/) `antsRegistration` application scripts 
+
+## Minimizing interpolations
+![](./figures/oneInterpolation.png)
+
+$\mathcal{T}_{total} = \mathcal{T}_1 \circ \mathcal{T}_2 \circ \mathcal{T}_3 \circ \mathcal{T}_4$
+
+To avoid compounding interpolation error with the concatenation of transformations, *ANTs* never
+uses more than a single interpolation.
+
+We ported many of these ideas into the [Insight ToolKit](http://www.itk.org) <br /> as part of its [V4 reboot](http://journal.frontiersin.org/Journal/10.3389/fninf.2014.00044/abstract)!
+
+## Registration benefits from<br /> *optimal sampling strategy*
+
+* sampling for *both* the metric and the transformation
+
+* impacts scalability, memory, optimization accuracy, speed, robustness ...
+
+* could be done optimally *with massive improvements in performance*
+    * but needs investment in order to achieve "dream" registration scenario
+
+* important for new schemes that *elect* solutions from **anatomical or transformation** dictionaries
+
+* overall, relatively little translational work on this important problem in biomedical imaging
+
+## Sampling & feature selection: Multi-start
+
+![](./figures/multistart.png)
+
+Theoretical guarantee of global optimum: improves local optimizers.
+
+Default in `antsCorticalThickness` pipeline and `FSL`.
+
+## Sampling & feature selection: Biomedical imagery
+
+![](./figures/slides1.png)
+
+Initial configuration of data
+
+## Sampling & feature selection: Biomedical imagery
+
+![](./figures/slides2.png)
+
+Automatic feature selection
+
+## Sampling & feature selection: Biomedical imagery
+
+![](./figures/slides3.png)
+
+Resampling allows comparison & slide alignment and <br />
+validates the feature selection
+
+Dramatic reduction in computation time / memory requirements
+
+## Sampling & feature selection: Lesioned brains
+
+![](./figures/lesionedbrains.jpg)
+
+## Sampling & feature selection: Summary
+
+* we exploit these strategies to:
+    - accelerate
+    - focus 
+    - validate
+
+

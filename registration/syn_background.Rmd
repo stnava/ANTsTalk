@@ -1,0 +1,77 @@
+
+# <span style="color:red;">ANTs was begotten in SyN:</span><br /> "science is the belief <br />in the ignorance of experts"
+
+## SyN: topology preserving large deformation transformations
+
+<div align="center"><iframe width="854" height="510" src="http://www.youtube.com/embed/tEfMBiKp9eE" frameborder="0" allowfullscreen></iframe></div>
+
+[smile movie](http://youtu.be/tEfMBiKp9eE)
+
+we map image pairs with a *transformation* and a *metric*
+
+
+## SyN was an answer to:<br /> <span style="color:red;">"Can we do a better job <br />of aligning these brains?"</span>
+
+##  Brain mapping in the early 2000s was based on SPM or <br />the [Demons algorithm](http://www.ncbi.nlm.nih.gov/pubmed/9873902)
+
+![](figures/oldbrainmapping.png)
+
+## These approaches over-penalized [large deformations](http://stnava.github.io/C) and were inadequate for several classes of problems
+
+## Geometric transformations
+![](./figures/antstransforms.png)
+
+we operate at different levels of transformation depending on the problem - *but SyN explores the outer edges*
+
+## Compare chimpanzee and human prefrontal cortex
+![](figures/chimp_human.png)
+
+[LPF algorithm](http://www.ncbi.nlm.nih.gov/pubmed/15948659)
+
+## SyN formulation
+$$
+\begin{aligned}
+  \inf_{\phi_1} \inf_{\phi_2}   \Bigg[
+                     \int_0^{0.5} & \left( \|v_1(t)\|_L^2 + \|v_2(t)\|_L^2 \right) dt \nonumber \\
+                     &+
+                     \int_{\Omega} \Pi_{\sim}
+                          \left( I \circ \phi_1^{-1}(\mathbf{x},0.5),
+                           J \circ \phi_2^{-1}(\mathbf{x},0.5) \right) d\Omega \Bigg]
+\end{aligned}
+$$
+where
+$$
+  \frac{d \phi_i(\mathbf{x},t)}{dt} = v_i( \phi_i(\mathbf{x},t), t ),\,\, \phi_i(\mathbf{x},0) = \mathbf{Id}, \,\, i \in \{1,2\}
+$$
+and $\Pi_{\sim}$ is an arbitrary similarity metric (<span style="color:red;">or metrics</span>).
+
+## SyN for optimization symmetry
+![](./figures/fishSyN.png)
+Images deform symmetrically along the shape manifold.  This eliminates bias in the
+measurement of image differences.
+
+## Minimizing interpolations
+![](./figures/oneInterpolation.png)
+
+$\mathcal{T}_{total} = \mathcal{T}_1 \circ \mathcal{T}_2 \circ \mathcal{T}_3 \circ \mathcal{T}_4$
+
+To avoid compounding interpolation error with the concatenation of transformations, *ANTs* never
+uses more than a single interpolation.
+
+We ported many of these ideas into the [Insight ToolKit](http://www.itk.org) as part of its V4 reboot!
+
+## SyN Example
+
+<!-- syn example -->
+
+<div align="center"><iframe width="560" height="315" src="http://www.youtube.com/embed/3I9RcRtpOvw" frameborder="0" allowfullscreen></iframe></div>
+
+[SyN movie](http://www.youtube.com/embed/3I9RcRtpOvw)
+
+
+
+## Intensity transformations
+![](./figures/antsmetrics.png)
+
+Our go to metrics: neighborhood correlation and mutual information
+

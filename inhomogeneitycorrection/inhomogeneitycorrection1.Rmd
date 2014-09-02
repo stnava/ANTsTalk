@@ -1,0 +1,69 @@
+
+## N4
+
+* N3 (developed at the Montreal Neurological Institute) has been the gold standard for
+bias correction---used in important projects such as ADNI
+
+* N3 is a set of perl scripts that works natively with the MINC file format which we tried
+to incorporate into an *ANTs* processing pipeline.
+
+* We had so much trouble converting back and forth between ITK-compatible Nifti format and
+MINC that BA suggested we try to implement N3 in ITK.
+
+* NT had some experience with B-splines and added some other tweaks giving birth to N4.
+
+## N4 Introduction
+
+![](./figures/n4_introduction.png)
+
+## Nonparametric nonuniform intensity normalization (N3)
+
+Sled et al., “A nonparametric method for automatic correction of intensity nonuniformity in MRI Data,” _IEEE-TMI_, 17(1), 1998.
+
+***
+
+Boyes et al., “Intensity non-uniformity correction using N3 on 3-T scanners with multichannel phased array coils,” _NeuroImage_, 39(4), 2008.
+
+> In a comparison of several correction techniques N3 performed well (Arnold et al., 2001).
+> Also, the algorithm and software are in the public domain
+> (http://www.bic.mni.mcgill.ca/software/N3/) and is probably the most widely used non-uniformity
+> correction technique in neurological imaging.
+
+Zheng et al., “Improvement of brain segmentation accuracy by optimizing non-uniformity correction using N3,” _NeuroImage_, 48(1), 2009.
+
+> Among existing approaches, the nonparametric non-uniformity intensity normalization method N3
+> (Sled et al., 1998) is one of the most frequently used... High performance and robustness have
+> practically turned N3 into an industry standard.
+
+Vovk et al., “A Review of Methods for Correction of Intensity Inhomogeneity in MRI,” _IEEE-TMI_, 26(3), 2007.
+
+> A well-known intensity inhomogeneity correction method, known as the N3 (nonparametric
+> nonuniformity normalization), was proposed in [15]...  Interestingly, no improvements have
+> been suggested for this highly popular and successful method...  The nonparametric
+> nonuniformity normalization (N3) method [15] has obviously become the standard method
+> against which other methods are compared.
+
+## Code
+
+```
+COMMAND:
+     N4BiasFieldCorrection
+
+OPTIONS:
+     -d, --image-dimensionality 2/3/4
+     -i, --input-image inputImageFilename
+     -x, --mask-image maskImageFilename
+     -w, --weight-image weightImageFilename
+     -s, --shrink-factor 1/2/3/4/...
+     -c, --convergence [<numberOfIterations=50x50x50x50>,<convergenceThreshold=0.0>]
+     -b, --bspline-fitting [splineDistance,<splineOrder=3>]
+                           [initialMeshResolution,<splineOrder=3>]
+     -t, --histogram-sharpening [<FWHM=0.15>,<wienerNoise=0.01>,<numberOfHistogramBins=200>]
+     -o, --output correctedImage
+                  [correctedImage,<biasField>]
+     -h
+     --help
+```
+> Talk is cheap, show me the code.
+
+

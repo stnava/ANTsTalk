@@ -1,0 +1,18 @@
+
+## Can we address subtle questions in brain and cognition via imaging-specific dimensionality reduction?
+
+##  [Eigenanatomy](http://www.ncbi.nlm.nih.gov/pubmed/24852460) & [SCCAN](http://www.ncbi.nlm.nih.gov/pubmed/?term=avants+SCCAN)
+
+## ANTs*R* $\rightarrow$ new insight <br />via better analytics
+
+Good software should fade into the background ... however ...
+
+<span style="color:red;">
+ As is common in science, the first big breakthrough in our understanding ...
+ [came from] an improvement in measurement.
+</span>
+
+<span style="color:blue;">
+> Daniel Kahnemann, *Thinking, Fast and Slow* (2011)
+</span>
+

@@ -1,0 +1,32 @@
+
+# Differentiable maps with<br /> differentiable inverse <br />$+$ *statistics in these spaces*
+
+## Brain templates as *high-dimensional averages*
+![](./figures/speciestemplates.png)
+
+## SyGN - templates and averages in deformation space
+
+![](figures/normvsnorm.png)
+from [miykael](http://miykael.github.io/nipype-beginner-s-guide/ANTS.html)
+
+[geodesic image averages](http://www.ncbi.nlm.nih.gov/pubmed/15501083)
+
+[optimal templates 2](http://www.ncbi.nlm.nih.gov/pubmed/19818860)
+
+[canine template](http://www.ncbi.nlm.nih.gov/pubmed/23284904)
+
+[chimpanzees](http://www.ncbi.nlm.nih.gov/pubmed/23516289)
+
+
+## Statistics in deformation space
+
+[AIBS movie](http://www.youtube.com/embed/8GgHG-rApiE)
+
+
+## Average Republican and Democratic congressmen
+
+<div align="center"><img src="figures/democrat_left_repub_right.png" frameborder="0"></img></div>
+
+[congress](http://ntustison.github.io/CongressionalFaceTemplates/)
+
+## We build templates to *store* and *transfer* prior knowledge 

@@ -1,0 +1,12 @@
+
+## Can we customize these methods for a challenging multivariate segmentation problem with clinical relevance?
+
+## Automated tumor segmentation from multiple MRI
+![](./figures/tumorsegmentation.png)
+
+## General theory tunable to specific domains:  *no-free lunch*
+![](./figures/brats.png)
+
+[BRATS 2013 Challenge](http://hal.inria.fr/docs/00/93/56/40/PDF/brats_preprint.pdf) **won** with [*ANTsR*](https://github.com/stnava/ANTsR)
+
+

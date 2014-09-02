@@ -25,6 +25,41 @@
   Url                      = {http://dx.doi.org/10.1371/journal.pmed.0040230}
 }
 
+@InCollection{Arnold2014,
+  Title                    = {Topological methods in hydrodynamics},
+  Author                   = {Arnold, Vladimir I},
+  Booktitle                = {Vladimir I. Arnold-Collected Works},
+  Publisher                = {Springer},
+  Year                     = {2014},
+  Pages                    = {433--454},
+  Owner                    = {stnava},
+  Timestamp                = {2014.08.26},
+  Url                      = {http://link.springer.com/chapter/10.1007/978-3-642-31031-7_42}
+}
+
+@Article{Ashburner2012,
+  Title                    = {SPM: a history.},
+  Author                   = {Ashburner, John},
+  Journal                  = {Neuroimage},
+  Year                     = {2012},
+
+  Month                    = {Aug},
+  Number                   = {2},
+  Pages                    = {791--800},
+  Volume                   = {62},
+  Abstract                 = {Karl Friston began the SPM project around 1991. The rest is history.},
+  Doi                      = {10.1016/j.neuroimage.2011.10.025},
+  Institution              = {Wellcome Trust Centre for Neuroimaging, 12 Queen Square, London WC1N 3BG, UK. john@fil.ion.ucl.ac.uk},
+  Keywords                 = {Brain Mapping, history/methods; Brain, anatomy /&/ histology/physiology; History, 20th Century; History, 21st Century; Humans; Image Processing, Computer-Assisted, history/methods; Magnetic Resonance Imaging, history/methods; Software, history},
+  Language                 = {eng},
+  Medline-pst              = {ppublish},
+  Owner                    = {stnava},
+  Pii                      = {S1053-8119(11)01188-8},
+  Pmid                     = {22023741},
+  Timestamp                = {2014.08.26},
+  Url                      = {http://dx.doi.org/10.1016/j.neuroimage.2011.10.025}
+}
+
 @PhdThesis{Avants2005,
   Title                    = {Shape optimizing diffeomorphisms for medical image analysis},
   Author                   = {B. Avants},
@@ -604,6 +639,7 @@
   Year                     = {2014},
   Pages                    = {44},
   Volume                   = {8},
+
   Abstract                 = {Publicly available scientific resources help establish evaluation standards, provide a platform for teaching and improve reproducibility. Version 4 of the Insight ToolKit (ITK(4)) seeks to establish new standards in publicly available image registration methodology. ITK(4) makes several advances in comparison to previous versions of ITK. ITK(4) supports both multivariate images and objective functions; it also unifies high-dimensional (deformation field) and low-dimensional (affine) transformations with metrics that are reusable across transform types and with composite transforms that allow arbitrary series of geometric mappings to be chained together seamlessly. Metrics and optimizers take advantage of multi-core resources, when available. Furthermore, ITK(4) reduces the parameter optimization burden via principled heuristics that automatically set scaling across disparate parameter types (rotations vs. translations). A related approach also constrains steps sizes for gradient-based optimizers. The result is that tuning for different metrics and/or image pairs is rarely necessary allowing the researcher to more easily focus on design/comparison of registration strategies. In total, the ITK(4) contribution is intended as a structure to support reproducible research practices, will provide a more extensive foundation against which to evaluate new work in image registration and also enable application level programmers a broad suite of tools on which to build. Finally, we contextualize this work with a reference registration evaluation study with application to pediatric brain labeling.},
   Doi                      = {10.3389/fninf.2014.00044},
   Institution              = {Penn Image Computing and Science Laboratory, Department of Radiology, University of Pennsylvania Philadelphia, PA, USA.},
@@ -791,6 +827,29 @@
   Url                      = {http://dx.doi.org/10.1016/j.neuroimage.2007.04.009}
 }
 
+@Article{Fischl2012,
+  Title                    = {FreeSurfer.},
+  Author                   = {Fischl, Bruce},
+  Journal                  = {Neuroimage},
+  Year                     = {2012},
+
+  Month                    = {Aug},
+  Number                   = {2},
+  Pages                    = {774--781},
+  Volume                   = {62},
+  Abstract                 = {FreeSurfer is a suite of tools for the analysis of neuroimaging data that provides an array of algorithms to quantify the functional, connectional and structural properties of the human brain. It has evolved from a package primarily aimed at generating surface representations of the cerebral cortex into one that automatically creates models of most macroscopically visible structures in the human brain given any reasonable T1-weighted input image. It is freely available, runs on a wide variety of hardware and software platforms, and is open source.},
+  Doi                      = {10.1016/j.neuroimage.2012.01.021},
+  Institution              = {Athinoula A Martinos Center, Dept. of Radiology, MGH, Harvard Medical School, MA fischl@nmr.mgh.harvard.edu, USA. fischl@nmr.mgh.harvard.edu},
+  Keywords                 = {Algorithms; Brain Mapping, history/methods; Brain, anatomy /&/ histology; History, 20th Century; History, 21st Century; Humans; Image Processing, Computer-Assisted, history/methods; Magnetic Resonance Imaging, history/methods; Software, history},
+  Language                 = {eng},
+  Medline-pst              = {ppublish},
+  Owner                    = {stnava},
+  Pii                      = {S1053-8119(12)00038-9},
+  Pmid                     = {22248573},
+  Timestamp                = {2014.08.26},
+  Url                      = {http://dx.doi.org/10.1016/j.neuroimage.2012.01.021}
+}
+
 @InCollection{Gee2005,
   Title                    = {Anatomy-based visualizations of diffusion tensor images of brain white matter},
   Author                   = {Gee, J.C. and Zhang, H. and Dubb, A. and Avants, B. and Yushkevich, P. and Duda, J.T.},
@@ -800,6 +859,33 @@
 
   Address                  = {Berlin},
   Editor                   = {Weickert, J. and Hagan, H.}
+}
+
+@Article{Gee1993,
+  Title                    = {Elastically deforming 3D atlas to match anatomical brain images.},
+  Author                   = {Gee, J. C. and Reivich, M. and Bajcsy, R.},
+  Journal                  = {J Comput Assist Tomogr},
+  Year                     = {1993},
+  Number                   = {2},
+  Pages                    = {225--236},
+  Volume                   = {17},
+  Abstract                 = {To evaluate our system for elastically deforming a three-dimensional atlas to match anatomical brain images, six deformed versions of an atlas were generated. The deformed atlases were created by elastically mapping an anatomical brain atlas onto different MR brain image volumes. The mapping matches the edges of the ventricles and the surface of the brain; the resultant deformations are propagated through the atlas volume, deforming the remainder of the structures in the process. The atlas was then elastically matched to its deformed versions. The accuracy of the resultant matches was evaluated by determining the correspondence of 32 cortical and subcortical structures. The system on average matched the centroid of a structure to within 1 mm of its true position and fit a structure to within 11\% of its true volume. The overlap between the matched and true structures, defined by the ratio between the volume of their intersection and the volume of their union, averaged 66\%. When the gray-white interface was included for matching, the mean overlap improved to 78\%; each structure was matched to within 0.6 mm of its true position and fit to within 6\% of its true volume. Preliminary studies were also made to determine the effect of the compliance of the atlas on the resultant match.},
+  Institution              = {Department of Computer and Information Science, University of Pennsylvania, Philadelphia 19104.},
+  Keywords                 = {Anatomy, Artistic; Brain, anatomy /&/ histology; Caudate Nucleus, anatomy /&/ histology; Cerebral Ventricles, anatomy /&/ histology; Female; Frontal Lobe, anatomy /&/ histology; Humans; Image Enhancement; Image Processing, Computer-Assisted; Magnetic Resonance Imaging, methods; Male; Medical Illustration; Medulla Oblongata, anatomy /&/ histology; Mesencephalon, anatomy /&/ histology; Pons, anatomy /&/ histology; Sensitivity and Specificity; Temporal Lobe, anatomy /&/ histology; Thalamus, anatomy /&/ histology},
+  Language                 = {eng},
+  Medline-pst              = {ppublish},
+  Owner                    = {stnava},
+  Pmid                     = {8454749},
+  Timestamp                = {2014.08.26}
+}
+
+@Book{Grenander1993,
+  Title                    = {General pattern theory-A mathematical study of regular structures},
+  Author                   = {Grenander, Ulf},
+  Publisher                = {Clarendon Press},
+  Year                     = {1993},
+  Owner                    = {stnava},
+  Timestamp                = {2014.08.26}
 }
 
 @Article{Grossman2008,
@@ -852,6 +938,7 @@
   Number                   = {12},
   Pages                    = {5241--5248},
   Volume                   = {33},
+
   Abstract                 = {Recent advances in structural magnetic resonance imaging technology and analysis now allows for accurate in vivo measurement of cortical thickness, an important aspect of cortical organization that has historically only been conducted on postmortem brains. In this study, for the first time, we examined regional and lateralized cortical thickness in a sample of 71 chimpanzees for comparison with previously reported findings in humans. We also measured gray and white matter volumes for each subject. The results indicated that chimpanzees showed significant regional variation in cortical thickness with lower values in primary motor and sensory cortex compared with association cortex. Furthermore, chimpanzees showed significant rightward asymmetries in cortical thickness for a number of regions of interest throughout the cortex and leftward asymmetries in white but not gray matter volume. We also found that total and region-specific cortical thickness was significantly negatively correlated with white matter volume. Thus, chimpanzees with greater white matter volumes had thinner cortical thickness. The collective findings are discussed within the context of previous findings in humans and theories on the evolution of cortical organization and lateralization in primates.},
   Bdsk-url-1               = {http://dx.doi.org/10.1523/JNEUROSCI.2996-12.2013},
   Doi                      = {10.1523/JNEUROSCI.2996-12.2013},
@@ -864,6 +951,18 @@
   Pmid                     = {23516289},
   Timestamp                = {2014.04.29},
   Url                      = {http://dx.doi.org/10.1523/JNEUROSCI.2996-12.2013}
+}
+
+@InProceedings{Horn1981,
+  Title                    = {Determining optical flow},
+  Author                   = {Horn, Berthold K and Schunck, Brian G},
+  Booktitle                = {1981 Technical Symposium East},
+  Year                     = {1981},
+  Organization             = {International Society for Optics and Photonics},
+  Pages                    = {319--331},
+  Owner                    = {stnava},
+  Timestamp                = {2014.08.26},
+  Url                      = {http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=1231385}
 }
 
 @Article{Kim2008,
@@ -950,6 +1049,26 @@
   Pmid                     = {19158440},
   Timestamp                = {2009.02.14},
   Url                      = {http://dx.doi.org/10.1159/000194658}
+}
+
+@Article{Miller2002,
+  Title                    = {On the metrics and euler-lagrange equations of computational anatomy.},
+  Author                   = {Miller, Michael I. and Trouve, Alain and Younes, Laurent},
+  Journal                  = {Annu Rev Biomed Eng},
+  Year                     = {2002},
+  Pages                    = {375--405},
+  Volume                   = {4},
+  Abstract                 = {This paper reviews literature, current concepts and approaches in computational anatomy (CA). The model of CA is a Grenander deformable template, an orbit generated from a template under groups of diffeomorphisms. The metric space of all anatomical images is constructed from the geodesic connecting one anatomical structure to another in the orbit. The variational problems specifying these metrics are reviewed along with their associated Euler-Lagrange equations. The Euler equations of motion derived by Arnold for the geodesics in the group of divergence-free volume-preserving diffeomorphisms of incompressible fluids are generalized for the larger group of diffeomorphisms used in CA with nonconstant Jacobians. Metrics that accommodate photometric variation are described extending the anatomical model to incorporate the construction of neoplasm. Metrics on landmarked shapes are reviewed as well as Joshi's diffeomorphism metrics, Bookstein's thin-plate spline approximate-metrics, and Kendall's affine invariant metrics. We conclude by showing recent experimental results from the Toga & Thompson group in growth, the Van Essen group in macaque and human cortex mapping, and the Csernansky group in hippocampus mapping for neuropsychiatric studies in aging and schizophrenia.},
+  Doi                      = {10.1146/annurev.bioeng.4.092101.125733},
+  Institution              = {Center for Imaging Science, The Johns Hopkins University, Baltimore, Maryland 21218, USA. mim@cis.jhu.edu},
+  Keywords                 = {Algorithms; Animals; Brain, anatomy /&/ histology; Humans; Image Processing, Computer-Assisted, methods; Imaging, Three-Dimensional, methods; Macaca; Models, Neurological; Models, Statistical},
+  Language                 = {eng},
+  Medline-pst              = {ppublish},
+  Owner                    = {stnava},
+  Pii                      = {092101.125733},
+  Pmid                     = {12117763},
+  Timestamp                = {2014.08.26},
+  Url                      = {http://dx.doi.org/10.1146/annurev.bioeng.4.092101.125733}
 }
 
 @Article{Murphy2011,
@@ -1070,6 +1189,30 @@
   Timestamp                = {2007.02.06}
 }
 
+@Article{Rueckert1999,
+  Title                    = {Nonrigid registration using free-form deformations: application to breast MR images.},
+  Author                   = {Rueckert, D. and Sonoda, L. I. and Hayes, C. and Hill, D. L. and Leach, M. O. and Hawkes, D. J.},
+  Journal                  = {IEEE Trans Med Imaging},
+  Year                     = {1999},
+
+  Month                    = {Aug},
+  Number                   = {8},
+  Pages                    = {712--721},
+  Volume                   = {18},
+
+  __markedentry            = {[stnava:]},
+  Abstract                 = {In this paper we present a new approach for the nonrigid registration of contrast-enhanced breast MRI. A hierarchical transformation model of the motion of the breast has been developed. The global motion of the breast is modeled by an affine transformation while the local breast motion is described by a free-form deformation (FFD) based on B-splines. Normalized mutual information is used as a voxel-based similarity measure which is insensitive to intensity changes as a result of the contrast enhancement. Registration is achieved by minimizing a cost function, which represents a combination of the cost associated with the smoothness of the transformation and the cost associated with the image similarity. The algorithm has been applied to the fully automated registration of three-dimensional (3-D) breast MRI in volunteers and patients. In particular, we have compared the results of the proposed nonrigid registration algorithm to those obtained using rigid and affine registration techniques. The results clearly indicate that the nonrigid registration algorithm is much better able to recover the motion and deformation of the breast than rigid or affine registration algorithms.},
+  Doi                      = {10.1109/42.796284},
+  Institution              = {Division of Radiological Sciences and Medical Engineering, Guy's, King's, and St. Thomas' School of Medicine, King's College London, Guy's Hospital, London, UK. D.Rueckert@umds.ac.uk},
+  Keywords                 = {Breast, anatomy /&/ histology; Female; Humans; Image Processing, Computer-Assisted, methods; Magnetic Resonance Imaging, methods},
+  Language                 = {eng},
+  Medline-pst              = {ppublish},
+  Owner                    = {stnava},
+  Pmid                     = {10534053},
+  Timestamp                = {2014.08.26},
+  Url                      = {http://dx.doi.org/10.1109/42.796284}
+}
+
 @Article{Schoenemann2007,
   Title                    = {Validation of plaster endocast morphology through 3D CT image analysis.},
   Author                   = {P.T. Schoenemann and J. Gee and B. Avants and R.L. Holloway and J. Monge and J. Lewis},
@@ -1114,6 +1257,28 @@
   Pmid                     = {17103425},
   Timestamp                = {2008.05.29},
   Url                      = {http://dx.doi.org/10.1002/ajpa.20499}
+}
+
+@Article{Shen2002,
+  Title                    = {HAMMER: hierarchical attribute matching mechanism for elastic registration.},
+  Author                   = {Shen, Dinggang and Davatzikos, Christos},
+  Journal                  = {IEEE Trans Med Imaging},
+  Year                     = {2002},
+
+  Month                    = {Nov},
+  Number                   = {11},
+  Pages                    = {1421--1439},
+  Volume                   = {21},
+  Abstract                 = {A new approach is presented for elastic registration of medical images, and is applied to magnetic resonance images of the brain. Experimental results demonstrate very high accuracy in superposition of images from different subjects. There are two major novelties in the proposed algorithm. First, it uses an attribute vector, i.e., a set of geometric moment invariants (GMIs) that are defined on each voxel in an image and are calculated from the tissue maps, to reflect the underlying anatomy at different scales. The attribute vector, if rich enough, can distinguish between different parts of an image, which helps establish anatomical correspondences in the deformation procedure; it also helps reduce local minima, by reducing ambiguity in potential matches. This is a fundamental deviation of our method, referred to as the hierarchical attribute matching mechanism for elastic registration (HAMMER), from other volumetric deformation methods, which are typically based on maximizing image similarity. Second, in order to avoid being trapped by local minima, i.e., suboptimal poor matches, HAMMER uses a successive approximation of the energy function being optimized by lower dimensional smooth energy functions, which are constructed to have significantly fewer local minima. This is achieved by hierarchically selecting the driving features that have distinct attribute vectors, thus, drastically reducing ambiguity in finding correspondence. A number of experiments demonstrate that the proposed algorithm results in accurate superposition of image data from individuals with significant anatomical differences.},
+  Doi                      = {10.1109/TMI.2002.803111},
+  Institution              = {Center for Biomedical Image Computing, Department of Radiology, The Johns Hopkins University School of Medicine, 601 N. Caroline Street, Baltimore, MD 21287, USA. dgshen@rad.upenn.edu},
+  Keywords                 = {Aged; Algorithms; Atrophy, diagnosis; Brain, anatomy /&/ histology/pathology; Elasticity; Humans; Image Enhancement, methods; Magnetic Resonance Imaging, methods; Pattern Recognition, Automated; Quality Control; Reproducibility of Results; Sensitivity and Specificity; Stochastic Processes; Subtraction Technique},
+  Language                 = {eng},
+  Medline-pst              = {ppublish},
+  Owner                    = {stnava},
+  Pmid                     = {12575879},
+  Timestamp                = {2014.08.26},
+  Url                      = {http://dx.doi.org/10.1109/TMI.2002.803111}
 }
 
 @Article{Simon2008,
@@ -1211,6 +1376,47 @@
   Owner                    = {stnava},
   Pmid                     = {16685976},
   Timestamp                = {2008.05.29}
+}
+
+@Article{Thirion1998,
+  Title                    = {Image matching as a diffusion process: an analogy with Maxwell's demons.},
+  Author                   = {Thirion, J. P.},
+  Journal                  = {Med Image Anal},
+  Year                     = {1998},
+
+  Month                    = {Sep},
+  Number                   = {3},
+  Pages                    = {243--260},
+  Volume                   = {2},
+
+  __markedentry            = {[stnava:6]},
+  Abstract                 = {In this paper, we present the concept of diffusing models to perform image-to-image matching. Having two images to match, the main idea is to consider the objects boundaries in one image as semi-permeable membranes and to let the other image, considered as a deformable grid model, diffuse through these interfaces, by the action of effectors situated within the membranes. We illustrate this concept by an analogy with Maxwell's demons. We show that this concept relates to more traditional ones, based on attraction, with an intermediate step being optical flow techniques. We use the concept of diffusing models to derive three different non-rigid matching algorithms, one using all the intensity levels in the static image, one using only contour points, and a last one operating on already segmented images. Finally, we present results with synthesized deformations and real medical images, with applications to heart motion tracking and three-dimensional inter-patients matching.},
+  Institution              = {INRIA, Equipe Epidaure, Sophia-Antipolis, France. jean-philippe.thirion@inria.fr},
+  Keywords                 = {Algorithms; Animals; Brain, anatomy /&/ histology; Computer Simulation; Diagnostic Imaging, methods; Dogs; Heart, anatomy /&/ histology; Humans; Image Processing, Computer-Assisted, methods; Models, Theoretical; Thermodynamics},
+  Language                 = {eng},
+  Medline-pst              = {ppublish},
+  Owner                    = {stnava},
+  Pii                      = {S1361-8415(98)80022-4},
+  Pmid                     = {9873902},
+  Timestamp                = {2014.08.26}
+}
+
+@Article{Thompson2001,
+  Title                    = {Detecting disease-specific patterns of brain structure using cortical pattern matching and a population-based probabilistic brain atlas.},
+  Author                   = {Thompson, Paul M. and Mega, Michael S. and Vidal, Christine and Rapoport, Judith L. and Toga, Arthur W.},
+  Journal                  = {Inf Process Med Imaging},
+  Year                     = {2001},
+  Pages                    = {488--501},
+  Volume                   = {2082},
+  Abstract                 = {The rapid creation of comprehensive brain image databases mandates the development of mathematical algorithms to uncover disease specific patterns of brain structure and function in human populations. We describe our construction of probabilistic atlases that store detailed information on how the brain varies across age and gender, across time, in health and disease, and in large human populations. Specifically, we introduce a mathematical framework based on covariant partial differential equations (PDEs), pull-backs of mappings under harmonic flows, and high-dimensional random tensor fields to encode variations in cortical patterning, asymmetry and tissue distribution in a population-based brain image database (N =94 scans). We use this information to detect disease-specific abnormalities in Alzheimer's disease and schizophrenia, including dynamic changes over time. Illustrative examples are chosen to show how group patterns of cortical organization, asymmetry, and disease-specific trends can be resolved that are not apparent in individual brain images. Finally, we create four-dimensional (4D) maps that store probabilistic information on the dynamics of brain change in development and disease. Digital atlases that generate these maps show considerable promise in identifying general patterns of structural and functional variation in diseased populations, and revealing how these features depend on demographic, genetic, clinical and therapeutic parameters.},
+  Doi                      = {10.1007/3-540-45729-1_52},
+  Institution              = {Laboratory of Neuro Imaging, Division of Brain Mapping, and Alzheimer's Disease Center, Dept. of Neurology, UCLA School of Medicine, Los Angeles, CA, USA thompson@loni.ucla.edu.},
+  Language                 = {eng},
+  Medline-pst              = {ppublish},
+  Owner                    = {stnava},
+  Pmid                     = {21218175},
+  Timestamp                = {2014.08.26},
+  Url                      = {http://dx.doi.org/10.1007/3-540-45729-1_52}
 }
 
 @Article{Tustison2013,
@@ -1356,8 +1562,6 @@
   Month                    = {Oct},
   Pages                    = {166--179},
   Volume                   = {99},
-
-  __markedentry            = {[stnava:6]},
   Abstract                 = {Many studies of the human brain have explored the relationship between cortical thickness and cognition, phenotype, or disease. Due to the subjectivity and time requirements in manual measurement of cortical thickness, scientists have relied on robust software tools for automation which facilitate the testing and refinement of neuroscientific hypotheses. The most widely used tool for cortical thickness studies is the publicly available, surface-based FreeSurfer package. Critical to the adoption of such tools is a demonstration of their reproducibility, validity, and the documentation of specific implementations that are robust across large, diverse imaging datasets. To this end, we have developed the automated, volume-based Advanced Normalization Tools (ANTs) cortical thickness pipeline comprising well-vetted components such as SyGN (multivariate template construction), SyN (image registration), N4 (bias correction), Atropos (n-tissue segmentation), and DiReCT (cortical thickness estimation). In this work, we have conducted the largest evaluation of automated cortical thickness measures in publicly available data, comparing FreeSurfer and ANTs measures computed on 1205 images from four open data sets (IXI, MMRR, NKI, and OASIS), with parcellation based on the recently proposed Desikan-Killiany-Tourville (DKT) cortical labeling protocol. We found good scan-rescan repeatability with both FreeSurfer and ANTs measures. Given that such assessments of precision do not necessarily reflect accuracy or an ability to make statistical inferences, we further tested the neurobiological validity of these approaches by evaluating thickness-based prediction of age and gender. ANTs is shown to have a higher predictive performance than FreeSurfer for both of these measures. In promotion of open science, we make all of our scripts, data, and results publicly available which complements the use of open image data sets and the open source availability of the proposed ANTs cortical thickness pipeline.},
   Doi                      = {10.1016/j.neuroimage.2014.05.044},
   Institution              = {Penn Image Computing and Science Laboratory, University of Pennsylvania, Philadelphia, PA, USA.},
@@ -1409,6 +1613,7 @@
   Number                   = {3},
   Pages                    = {968--985},
   Volume                   = {55},
+
   Abstract                 = {We propose a simple but generally applicable approach to improving the accuracy of automatic image segmentation algorithms relative to manual segmentations. The approach is based on the hypothesis that a large fraction of the errors produced by automatic segmentation are systematic, i.e., occur consistently from subject to subject, and serves as a wrapper method around a given host segmentation method. The wrapper method attempts to learn the intensity, spatial and contextual patterns associated with systematic segmentation errors produced by the host method on training data for which manual segmentations are available. The method then attempts to correct such errors in segmentations produced by the host method on new images. One practical use of the proposed wrapper method is to adapt existing segmentation tools, without explicit modification, to imaging data and segmentation protocols that are different from those on which the tools were trained and tuned. An open-source implementation of the proposed wrapper method is provided, and can be applied to a wide range of image segmentation problems. The wrapper method is evaluated with four host brain MRI segmentation methods: hippocampus segmentation using FreeSurfer (Fischl et al., 2002); hippocampus segmentation using multi-atlas label fusion (Artaechevarria et al., 2009); brain extraction using BET (Smith, 2002); and brain tissue segmentation using FAST (Zhang et al., 2001). The wrapper method generates 72\%, 14\%, 29\% and 21\% fewer erroneously segmented voxels than the respective host segmentation methods. In the hippocampus segmentation experiment with multi-atlas label fusion as the host method, the average Dice overlap between reference segmentations and segmentations produced by the wrapper method is 0.908 for normal controls and 0.893 for patients with mild cognitive impairment. Average Dice overlaps of 0.964, 0.905 and 0.951 are obtained for brain extraction, white matter segmentation and gray matter segmentation, respectively.},
   Institution              = {Penn Image Computing and Science Laboratory, Department of Radiology, University of Pennsylvania, Philadelphia, PA, USA. hongzhiw@mail.med.upenn.edu},
   Keywords                 = {Aged; Algorithms; Alzheimer Disease, pathology; Artificial Intelligence; Atlases as Topic; Brain, anatomy /&/ histology/pathology; Cerebral Cortex, anatomy /&/ histology/pathology; Databases, Factual; Female; Hippocampus, anatomy /&/ histology/pathology; Humans; Image Enhancement, methods; Image Processing, Computer-Assisted, methods; Male; Middle Aged; Software},

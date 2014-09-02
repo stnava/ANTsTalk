@@ -1,0 +1,50 @@
+
+##  Segmentation Framework 
+
+1. Bias correction (with optional priors)
+
+2. Prior-based tissue segmentation
+
+3. Prior-based anatomical labeling 
+
+4. Iteration through above steps (optional)
+
+## We tried N3 and FSL-FAST for these problems ... and *dislike* Matlab ...
+
+failed to locate well-implemented open-source resources for general purpose prior-based 
+segmentation and inhomogeneity correction ...
+
+##  Atropos: Bayesian $N$-class multivariate segmentation 
+
+* Similar to our experience with N3, we tried to incorporate FAST (from the FMRIB at Oxford)
+into an *ANTs* processing pipeline.
+
+* We failed to successfully incorporate priors into FAST.
+
+* Related, BA went to a segmentation-related worksop at MICCAI and
+aired disappointment that so much of what had been developed in the
+community over the last 20+ years has not been made publicly
+available.  "What's wrong with you people!"
+
+* 3-tissue algorithm in ImageMath $\rightarrow$ multivariate, n-class Atropos
+
+## Atropos components
+<div align="center"><img height="350" src="./figures/atropos2.png" frameborder="0"></img></div>
+
+## Babies
+
+![](./figures/baby.png)
+
+
+# Can we accurately measure cortical thickness by DiReCTly using the image space?
+
+## KellySlater $\rightarrow$ KellyKapowski
+
+![KK-KS](figures/kkks.png)
+
+Several years of development by SR Das, BA, NT (KK fan)
+
+## Atropos $+$ KK Example
+
+![](./figures/atropos.png)
+
