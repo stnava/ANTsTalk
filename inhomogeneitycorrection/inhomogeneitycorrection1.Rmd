@@ -1,4 +1,6 @@
 
+# Bias Correction a.k.a. Inhomogeneity Correction
+
 ## N4
 
 * N3 (developed at the Montreal Neurological Institute) has been the gold standard for

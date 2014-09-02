@@ -1,5 +1,5 @@
 
-## Can we address subtle questions in brain and cognition via imaging-specific dimensionality reduction?
+# Biologically regularized dimensionality reduction
 
 ##  [Eigenanatomy](http://www.ncbi.nlm.nih.gov/pubmed/24852460) & [SCCAN](http://www.ncbi.nlm.nih.gov/pubmed/?term=avants+SCCAN)
 

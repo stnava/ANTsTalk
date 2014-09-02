@@ -46,6 +46,7 @@ opts_chunk$set(fig.width=9, fig.height=6, fig.path=figpath,
 This talk is online at [http://stnava.github.io/ANTsTalk/](http://stnava.github.io/ANTsTalk/#/) with colored [links](http://stnava.github.io/ANTsTalk/#/) meant to be clicked for more information
 
 
+# Background
 
 ## Image mapping & perception: 1878
 
@@ -350,6 +351,7 @@ from [miykael](http://miykael.github.io/nipype-beginner-s-guide/ANTS.html)
 [congress](http://ntustison.github.io/CongressionalFaceTemplates/)
 
 ## We build templates to *store* and *transfer* prior knowledge 
+# Tissue segmentation
 
 ##  Segmentation Framework 
 
@@ -400,6 +402,8 @@ Several years of development by SR Das, BA, NT (KK fan)
 
 ![](./figures/atropos.png)
 
+
+# Bias Correction a.k.a. Inhomogeneity Correction
 
 ## N4
 
@@ -469,7 +473,9 @@ OPTIONS:
 > Talk is cheap, show me the code.
 
 
-## Joint Label Fusion 
+# Learning from anatomical dictionaries
+
+## Joint Label Fusion
 
 FIXME 
 
@@ -716,6 +722,9 @@ ofnpng<-paste(ofn,'.png',sep='')
 ![](./figures/antsgoals.png)
 
 ... used in ["Sparse canonical correlation analysis relates network-level atrophy to multivariate cognitive measures in a neurodegenerative population"](http://www.ncbi.nlm.nih.gov/pubmed/24096125) and several upcoming ...
+
+
+# Wrap-up & Discussion 
 
 ## Many instructional examples for new colleagues
 

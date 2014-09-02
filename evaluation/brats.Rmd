@@ -1,4 +1,6 @@
 
+# BRATS
+
 ## Can we customize these methods for a challenging multivariate segmentation problem with clinical relevance?
 
 ## Automated tumor segmentation from multiple MRI

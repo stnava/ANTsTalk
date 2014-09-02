@@ -1,3 +1,6 @@
+
+# Wrap-up & Discussion 
+
 ## Many instructional examples for new colleagues
 
 [see examples @ *ANTs* webpage](http://stnava.github.io/ANTs/)

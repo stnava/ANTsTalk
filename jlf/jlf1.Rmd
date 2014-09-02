@@ -1,4 +1,6 @@
-## Joint Label Fusion 
+# Learning from anatomical dictionaries
+
+## Joint Label Fusion
 
 FIXME 
 

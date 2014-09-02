@@ -116,26 +116,23 @@ code > span.er { color: #c3bf9f; }
 </div>
 <p>This talk is online at <a href="http://stnava.github.io/ANTsTalk/#/"><a href="http://stnava.github.io/ANTsTalk/" class="uri">http://stnava.github.io/ANTsTalk/</a></a> with colored <a href="http://stnava.github.io/ANTsTalk/#/">links</a> meant to be clicked for more information</p>
 </section>
-<section id="image-mapping-perception-1878" class="slide level2">
+<section><section id="background" class="titleslide slide level1"><h1>Background</h1></section><section id="image-mapping-perception-1878" class="slide level2">
 <h1>Image mapping &amp; perception: 1878</h1>
 <p><img src="figures/galton.png" /></p>
 <ul>
 <li class="fragment"><p>Francis Galton: Can we see criminality in the face?</p></li>
 <li class="fragment"><p>(maybe he should have used ANTs?)</p></li>
 </ul>
-</section>
-<section id="founding-developers" class="slide level2">
+</section><section id="founding-developers" class="slide level2">
 <h1>Founding developers</h1>
 <div align="center">
 <img width="1433" src="./figures/bant2.png" frameborder="0"></img>
 </div>
-</section>
-<section id="long-term-collaborators" class="slide level2">
+</section><section id="long-term-collaborators" class="slide level2">
 <h1>Long-term collaborators</h1>
 <p><img src="figures/antscollab.jpg" /></p>
 <p><span class="math">\(+\)</span> <a href="http://neuro.debian.net/pkgs/ants.html">neurodebian</a>, <a href="http://www.slicer.org/">slicer</a>, <a href="https://github.com/BRAINSia/BRAINSTools">brainsfit</a>, <a href="http://nipy.sourceforge.net/nipype/">nipype</a>, <a href="http://www.itk.org">itk</a> and more …</p>
-</section>
-<section id="general-purpose-library-for-multivariate-image-registration-segmentation-statistical-analysis-tools" class="slide level2">
+</section><section id="general-purpose-library-for-multivariate-image-registration-segmentation-statistical-analysis-tools" class="slide level2">
 <h1>General purpose library for multivariate image registration, segmentation &amp; statistical analysis tools</h1>
 <ul>
 <li class="fragment"><p>170,000+ lines of C++, 6<span class="math">\(+\)</span> years of work, 15+ collaborators.</p></li>
@@ -145,7 +142,7 @@ code > span.er { color: #c3bf9f; }
 </ul>
 <pre><code>    An algorithm must use prior knowledge about a problem 
     to do well on that problem </code></pre>
-</section>
+</section></section>
 <section><section id="ants-optimizes-mathematically-well-defined-objective-functions-guided-by-prior-knowledge" class="titleslide slide level1"><h1><em>ANTs</em> optimizes mathematically well-defined <span style="color:red;">objective functions</span> guided by <span style="color:red;">prior knowledge</span> …</h1></section></section>
 <section><section id="including-that-of-developers-domain-experts-and-other-colleagues" class="titleslide slide level1"><h1>… including that of developers, domain experts and other colleagues …</h1></section></section>
 <section><section id="plug-your-ideas-into-our-software-to-gain-insight-into-biomedical-data" class="titleslide slide level1"><h1>plug <em>your ideas</em> into our software to gain insight into biomedical data …</h1></section></section>
@@ -329,7 +326,8 @@ code > span.er { color: #c3bf9f; }
 <p><a href="http://ntustison.github.io/CongressionalFaceTemplates/">congress</a></p>
 </section><section id="we-build-templates-to-store-and-transfer-prior-knowledge" class="slide level2">
 <h1>We build templates to <em>store</em> and <em>transfer</em> prior knowledge</h1>
-</section><section id="segmentation-framework" class="slide level2">
+</section></section>
+<section><section id="tissue-segmentation" class="titleslide slide level1"><h1>Tissue segmentation</h1></section><section id="segmentation-framework" class="slide level2">
 <h1>Segmentation Framework</h1>
 <ol type="1">
 <li class="fragment"><p>Bias correction (with optional priors)</p></li>
@@ -364,7 +362,8 @@ code > span.er { color: #c3bf9f; }
 </section><section id="atropos-kk-example" class="slide level2">
 <h1>Atropos <span class="math">\(+\)</span> KK Example</h1>
 <p><img src="figures/atropos.png" /></p>
-</section><section id="n4" class="slide level2">
+</section></section>
+<section><section id="bias-correction-a.k.a.-inhomogeneity-correction" class="titleslide slide level1"><h1>Bias Correction a.k.a. Inhomogeneity Correction</h1></section><section id="n4" class="slide level2">
 <h1>N4</h1>
 <ul>
 <li class="fragment"><p>N3 (developed at the Montreal Neurological Institute) has been the gold standard for bias correction—used in important projects such as ADNI</p></li>
@@ -414,7 +413,8 @@ OPTIONS:
 <blockquote>
 <p>Talk is cheap, show me the code.</p>
 </blockquote>
-</section><section id="joint-label-fusion" class="slide level2">
+</section></section>
+<section><section id="learning-from-anatomical-dictionaries" class="titleslide slide level1"><h1>Learning from anatomical dictionaries</h1></section><section id="joint-label-fusion" class="slide level2">
 <h1>Joint Label Fusion</h1>
 <p>FIXME</p>
 <p>Use dictionaries to labels</p>
@@ -563,7 +563,7 @@ mat&lt;-<span class="kw">imageListToMatrix</span>( imglist, mask )
 DX&lt;-<span class="kw">factor</span>( <span class="kw">c</span>( <span class="kw">rep</span>(<span class="dv">0</span>,simnum), <span class="kw">rep</span>(<span class="dv">1</span>,simnum) ) )
 mylmresults&lt;-<span class="kw">bigLMStats</span>( <span class="kw">lm</span>( mat ~<span class="st"> </span>DX ) )
 qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pre>
-<p>The minimum q-value is 3.1646 × 10<sup>-5</sup> …</p>
+<p>The minimum q-value is 2.5212 × 10<sup>-6</sup> …</p>
 </section><section id="visualize-the-histograms-of-effects" class="slide level2">
 <h1>Visualize the histograms of effects</h1>
 <pre class="sourceCode r"><code class="sourceCode r">whichvox&lt;-qvals &lt;<span class="st"> </span><span class="fl">1.e-2</span>
@@ -583,7 +583,8 @@ voxdf&lt;-<span class="kw">data.frame</span>( <span class="dt">volume=</span><sp
 <h1>The power of <em>ANTs</em> <span class="math">\(+\)</span> <em>R</em> <span class="math">\(\rightarrow\)</span><br /> <span style="color:red;"><strong>Reproducible imaging science</strong></span></h1>
 <p><img src="figures/antsgoals.png" /></p>
 <p>… used in <a href="http://www.ncbi.nlm.nih.gov/pubmed/24096125">“Sparse canonical correlation analysis relates network-level atrophy to multivariate cognitive measures in a neurodegenerative population”</a> and several upcoming …</p>
-</section><section id="many-instructional-examples-for-new-colleagues" class="slide level2">
+</section></section>
+<section><section id="wrap-up-discussion" class="titleslide slide level1"><h1>Wrap-up &amp; Discussion</h1></section><section id="many-instructional-examples-for-new-colleagues" class="slide level2">
 <h1>Many instructional examples for new colleagues</h1>
 <p><a href="http://stnava.github.io/ANTs/">see examples @ <em>ANTs</em> webpage</a></p>
 </section><section id="recap" class="slide level2">

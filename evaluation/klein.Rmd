@@ -1,4 +1,8 @@
-## Klein 2009
+# Klein 2009
+
+## Arno set forth a challenge to image registration developers
+
+Can you instruct a naive user on how to use your software efficiently to register T1-weighted MRI of the human brain?
 
 FIXME
 
