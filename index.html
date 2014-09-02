@@ -399,9 +399,11 @@ filename&lt;-<span class="kw">getANTsRData</span>(<span class="st">&#39;r16&#39;
 img&lt;-<span class="kw">antsImageRead</span>( filename , dim )
 filename&lt;-<span class="kw">getANTsRData</span>(<span class="st">&#39;r64&#39;</span>)
 img2&lt;-<span class="kw">antsImageRead</span>( filename , dim )
-mask&lt;-<span class="kw">getMask</span>(img,<span class="dv">150</span>,<span class="dv">255</span>,T)
-nvox&lt;-<span class="kw">sum</span>( mask ==<span class="st"> </span><span class="dv">1</span> )</code></pre>
-<p>The brain has 1180 voxels …</p>
+mask&lt;-<span class="kw">getMask</span>(img,<span class="dv">50</span>,<span class="kw">max</span>(img),T)
+mask2&lt;-<span class="kw">getMask</span>(img,<span class="dv">150</span>,<span class="kw">max</span>(img),T)
+nvox&lt;-<span class="kw">sum</span>( mask ==<span class="st"> </span><span class="dv">1</span> )
+nvox2&lt;-<span class="kw">sum</span>( mask2 ==<span class="st"> </span><span class="dv">1</span> )</code></pre>
+<p>The brain has 17395 voxels …</p>
 </section><section id="a-quick-antsr-example-1" class="slide level2">
 <h1>A Quick <span style="color:grey;"><em>ANTsR</em></span> example</h1>
 <p>Simulate a population morphometry study - a “VBM” …</p>
@@ -410,11 +412,10 @@ imglist&lt;-<span class="kw">list</span>()
 imglist2&lt;-<span class="kw">list</span>()
 for ( i in <span class="dv">1</span>:simnum ) {
   img1sim&lt;-<span class="kw">antsImageClone</span>(img)
-  img1sim[ mask==<span class="dv">1</span> ]&lt;-<span class="kw">rnorm</span>(nvox,<span class="dt">mean=</span><span class="fl">0.205</span>)
-  <span class="kw">SmoothImage</span>(dim,img1sim,<span class="fl">1.5</span>,img1sim)
+  img1sim[ mask==<span class="dv">1</span> ]&lt;-<span class="kw">rnorm</span>(nvox,<span class="dt">mean=</span><span class="fl">0.5</span>)
+  img1sim[ mask2==<span class="dv">1</span> ]&lt;-<span class="kw">rnorm</span>(nvox2,<span class="dt">mean=</span><span class="fl">2.0</span>)
   img2sim&lt;-<span class="kw">antsImageClone</span>(img2)
   img2sim[ mask==<span class="dv">1</span> ]&lt;-<span class="kw">rnorm</span>(nvox,<span class="dt">mean=</span><span class="fl">0.20</span>)
-  <span class="kw">SmoothImage</span>(dim,img2sim,<span class="fl">1.5</span>,img2sim)
   imglist&lt;-<span class="kw">lappend</span>(imglist,img1sim)
   imglist2&lt;-<span class="kw">lappend</span>(imglist2,img2sim)
 }
@@ -423,10 +424,10 @@ mat&lt;-<span class="kw">imageListToMatrix</span>( imglist, mask )
 DX&lt;-<span class="kw">factor</span>( <span class="kw">c</span>( <span class="kw">rep</span>(<span class="dv">0</span>,simnum), <span class="kw">rep</span>(<span class="dv">1</span>,simnum) ) )
 mylmresults&lt;-<span class="kw">bigLMStats</span>( <span class="kw">lm</span>( mat ~<span class="st"> </span>DX ) )
 qvals&lt;-<span class="kw">p.adjust</span>( mylmresults$pval.model ) </code></pre>
-<p>The minimum q-value is 5.0847 × 10<sup>-40</sup> …</p>
+<p>The minimum q-value is 3.4117 × 10<sup>-4</sup> …</p>
 </section><section id="visualize-the-histograms-of-effects" class="slide level2">
 <h1>Visualize the histograms of effects</h1>
-<pre class="sourceCode r"><code class="sourceCode r">whichvox&lt;-qvals &lt;<span class="st"> </span><span class="fl">1.e-8</span>
+<pre class="sourceCode r"><code class="sourceCode r">whichvox&lt;-qvals &lt;<span class="st"> </span><span class="fl">1.e-2</span>
 voxdf&lt;-<span class="kw">data.frame</span>( <span class="dt">volume=</span><span class="kw">c</span>( <span class="kw">as.numeric</span>( mat[,whichvox] ) ), <span class="dt">DX=</span>DX )
 <span class="kw">ggplot</span>(voxdf, <span class="kw">aes</span>(volume, <span class="dt">fill =</span> DX)) +<span class="st"> </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>)</code></pre>
 <p><img src="FigsAntsHistory/vizmorph.png" title="plot of chunk vizmorph" alt="plot of chunk vizmorph" width="864" /></p>
@@ -435,7 +436,15 @@ voxdf&lt;-<span class="kw">data.frame</span>( <span class="dt">volume=</span><sp
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plotANTsImage</span>(img,<span class="dt">functional=</span><span class="kw">list</span>(betas),<span class="dt">threshold=</span>thresh,
   <span class="dt">outname=</span>ofn)</code></pre>
 <p><img src="FigsAntsHistory/vizmorph2.jpg" /></p>
+</section><section id="network-visualization" class="slide level2">
+<h1>Network visualization</h1>
+<p>see <code>?plotBasicNetwork</code></p>
+<p><img src="FigsAntsHistory/network.png" /></p>
 </section><section id="the-power-of-ants-r-rightarrow-reproducible-imaging-science" class="slide level2">
+<h1>The power of <em>ANTs</em> <span class="math">\(+\)</span> <em>R</em> <span class="math">\(\rightarrow\)</span><br /> <span style="color:red;"><strong>Reproducible imaging science</strong></span></h1>
+<p><img src="figures/antsgoals.png" /></p>
+<p>… used in <a href="http://www.ncbi.nlm.nih.gov/pubmed/24096125">“Sparse canonical correlation analysis relates network-level atrophy to multivariate cognitive measures in a neurodegenerative population”</a> and several upcoming …</p>
+</section><section id="the-power-of-ants-r-rightarrow-reproducible-imaging-science-1" class="slide level2">
 <h1>The power of <em>ANTs</em> <span class="math">\(+\)</span> <em>R</em> <span class="math">\(\rightarrow\)</span><br /> <span style="color:red;"><strong>Reproducible imaging science</strong></span></h1>
 <p><img src="figures/antsgoals.png" /></p>
 <p>… used in <a href="http://www.ncbi.nlm.nih.gov/pubmed/24096125">“Sparse canonical correlation analysis relates network-level atrophy to multivariate cognitive measures in a neurodegenerative population”</a> and several upcoming …</p>
